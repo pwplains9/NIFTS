@@ -1,0 +1,120 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	.content
+		+Maintitle({
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 1,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 2,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 3,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 4,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 5,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 6,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 7,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 8,
+			title: 'Main headline',
+		})
+
+		+Title({
+			size: 9,
+			title: 'Main headline',
+		})
+
+		+Button({
+			size: 'medium',
+			title: 'button'
+		})
+
+		+Button({
+			arrow: true,
+			size: 'arrow',
+			title: 'button'
+		})
+
+		+Button({
+			size: 'small',
+			title: 'button'
+		})
+
+		+Button({
+			size: 'black',
+			title: 'button'
+		})
+
+		+Button({
+			arrow: true,
+			size: 'text',
+			title: 'button',
+		})
+
+		+Card({
+			link: '#',
+			caption: 'Total sale $235',
+			image: '../images/card.jpg',
+			edition: 'Editions 342',
+			title: 'Crypto Girl Avatar #5 - Shiba-Inu',
+			price: 'PRICE',
+			money: '$139',
+			start: 'Starting Bid',
+			hour: '2 hours',
+			end: 'Ends in',
+			product: 'AI.MALEVICH Х NIFTS',
+		})
+
+		+Card({
+			size: 'small',
+			link: '#',
+			caption: 'Total sale $235',
+			image: '../images/card.jpg',
+			edition: 'Editions 342',
+			title: 'Crypto Girl Avatar #5',
+			price: 'PRICE',
+			money: '$139',
+			start: 'Starting Bid',
+			hour: '2 hours',
+			end: 'Ends in',
+			product: 'AI.MALEVICH Х NIFTS',
+		})
+
+		+CardPixel({
+			image: '../images/Pixel.png',
+			rank: '#24 rank',
+			title: 'Pixel Punks#25'
+		})

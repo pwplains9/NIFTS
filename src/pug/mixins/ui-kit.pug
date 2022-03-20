@@ -1,0 +1,73 @@
+mixin Maintitle(data)
+	.main-title&attributes(attributes)
+		!=data.title
+
+mixin Title(data)
+	.title(class=`title--${data.size}`)&attributes(attributes)
+		!=data.title
+
+mixin Subtitle(data)
+	.subtitle(class=`subtitle--${data.size}`)&attributes(attributes)
+		!=data.title
+
+mixin Bodytitle(data)
+	.text(class=`text--${data.size}`)&attributes(attributes)
+		!=data.title
+
+mixin Captiontitle(data)
+	.caption(class=`caption--${data.size}`)&attributes(attributes)
+		!=data.title
+
+mixin Button(data)
+	a.button(class=`button--${data.size}` href="#")&attributes(attributes)
+		if data.arrow
+			span
+				!=data.title
+				+svg('arrow-right')
+		else
+			span
+				!=data.title
+mixin Card(data)
+	.card(class=`card--${data.size}` )&attributes(attributes)
+		.card__info
+			a.card__image(href=data.link)
+				img(src=data.image alt="image")
+			.card__caption
+				!=data.caption
+			.like.js-like(data-like="card")
+				| 10
+				span.like__span
+					+svg('like').like__svg.like__svg--inactive
+					+svg('like-active').like__svg.like__svg--active
+		.card__edition
+			!=data.edition
+		a.card__title(href=data.link)
+			!=data.title
+		.card__bottom(class=`${data.sold ? 'is-sold': ''}`)
+			if data.sold
+				| SOLD OUT
+			else
+				.card__price
+					!=data.price
+				.card__content
+					.card__mount
+						span
+							!=data.money
+						!=data.start
+					.card__mount.card__mount--right
+						span
+							!=data.hour
+						!=data.end
+		.card__product
+			.card__icon
+				img(src="../images/icon.png" alt="production")
+			!=data.product
+mixin CardPixel(data)
+	.swiper-slide
+		.card-pixel(class=`card-pixel--${data.size}`)&attributes(attributes)
+			.card-pixel__image
+				img(src=data.image alt="image")
+			.card-pixel__rank
+				!=data.rank
+			.card-pixel__title
+				!=data.title

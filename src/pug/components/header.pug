@@ -1,0 +1,42 @@
+header.header
+	.container.container--header
+		.header__left
+			a.header__logo(href="/")
+				+svg('client')
+			ul.header__nav
+				li.is-current
+					a.header__link
+						+svg('bag')
+						| Marketplace
+				li
+					a.header__link
+						+svg('moon_stars')
+						| Metaverse
+				li
+					a.header__link
+						+svg('card')
+						| Digital clothing
+				li
+					a.header__link
+						+svg('bolt')
+						| Collab
+		.header__right
+			.header__lang
+				.header__lang-current
+					| ENG
+					+svg('arrow-down')
+				ul.header__lang-list.is-hidden
+					li
+						a.header__lang-link
+							| RU
+
+			.header__area
+				+svg('person')
+			+Button({
+				size: 'medium',
+				title: 'Create NFT'
+			})
+			.header__burger.js-button
+				.header__burger-i
+					span
+

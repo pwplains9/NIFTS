@@ -1,0 +1,31 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #eee;
+$color-body: #212429;
+$color-green: #16B862;
+$color-hover: rgba(224, 224, 255, 0.6);
+$color-bg: #2D2F33;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-Montserrat: 'Montserrat';
+$font-Gilroy: 'Gilroy';
+
+// EASING TRANSITIONS
+$duration-normal: 0.4s;
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;
+$easing-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+// Settings
+$desktop: 1025;
+$desktop-xl: 1680;
+$laptop: 1366;
+$mobile: 360;
+$desktop-vh: 750;
