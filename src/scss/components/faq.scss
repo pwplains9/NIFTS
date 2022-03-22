@@ -1,0 +1,139 @@
+.faq {
+	margin-top: 32px;
+	margin-bottom: 73px;
+
+	&__item {
+		margin-bottom: 16px;
+		border-radius: 12px;
+		padding: 24px;
+		background: rgba(224, 224, 255, 0.04);
+		transition: all 0.3s $easing-smooth;
+
+		&.is-active {
+			background: rgba(224, 224, 255, 0.08);
+
+			.faq__content {
+
+			}
+
+			.faq__arrow {
+				span {
+					background: $color-white;
+
+					&:last-child {
+						opacity: 0;
+						transform: rotate(0);
+					}
+				}
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: -0.4px;
+	}
+
+	&__arrow {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		cursor: pointer;
+
+		span {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			width: 13.23px;
+			height: 2.08px;
+			background: rgba(224, 224, 255, 0.4);
+			transition: all 0.3s $easing-smooth;
+
+			&:first-child {
+
+			}
+
+			&:last-child {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	&__content {
+		display: none;
+		padding-top: 16px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 24px;
+		color: $color-hover;
+		mix-blend-mode: normal;
+	}
+}
+
+.writeUs {
+	position: relative;
+	z-index: 1;
+	margin-top: -218px;
+	margin-bottom: 71px;
+	border-radius: 24px;
+	padding: 72px 0 60px;
+	background: url("../images/write-us.png") center center no-repeat;
+	background-size: cover;
+	box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.12), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12);
+
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 36px;
+		text-align: center;
+		letter-spacing: -1px;
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 32px;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		margin: 0 16px;
+		border-radius: 12px;
+		padding: 0 20px;
+		width: 241px;
+		height: 72px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: -0.4px;
+		background: rgba(255, 255, 255, 0.08);
+
+		svg {
+			margin-right: 20px;
+			width: 32px;
+			height: 32px;
+		}
+
+		@include desktop {
+			&:hover {
+				background: rgba(255, 255, 255, 0.16);
+			}
+		}
+	}
+}

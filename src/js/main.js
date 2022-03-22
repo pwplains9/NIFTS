@@ -44,6 +44,20 @@ function init () {
 		}
 	});
 
+	vars.$document.find('.faq__item').find('.faq__arrow').on('click', (e) => {
+		let $this = $(e.currentTarget);
+		let $item = $this.closest('.faq__item');
+		let $content = $item.find('.faq__content');
+
+		if(!$item.hasClass('is-active')) {
+			$item.addClass('is-active');
+			$content.addClass('is-active').slideDown();
+		} else {
+			$item.removeClass('is-active');
+			$content.removeClass('is-active').slideUp();
+		}
+	})
+
 	sliderAutor.init();
 	sliderCollections.init();
 }

@@ -170,8 +170,8 @@
 
 			svg {
 				margin-left: 12px;
-				width: 15.01px;
-				height: 12.34px;
+				width: 24px;
+				height: 24px;
 			}
 		}
 
@@ -473,6 +473,13 @@
 		align-items: flex-end;
 	}
 
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 23px;
+	}
+
 	&--header {
 		display: flex;
 		align-items: center;
@@ -489,11 +496,27 @@
 	}
 
 	&--popular {
-
+		padding-bottom: 140px;
 	}
 
 	&__buttons {
 		display: flex;
+	}
+
+	&--advantage {
+		padding-bottom: 72px;
+	}
+
+	&--faq {
+		padding-top: 72px;
+	}
+
+	&--footer {
+
+
+		border-radius: 24px;
+		background: rgba(41, 44, 48, 0.48);
+		backdrop-filter: blur(72px);
 	}
 }
 
@@ -534,6 +557,10 @@
 	padding-top: 72px;
 	background: rgba(41, 44, 48, 0.48);
 	backdrop-filter: blur(72px);
+
+	&--1 {
+		padding-bottom: 218px;
+	}
 }
 
 .autor {

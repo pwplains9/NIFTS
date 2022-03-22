@@ -1,0 +1,91 @@
+.advantage {
+	display: flex;
+
+	&__left {
+		display: flex;
+		flex-wrap: wrap;
+		flex-shrink: 0;
+		justify-content: space-between;
+		margin-top: -69px;
+		margin-right: 136px;
+		width: 648px;
+	}
+
+	&__right {
+
+	}
+
+	&__item {
+		border: 1px solid rgba(245, 247, 250, 0.06);
+		border-radius: 24px;
+		padding: 24px;
+		width: 312px;
+		height: 248px;
+		box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
+		backdrop-filter: blur(24px);
+
+		&--1 {
+			background: linear-gradient(122.29deg, rgba(156, 66, 245, 0) 0%, rgba(156, 66, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+		}
+
+		&--2 {
+			background: linear-gradient(122.29deg, rgba(156, 66, 245, 0) 0%, rgba(156, 66, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+		}
+
+		&--3 {
+			background: linear-gradient(122.29deg, rgba(93, 45, 225, 0) 0%, rgba(93, 45, 225, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+		}
+
+		&--4 {
+			background: linear-gradient(122.29deg, rgba(69, 121, 245, 0) 0%, rgba(69, 121, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+		}
+
+		&--1,
+		&--2 {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__icon {
+		width: 96px;
+		height: 96px;
+	}
+
+	&__subtitle {
+		margin: 24px 0 16px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: -0.4px;
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: $color-hover;
+	}
+
+	&__right {
+
+	}
+
+	&__title {
+		margin-top: 72px;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 36px;
+		letter-spacing: -1px;
+	}
+
+	&__subtext {
+		margin: 32px 0 24px;
+		width: 421px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 28px;
+		color: $color-text;
+		mix-blend-mode: normal;
+		opacity: 0.6;
+	}
+}
