@@ -1,0 +1,89 @@
+.intro-page
+	.intro-page__bg
+		img(src="../images/bg.jpg")
+		.container.container--inner-page
+			ul.breadcrums
+				li
+					a.breadcrums__link(href='#') Home
+				li
+					a.breadcrums__link(href='#') Authors
+				li
+					a.breadcrums__link(href='#') Kirill Zubarev
+				li
+					a.breadcrums__link(href='#') NFT collections
+				li
+					a.breadcrums__link(href='#') Crypto Girl Avatar #5
+	.container.intro-page__container
+		.autor-info.autor-info--inner
+			.autor-info__left
+				.autor-info__content.autor-info__content--inner
+					.autor-info__image.autor-info__image--inner
+						img(src="../images/Pixel-6.png")
+					.autor-info__title.autor-info__title--inner
+							| Kirill Zubarev
+					.autor-info__info.autor-info__info--inner
+						.autor-info__rank.autor-info__rank--inner
+							| #24 rank
+						.autor-info__rank.autor-info__rank--inner
+							| Sales volume: $478 821
+				.autor-info__links.autor-info__links--inner
+					.autor-info__social.autor-info__social--1
+						+svg("fb")
+						| https://www.facebook.com
+					.autor-info__social.autor-info__social--2
+						+svg("tg")
+						| @telegram
+					.autor-info__social.autor-info__social--3
+						+svg("tw")
+						| https://twitter.com
+					.autor-info__social.autor-info__social--4
+						+svg("dis")
+						| @discord
+					.autor-info__social.autor-info__social--5
+						+svg("inst")
+						| @Instagram
+			.autor-info__right.autor-info__right--inner
+				.card-page__nav
+					.card-page__add.js-add
+						+svg('add')
+					a.card-page__share(href="")
+						+svg('share')
+					.card-page__like
+						.like.js-like(data-like="page-card")
+							| 10
+							span.like__span
+								+svg('like').like__svg.like__svg--inactive
+								+svg('like-active').like__svg.like__svg--active
+				.card-page__lots.card-page__lots--1
+					.card-page__numbers.card-page__numbers--1
+						.card-page__number
+							| 342
+						.card-page__subinfo
+							| All lots
+					.card-page__numbers.card-page__numbers--2
+						.card-page__number
+							| 27
+						.card-page__subinfo
+							| Owners
+					.card-page__numbers.card-page__numbers--3
+						.card-page__number
+							| $14,95
+						.card-page__subinfo
+							| Floor price
+					.card-page__numbers.card-page__numbers--4
+						.card-page__number
+							| $1 396,08
+						.card-page__subinfo
+							| Highest price
+					.card-page__numbers.card-page__numbers--5
+						.card-page__number
+							| 27
+						.card-page__subinfo
+							| Total sold
+				.card-page__content
+					.card-page__more
+						.card-page__text
+							| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...
+						.card-page__button
+							| Show more
+

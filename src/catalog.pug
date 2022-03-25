@@ -1,0 +1,73 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		.container
+			ul.breadcrums
+				li
+					a.breadcrums__link(href='#') Home
+				li
+					a.breadcrums__link(href='#') Catalog
+		include pug/components/catalog
+		.background-gray.background-gray--1
+			.container
+				.container__top
+					+Title({
+						size: 3,
+						title: 'Popular autors',
+					})
+					.container__buttons
+						+Button({
+							size: 'black',
+							title: 'View all'
+						}).right-16.button--try
+						.js-nav.nav-autor.nav-autor--left
+							+svg('arrow-left')
+						.js-nav.js-nav--right.nav-autor.nav-autor--right
+							+svg('arrow-right')
+				.autor.swiper
+					.swiper-wrapper
+						+CardPixel({
+							image: '../images/Pixel.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+						+CardPixel({
+							image: '../images/Pixel-2.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+						+CardPixel({
+							image: '../images/Pixel-3.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+						+CardPixel({
+							image: '../images/Pixel-4.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+						+CardPixel({
+							image: '../images/Pixel-5.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+						+CardPixel({
+							image: '../images/Pixel-6.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+						+CardPixel({
+							image: '../images/Pixel.png',
+							rank: '#24 rank',
+							title: 'Pixel Punks#25'
+						})
+
+	include pug/components/footer

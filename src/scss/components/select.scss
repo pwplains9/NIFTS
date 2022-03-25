@@ -1,0 +1,575 @@
+$background: #e74c3c;
+$select-color: #fff;
+$select-background: #c0392b;
+//$select-width: 220px;
+//$select-height: 40px;
+
+
+.select-hidden {
+	display: none;
+	visibility: hidden;
+	padding-right: 10px;
+}
+
+.select {
+	margin-left: 16px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	color: $select-color;
+	margin-bottom: 4px;
+}
+
+.select--sorting + {
+	.select-styled {
+		display: flex;
+		align-items: center;
+		padding: 10px 16px 10px 12px;
+
+		&::before {
+			content: "";
+			flex-shrink: 0;
+			margin-right: 8px;
+			width: 20px;
+			height: 20px;
+			background: url("../images/sprites/svg/sort.svg") center center no-repeat;
+			background-size: contain;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		&.active {
+			&::before {
+				background: url("../images/sprites/svg/sort-white.svg") center center no-repeat;
+				background-size: contain;
+			}
+		}
+
+		+ {
+			.select-options {
+				width: 280px;
+			}
+		}
+	}
+}
+
+.select--last + {
+	.select-styled {
+		+ {
+			.select-options {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+}
+
+.select-styled {
+	display: flex;
+	padding: 10px 12px 10px 16px;
+	border-radius: 12px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(224, 224, 255, 0.6);
+	background: #2D2F33;
+
+	&:after {
+		content: "";
+		flex-shrink: 0;
+		display: block;
+		margin-left: 12px;
+		width: 20px;
+		height: 20px;
+		background: url("../images/sprites/svg/arrow-select.svg") center center no-repeat;
+		background-size: contain;
+	}
+
+	@include desktop {
+		&:hover {
+			background: linear-gradient(0deg, rgba(224, 224, 255, 0.06), rgba(224, 224, 255, 0.06)), #2D2F33;
+		}
+
+	}
+	&:active, &.active {
+		&:after {
+			background: url("../images/sprites/svg/arrow-select-white.svg") center center no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.select-options {
+	display: none;
+	position: absolute;
+	top: 48px;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	margin: 0;
+	padding: 20px 0;
+	width: 280px;
+	list-style: none;
+	background: #2D2F33;
+	border: 1px solid rgba(224, 224, 255, 0.2);
+	box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 6px 12px 24px rgba(9, 13, 20, 0.4);
+	border-radius: 12px;
+
+	li {
+		position: relative;
+		margin: 0;
+		padding: 10px 24px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.8);
+
+		&:hover,
+		&.is-selected {
+			background: rgba(24, 27, 31, 0.24);
+		}
+
+		&.is-selected {
+			&::after {
+				content: "";
+				position: absolute;
+				right: 24px;
+				top: 9px;
+				bottom: 0;
+				flex-shrink: 0;
+				width: 20px;
+				height: 20px;
+				background: url("../images/sprites/svg/check.svg") center center no-repeat;
+				background-size: contain;
+			}
+		}
+
+		&[rel="hide"] {
+			display: none;
+		}
+	}
+}
+
+.ms-options-wrap {
+	position: relative;
+}
+
+.ms-options-wrap,
+.ms-options-wrap * {
+	box-sizing: border-box;
+}
+
+.ms-options-wrap > button:focus,
+.ms-options-wrap > button {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	padding: 5px 20px 5px 5px;
+	margin-top: 1px;
+	font-size: 13px;
+	color: #aaa;
+	outline-offset: -2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ms-options-wrap > button[disabled] {
+	background-color: #e5e9ed;
+	color: #808080;
+	opacity: 0.6;
+}
+
+.ms-options-wrap > button:after {
+	content: ' ';
+	height: 0;
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	width: 0;
+	border: 6px solid rgba(0, 0, 0, 0);
+	border-top-color: #999;
+	margin-top: -3px;
+}
+
+.ms-options-wrap.ms-has-selections > button {
+	color: #333;
+}
+
+.ms-options-wrap > .ms-options {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	margin-top: 1px;
+	margin-bottom: 20px;
+	background: white;
+	z-index: 2000;
+	border: 1px solid #aaa;
+	overflow: auto;
+	visibility: hidden;
+}
+
+.ms-options-wrap.ms-active > .ms-options {
+	visibility: visible
+}
+
+.ms-options-wrap > .ms-options > .ms-search input {
+	width: 100%;
+	padding: 4px 5px;
+	border: none;
+	border-bottom: 1px groove;
+	outline: none;
+}
+
+.ms-options-wrap > .ms-options > .no-result-message {
+	padding: 4px 5px;
+	display: none;
+}
+
+.ms-options-wrap > .ms-options .ms-selectall {
+	display: inline-block;
+	font-size: .9em;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+.ms-options-wrap > .ms-options .ms-selectall:hover {
+	text-decoration: underline;
+}
+
+.ms-options-wrap > .ms-options > .ms-selectall.global {
+	margin: 4px 5px;
+}
+
+.ms-options-wrap > .ms-options > ul,
+.ms-options-wrap > .ms-options > ul > li.optgroup ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ms-options-wrap > .ms-options > ul li.ms-hidden {
+	display: none;
+}
+
+.ms-options-wrap > .ms-options > ul > li.optgroup {
+	padding: 5px;
+}
+.ms-options-wrap > .ms-options > ul > li.optgroup + li.optgroup {
+	border-top: 1px solid #aaa;
+}
+
+.ms-options-wrap > .ms-options > ul > li.optgroup .label {
+	display: block;
+	padding: 5px 0 0 0;
+	font-weight: bold;
+}
+
+.ms-options-wrap > .ms-options > ul label {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	padding: 4px 4px 4px 20px;
+	margin: 1px 0;
+	border: 1px dotted transparent;
+}
+.ms-options-wrap > .ms-options.checkbox-autofit > ul label,
+.ms-options-wrap > .ms-options.hide-checkbox > ul label {
+	padding: 4px;
+}
+
+.ms-options-wrap > .ms-options > ul label.focused,
+.ms-options-wrap > .ms-options > ul label:hover {
+	background-color: #efefef;
+	border-color: #999;
+}
+
+.ms-options-wrap > .ms-options > ul li.selected label {
+	background-color: #efefef;
+	border-color: transparent;
+}
+
+.ms-options-wrap > .ms-options > ul input[type="checkbox"] {
+	margin: 0 5px 0 0;
+	position: absolute;
+	left: 4px;
+	top: 7px;
+}
+
+.ms-options-wrap > .ms-options.hide-checkbox > ul input[type="checkbox"] {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.range {
+	position: relative;
+	margin-left: 16px;
+
+	&__d {
+		margin: 0 4px;
+	}
+
+	&__current {
+		display: inline-flex;
+		position: relative;
+		border-radius: 12px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		padding: 10px 12px 10px 16px;
+		color: rgba(224, 224, 255, 0.6);
+		background: #2D2F33;
+		cursor: pointer;
+
+		&.is-open {
+			.range__icon {
+				background: url("../images/sprites/svg/arrow-select-white.svg") center center no-repeat;
+				background-size: contain;
+			}
+		}
+
+		@include desktop {
+			&:hover {
+				background: linear-gradient(0deg, rgba(224, 224, 255, 0.06), rgba(224, 224, 255, 0.06)), #2D2F33;
+			}
+
+		}
+	}
+
+	&__start {
+
+	}
+
+	&__end {
+
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		display: block;
+		margin-left: 12px;
+		width: 20px;
+		height: 20px;
+		background: url("../images/sprites/svg/arrow-select.svg") center center no-repeat;
+		background-size: contain;
+	}
+
+	&__dropdown {
+		position: absolute;
+		right: -9px;
+		top: 48px;
+		width: 280px;
+		padding: 20px 24px;
+		background: #2D2F33;
+		border: 1px solid rgba(224, 224, 255, 0.2);
+		box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 6px 12px 24px rgba(9, 13, 20, 0.4);
+		border-radius: 16px;
+		opacity: 0;
+		visibility: hidden;
+
+		&.is-open {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__title {
+		margin-bottom: 8px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.6);
+	}
+
+	&__inputs {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.6);
+	}
+
+	&__input {
+		width: 104px;
+		height: 40px;
+		background: rgba(24, 27, 31, 0.24);
+		border-radius: 12px;
+
+		input {
+			padding: 10px 12px;
+			width: 100%;
+			height: 100%;
+			border: none;
+			background: none;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 20px;
+			color: rgba(224, 224, 255, 0.6);
+			background: transparent;
+			outline: none;
+
+			&::placeholder {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 20px;
+				color: rgba(224, 224, 255, 0.6);
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 8px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.6);
+	}
+
+	&__sicon {
+		right: 44px;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+
+		svg {
+			margin-left: 4px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__price {
+
+	}
+
+	&__divider {
+
+	}
+
+	&__apply {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 24px;
+		width: 232px;
+		height: 40px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
+		box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.12), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12);
+		border-radius: 12px;
+	}
+
+	&__clear {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 16px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+
+.ms-options-wrap > button:focus, .ms-options-wrap > button {
+	width: 232px;
+	height: 40px;
+	background: rgba(24, 27, 31, 0.24);
+	border-radius: 12px;
+	border: none;
+	padding: 10px 12px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.ms-options-wrap > button:after {
+	content: "";
+	flex-shrink: 0;
+	display: block;
+	right: 20px;
+	margin-left: 12px;
+	margin-top: -10px;
+	width: 20px;
+	height: 20px;
+	background: url("../images/sprites/svg/arrow-select.svg") center center no-repeat;
+	background-size: contain;
+	border: none;
+}
+
+.ms-active button {
+	&:after {
+		background: url("../images/sprites/svg/arrow-select-white.svg") center center no-repeat;
+		background-size: contain;
+	}
+}
+
+.ms-options-wrap.ms-has-selections > button {
+	color: $color-white;
+}
+
+.ms-options {
+	background: #2D2F33 !important;
+	border: 1px solid rgba(224, 224, 255, 0.2) !important;
+	box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 6px 12px 24px rgba(9, 13, 20, 0.4);
+	border-radius: 12px;
+
+	li {
+		position: relative;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.8);
+		outline: none !important;
+
+		label {
+			padding: 10px 24px !important;
+			background: transparent !important;
+			outline: none !important;
+
+			input {
+				display: none;
+				outline: none !important;
+			}
+		}
+
+		&.selected {
+			background: rgba(24, 27, 31, 0.24);
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 24px;
+				top: 9px;
+				bottom: 0;
+				flex-shrink: 0;
+				width: 20px;
+				height: 20px;
+				background: url("../images/sprites/svg/check.svg") center center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+
+div#ms-list-1 {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,60 @@
+.container
+	.autor-info
+		.autor-info__left
+			.autor-info__title
+				| Author
+			.autor-info__content
+				.autor-info__image
+					img(src="../images/Pixel-6.png")
+				.autor-info__info
+					.autor-info__rank
+						| #24 rank
+					.autor-info__name
+						| Kirill Zubarev
+			.autor-info__links
+				.autor-info__social.autor-info__social--1
+					+svg("fb")
+					| https://www.facebook.com
+				.autor-info__social.autor-info__social--2
+					+svg("tg")
+					| @telegram
+				.autor-info__social.autor-info__social--3
+					+svg("tw")
+					| https://twitter.com
+				.autor-info__social.autor-info__social--4
+					+svg("dis")
+					| @discord
+				.autor-info__social.autor-info__social--5
+					+svg("inst")
+					| @Instagram
+		.autor-info__right
+			.card-page__lots.card-page__lots--1
+				.card-page__numbers.card-page__numbers--1
+					.card-page__number
+						| 342
+					.card-page__subinfo
+						| All lots
+				.card-page__numbers.card-page__numbers--2
+					.card-page__number
+						| 27
+					.card-page__subinfo
+						| Owners
+				.card-page__numbers.card-page__numbers--3
+					.card-page__number
+						| $14,95
+					.card-page__subinfo
+						| Floor price
+				.card-page__numbers.card-page__numbers--4
+					.card-page__number
+						| $1 396,08
+					.card-page__subinfo
+						| Highest price
+				.card-page__numbers.card-page__numbers--5
+					.card-page__number
+						| 27
+					.card-page__subinfo
+						| Total sold
+			+Button({
+				size: 'medium',
+				title: 'View all works'
+			}).button--autor

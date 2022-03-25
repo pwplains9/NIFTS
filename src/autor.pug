@@ -1,0 +1,69 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		include pug/components/intro-inner-1
+		section.section.section--marketplace
+			.background-gray.background-gray--inner
+				.container.container--collections
+					.container__top
+						+Title({
+							size: 3,
+							title: 'Collections',
+						})
+						.container__buttons
+							+Button({
+								size: 'black',
+								title: 'View all'
+							}).right-16.button--try
+							.js-nav.nav-collections.nav-collections--left
+								+svg('arrow-left')
+							.js-nav.js-nav--right.nav-collections.nav-collections--right
+								+svg('arrow-right')
+					.collections.swiper
+						.swiper-wrapper
+							.swiper-slide
+								.collections__item
+									a.collections__image(href="")
+										img(src="../images/card.jpg" alt="image")
+
+									.collections__content
+										.collections__icon
+											img(src="../images/Pixel.png" alt="person")
+										.collections__person
+											| by
+											a(href="#")
+												| KittyCryptoGang
+										a.collections__title(href="")
+											| FishuFam
+										.collections__text
+											| Explore the FichyFam collection that made
+											| by the talented Nicolas Morel & Amalie Comes
+							.swiper-slide
+								.collections__item
+									a.collections__image(href="")
+										img(src="../images/card-2.jpg" alt="image")
+
+									.collections__content
+										.collections__icon
+											img(src="../images/Pixel-2.png" alt="person")
+										.collections__person
+											| by
+											a(href="#")
+												| KittyCryptoGang
+										a.collections__title(href="")
+											| FishuFam
+										.collections__text
+											| Explore the FichyFam collection that made
+											| by the talented Nicolas Morel & Amalie Comes
+
+		include pug/components/catalog
+		include pug/components/FAQ
+	include pug/components/footer

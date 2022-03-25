@@ -76,8 +76,10 @@
 		"normalize.css": "8.0.1",
 		"object-fit-images": "3.2.4",
 		"object-fit-videos": "1.0.4",
+		"smooth-scrollbar": "8.7.4",
 		"svg4everybody": "2.1.9",
-		"swiper": "8.0.7"
+		"swiper": "8.0.7",
+		"gsap": "3.7.1"
 	},
 	"husky": {
 		"hooks": {

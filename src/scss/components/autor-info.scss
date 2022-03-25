@@ -1,0 +1,192 @@
+.autor-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 72px;
+	padding-bottom: 54px;
+
+	&__left {
+
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 36px;
+		letter-spacing: -1px;
+
+		&--inner {
+			font-size: 40px;
+			line-height: 48px;
+			letter-spacing: 0;
+		}
+	}
+
+	&__content {
+		display: flex;
+		margin-top: 32px;
+
+		&--inner {
+			display: block;
+		}
+
+		&--collections {
+
+		}
+	}
+
+	&__image {
+		margin-right: 24px;
+		overflow: hidden;
+		border-radius: 16px;
+		width: 100px;
+		height: 100px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&--inner {
+			margin-bottom: 40px;
+			border-radius: 24px;
+			width: 148px;
+			height: 148px;
+		}
+
+		&--collections {
+			margin-right: 12px;
+			border-radius: 10px;
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	&__info {
+		padding-top: 8px;
+
+		&--inner {
+			display: flex;
+			padding-top: 9px;
+		}
+
+		&--collections {
+			padding-top: 0;
+		}
+	}
+
+	&__rank {
+		margin-bottom: 8px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.6);
+
+
+		&--inner {
+			margin-right: 40px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&--collections {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28px;
+		text-decoration: underline;
+
+		&--collections {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 56px;
+		width: 537px;
+
+		&--inner {
+			margin-top: 32px;
+		}
+	}
+
+	&__social {
+		display: flex;
+		margin-bottom: 16px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+
+		svg {
+			margin-right: 16px;
+			width: 24px;
+			height: 24px;
+			opacity: 0.6;
+		}
+
+		&--1,
+		&--3,
+		&--5 {
+			width: 258px;
+		}
+
+		&--2,
+		&--4 {
+			width: 131px;
+		}
+	}
+
+	&__right {
+		margin-top: 69px;
+		width: 640px;
+
+		.card-page__nav {
+			justify-content: flex-end;
+			margin-bottom: 41px;
+		}
+
+		.card-page__content {
+			margin-top: 40px;
+		}
+
+		&--inner {
+			margin-top: 148px;
+		}
+	}
+
+	&--inner {
+		margin-top: -106px;
+	}
+}
+
+.intro-page {
+	position: relative;
+
+	.container--inner-page {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+
+	&__bg {
+		position: relative;
+		width: 100%;
+		height: 400px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

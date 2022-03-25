@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime';
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import objectFitImages from 'object-fit-images';
+import gsap from 'gsap';
 // import objectFitVideos from 'object-fit-videos';
 
 svg4everybody();
@@ -11,6 +12,7 @@ objectFitImages();
 
 window.$ = $;
 window.jQuery = $;
+window.gsap = gsap;
 window.objectFitImages = objectFitImages;
 // window.objectFitVideos = objectFitVideos;
 

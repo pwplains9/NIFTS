@@ -188,8 +188,101 @@ iframe {
 		transition-delay: 0s !important;
 	}
 }
+
 /* stylelint-enable */
 
 .content {
 	padding-left: 140px;
+}
+
+
+.breadcrums {
+	display: flex;
+	margin: 39px 0px 25px;
+
+	li {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
+
+			a {
+				color: rgba(224, 224, 255, 0.5);
+				pointer-events: none;
+			}
+		}
+
+		&::after {
+			content: "•";
+			margin: 0 8px;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 20px;
+			color: rgba(224, 224, 255, 0.6);
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(224, 224, 255, 0.8);
+	}
+}
+
+
+[data-scrollbar] {
+	display: block;
+	position: relative;
+	height: 310px;
+}
+
+.scroll-content {
+	display: flow-root;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.scrollbar-track {
+	position: absolute;
+	opacity: 1 !important;
+	z-index: 1;
+	background: rgb(30, 32, 37) !important;
+	user-select: none;
+	transition: opacity 0.5s 0.5s ease-out;
+}
+
+.scrollbar-track.show,
+.scrollbar-track:hover {
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.scrollbar-track-x {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 8px;
+}
+
+.scrollbar-track-y {
+	top: 0;
+	right: 2px !important;
+	width: 6px;
+	height: 100%;
+}
+
+.scrollbar-thumb {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 6px !important;
+	height: 8px;
+	background: rgba(224, 224, 255, 0.12) !important;
+	border-radius: 10px;
 }

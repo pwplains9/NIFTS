@@ -1,0 +1,18 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		include pug/components/card-page
+		include pug/components/info
+		include pug/components/autor-info
+		include pug/components/popular
+		include pug/components/collections
+		include pug/components/FAQ
+	include pug/components/footer

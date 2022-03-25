@@ -1,0 +1,143 @@
+.info {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 41px;
+
+	&__left {
+
+	}
+
+	&__right {
+		margin-top: -8px;
+		margin-right: 2px;
+		width: 640px;
+	}
+
+	&__title {
+		margin-bottom: 32px;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 36px;
+		letter-spacing: -1px;
+	}
+
+	&__content {
+		margin-bottom: 19px;
+	}
+
+	&__subtitle {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 28px;
+		color: #E0E0FF;
+		mix-blend-mode: normal;
+		opacity: 0.6;
+	}
+
+	&__subtext {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 37px;
+		letter-spacing: 0.02em;
+	}
+}
+
+.tabs {
+	&__navs {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 4px;
+		width: 640px;
+		height: 52px;
+		border-radius: 100px;
+		background: rgba(24, 27, 31, 0.42);
+		box-shadow: inset 6px 10px 16px rgba(0, 0, 0, 0.16);
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 316px;
+			height: 44px;
+			background: linear-gradient(180deg, #5A5E62 0%, #34373B 72.53%, #24272B 100%);
+			box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.16), 0px 6px 8px rgba(0, 0, 0, 0.2);
+			border-radius: 100px;
+			transform: translateX(0);
+			transition: all 0.5s linear;
+		}
+
+		&.is-active {
+			&::before {
+				transform: translateX(100%);
+			}
+		}
+	}
+
+	&__nav {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 316px;
+		height: 44px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		color: #E0E0FF;
+		opacity: 0.6;
+		cursor: pointer;
+		transition: all 0.5s linear;
+
+		&.is-active {
+			opacity: 1;
+			color: $color-white;
+			pointer-events: none;
+		}
+	}
+
+	&__content {
+		margin-top: 16px;
+		padding: 16px 0 16px 16px;
+		background: rgba(24, 27, 31, 0.6);
+		box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.06);
+		backdrop-filter: blur(72px);
+		border-radius: 12px;
+	}
+
+	&__element {
+
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+		padding: 16px 24px;
+		width: 608px;
+		background: rgba(224, 224, 255, 0.04);
+		border-radius: 12px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.4px;
+	}
+
+	&__times {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		color: #E0E0FF;
+
+		mix-blend-mode: normal;
+		opacity: 0.6;
+	}
+}

@@ -1,0 +1,125 @@
+.container
+	ul.breadcrums
+		li
+			a.breadcrums__link(href='#') Home
+		li
+			a.breadcrums__link(href='#') Authors
+		li
+			a.breadcrums__link(href='#') Kirill Zubarev
+		li
+			a.breadcrums__link(href='#') NFT collections
+		li
+			a.breadcrums__link(href='#') Crypto Girl Avatar #5
+
+	.card-page
+		.card-page__left
+			.card-page__image
+				img(src="../images/card-lg.jpg" alt="image")
+			.card-page__caption
+				| 2000 x 2000 px IMAGE (3.35 MB)
+		.card-page__right
+			.card-page__top
+				.card-page__title
+					| Crypto Girl Avatar #5
+				.card-page__nav
+					.card-page__add.js-add
+						+svg('add')
+					a.card-page__share(href="")
+						+svg('share')
+					.card-page__like
+						.like.js-like(data-like="page-card")
+							| 10
+							span.like__span
+								+svg('like').like__svg.like__svg--inactive
+								+svg('like-active').like__svg.like__svg--active
+			.card-page__info
+				.card-page__item
+					.card-page__subimage
+						img(src="../images/Pixel-6.png" alt="image")
+					.card-page__infos
+						.card-page__subtitle
+							| Author
+						.card-page__subtext
+							| Kirill Zubarev
+				.card-page__item
+					.card-page__subimage
+						img(src="../images/Pixel-7.png" alt="image")
+					.card-page__infos
+						.card-page__subtitle
+							| Collection
+						.card-page__subtext
+							| NFT collections
+			.card-page__content
+				.card-page__subtitle
+					| Description
+				.card-page__more
+					.card-page__text
+						| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...
+					.card-page__button
+						| Show more
+			.card-page__lots
+				.card-page__numbers.card-page__numbers--1
+					.card-page__number
+						| 342
+					.card-page__subinfo
+						| All lots
+				.card-page__numbers.card-page__numbers--2
+					.card-page__number
+						| 27
+					.card-page__subinfo
+						| Owners
+				.card-page__numbers.card-page__numbers--3
+					.card-page__number
+						| $14,95
+					.card-page__subinfo
+						| Floor price
+				.card-page__numbers.card-page__numbers--4
+					.card-page__number
+						| $1 396,08
+					.card-page__subinfo
+						| Highest price
+				.card-page__numbers.card-page__numbers--5
+					.card-page__number
+						| 27
+					.card-page__subinfo
+						| Total sold
+			.card-page__subcontent
+				.card-page__tcard
+					.card-page__edition
+						.card-page__arrows
+							.card-page__arrow.card-page__arrow--top
+								+svg('arrow-left')
+							.card-page__arrow.card-page__arrow--bottom
+								+svg('arrow-left')
+						.card-page__sinfo
+							.card-page__stitle
+								| Edition #10
+								span of 342
+							a.card-page__select(href="")
+								| Select Edition
+					.card-page__edition
+						.card-page__subincon
+							img(src="../images/icon-2.png" alt="image")
+						.card-page__sinfo
+							.card-page__stitle
+								| NIFTS_45882
+
+							a.card-page__owner(href="")
+								| Owner
+				.card-page__bcard
+					.card-page__contain
+						.card-page__lleft
+							.card-page__lnumber
+								| $139
+							.card-page__subinfo
+								| Starting Bid
+						.card-page__rright
+							.card-page__mnumber
+								| 2 hours
+							.card-page__subinfo
+								| Ends in
+					.card-page__ccontain
+						a.card-page__sbutton(href="")
+							| Place a bid
+						.card-page__ssubinfo
+							| at Binance
