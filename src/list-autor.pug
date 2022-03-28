@@ -1,0 +1,115 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		.container
+			ul.breadcrums
+				li
+					a.breadcrums__link(href='#') Home
+				li
+					a.breadcrums__link(href='#') Authors
+		include pug/components/list-autor
+
+	footer.footer
+
+		.footer__container
+			.footer__left
+				a.footer__logo(href="/")
+					+svg('client')
+				a.footer__link(href="")
+					+svg('location')
+					| United States
+				a.footer__link(href="")
+					+svg('massage')
+					span
+						| English
+					| (United States)
+				.footer__copyright
+					| &copy;&nbsp;2022&nbsp;NIFTS
+			.footer__right
+				.footer__nav
+					.footer__item
+						.footer__title
+							| DOCUMENTS
+						ul.footer__links
+							li
+								a.footer__link(href="")
+									| Cookies policy
+							li
+								a.footer__link(href="")
+									| Privacy
+							li
+								a.footer__link(href="")
+									| Purchase agreement
+							li
+								a.footer__link(href="")
+									| Terms of use
+					.footer__item
+						.footer__title
+							| Functions
+						ul.footer__links
+							li
+								a.footer__link(href="")
+									| Marketplace
+							li
+								a.footer__link(href="")
+									| Metaverse
+							li
+								a.footer__link(href="")
+									| Digital clothing
+							li
+								a.footer__link(href="")
+									| Collab
+					.footer__item
+						.footer__title
+							| company
+						ul.footer__links
+							li
+								a.footer__link(href="")
+									| Abouts us
+							li
+								a.footer__link(href="")
+									| Projects
+							li
+								a.footer__link(href="")
+									| Blog
+							li
+								a.footer__link(href="")
+									| FAQ
+					.footer__item
+						.footer__title
+							| contact us
+						ul.footer__links
+							li
+								a.footer__link(href="")
+									| Support
+							li
+								a.footer__link(href="")
+									| Contacts
+				.footer__item.footer__item--last
+					.footer__title
+						| follow
+					.footer__follow
+						a.footer__social(href="" target="_blank")
+							+svg('fb')
+						a.footer__social(href="" target="_blank")
+							+svg('tw')
+						a.footer__social(href="" target="_blank")
+							+svg('inst')
+						a.footer__social(href="" target="_blank")
+							+svg('tg')
+						a.footer__social(href="" target="_blank")
+							+svg('dis')
+
+					.footer__production
+						| made by
+						a(href="roobinium.io" target="_blank")
+							| roobinium.io
+

@@ -3,7 +3,7 @@ header.header
 		.header__left
 			a.header__logo(href="/")
 				+svg('client')
-			ul.header__nav
+			ul.header__nav.for-desktop
 				li.is-current
 					a.header__link
 						+svg('bag')
@@ -21,16 +21,15 @@ header.header
 						+svg('bolt')
 						| Collab
 		.header__right
-			.header__lang
+			.header__lang.for-desktop
 				.header__lang-current
 					| ENG
-					+svg('arrow-down')
-				ul.header__lang-list.is-hidden
+				ul.header__lang-list
 					li
-						a.header__lang-link
+						a.header__lang-link(href='#')
 							| RU
 
-			.header__area
+			a.header__area(href="#").for-desktop
 				+svg('person')
 			+Button({
 				size: 'medium',
@@ -39,4 +38,18 @@ header.header
 			.header__burger.js-button
 				.header__burger-i
 					span
-
+			ul.header__menu
+				li
+					a.header__menu-link(href="") About Us
+				li
+					a.header__menu-link(href="") NFT Marketing Strategy
+				li
+					a.header__menu-link(href="") Projects
+				li
+					a.header__menu-link(href="") Sold Out
+				li
+					a.header__menu-link(href="") Charity
+				li
+					a.header__menu-link(href="") Blog
+				li
+					a.header__menu-link(href="") Contacts

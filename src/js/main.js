@@ -40,9 +40,25 @@ function init() {
 		let $this = $(e.currentTarget);
 
 		if (!$this.hasClass('is-active')) {
-			$this.addClass('is-active')
+			$this.addClass('is-active');
+
+			vars.$document.find('.header__menu').addClass('is-view');
 		} else {
 			$this.removeClass('is-active');
+			vars.$document.find('.header__menu').removeClass('is-view');
+		}
+	});
+
+	$('.header__lang-current').on('click', (e) => {
+		let $this = $(e.currentTarget);
+
+		if (!$this.hasClass('is-active')) {
+			$this.addClass('is-active');
+
+			vars.$document.find('.header__lang-list').addClass('is-view');
+		} else {
+			$this.removeClass('is-active');
+			vars.$document.find('.header__lang-list').removeClass('is-view');
 		}
 	});
 
@@ -76,7 +92,7 @@ function init() {
 
 			$this.addClass('is-active');
 
-			if($this.data('tab') === 2) {
+			if ($this.data('tab') === 2) {
 				vars.$document.find('.tabs__navs').addClass('is-active')
 			} else {
 				vars.$document.find('.tabs__navs').removeClass('is-active')
@@ -99,7 +115,7 @@ function init() {
 		});
 	}
 
-	$('.js-select').each(function(){
+	$('.js-select').each(function () {
 		var $this = $(this), numberOfOptions = $(this).children('option').length;
 
 		$this.addClass('select-hidden');
@@ -125,15 +141,15 @@ function init() {
 
 		var $listItems = $list.children('li');
 
-		$styledSelect.click(function(e) {
+		$styledSelect.click(function (e) {
 			e.stopPropagation();
-			$('div.select-styled.active').not(this).each(function(){
+			$('div.select-styled.active').not(this).each(function () {
 				$(this).removeClass('active').next('ul.select-options').hide();
 			});
 			$(this).toggleClass('active').next('ul.select-options').toggle();
 		});
 
-		$listItems.click(function(e) {
+		$listItems.click(function (e) {
 			e.stopPropagation();
 			$listItems.removeClass('is-selected')
 			$(this).addClass('is-selected')
@@ -143,7 +159,7 @@ function init() {
 			//console.log($this.val());
 		});
 
-		$(document).click(function() {
+		$(document).click(function () {
 			$styledSelect.removeClass('active');
 			$list.hide();
 		});
@@ -161,8 +177,8 @@ function init() {
 	});
 
 	$('select[multiple]').multiselect({
-		columns  : 1,
-		search   : false,
+		columns: 1,
+		search: false,
 		texts: {
 			placeholder: 'Select options'
 		},
@@ -170,7 +186,7 @@ function init() {
 	});
 
 	$('select[multiple]').siblings('a.addoption')
-		.click(function( event ){
+		.click(function (event) {
 			event.preventDefault();
 
 			var optionCnt = $(this).siblings('select[multiple]')
@@ -178,8 +194,8 @@ function init() {
 
 			$(this).siblings('select[multiple]')
 				.multiselect('loadOptions', [{
-						name   : 'Option '+ optionCnt,
-						value  : optionCnt,
+						name: 'Option ' + optionCnt,
+						value: optionCnt,
 						checked: false
 					}],
 					false
@@ -187,7 +203,7 @@ function init() {
 		});
 
 	$('select[multiple]').siblings('a.daddoptgetvalues')
-		.click(function( event ){
+		.click(function (event) {
 			event.preventDefault();
 
 			alert(
@@ -198,11 +214,10 @@ function init() {
 
 
 	vars.$document.find('.range__current').on('click', () => {
-		if(!vars.$document.find('.range__current').hasClass('is-open')) {
+		if (!vars.$document.find('.range__current').hasClass('is-open')) {
 			vars.$document.find('.range__current').addClass('is-open');
 			vars.$document.find('.range__dropdown').addClass('is-open');
-		}
-		else {
+		} else {
 			vars.$document.find('.range__current').removeClass('is-open');
 			vars.$document.find('.range__dropdown').removeClass('is-open');
 		}

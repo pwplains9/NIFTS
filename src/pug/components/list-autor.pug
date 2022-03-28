@@ -1,0 +1,293 @@
+.container.container--catalog
+	.container__top.container__top--catalog
+		.container__left
+			+Title({
+				size: 1,
+				title: 'Authors'
+			})
+			.search
+				.search__button.js-open
+					+svg('search')
+				form.search__form
+					.search__input
+						input(placeholder="Authors names")
+						button.search__go(type="submit")
+							| Search
+					.search__cencel.js-close
+						| Cancel
+		.container__right
+			select.js-select.select--category
+				option(value="hide") Category
+				option All
+				option Art
+				option Collectibles
+				option Entertainment
+				option Esports
+				option Gaming
+				option NFT for Good
+				option Sport
+			select.js-select
+				option(value="hide") Media type
+				option By popularity
+				option Lowest Price
+				option Highest Price
+				option Most Likes
+				option Most Views
+				option Auction Ending Soon
+
+
+			select.js-select.select--last
+				option(value="hide") Binance
+				option By popularity
+				option Lowest Price
+				option Highest Price
+				option Most Likes
+				option Most Views
+				option Auction Ending Soon
+	.autor-list
+		.autor-list__top
+			.autor-list__col.autor-list__col--text.autor-list__col--1
+				.autor-list__subtext
+					| Name
+			.autor-list__col.autor-list__col--2
+				.autor-list__subtext
+					| Works
+			.autor-list__col.autor-list__col--3
+				.autor-list__subtext
+					| Editions sold
+			.autor-list__col.autor-list__col--4
+				.autor-list__subtext
+					| Sales volume
+			.autor-list__col.autor-list__col--5
+				.autor-list__subtext
+					| Likes
+		.autor-list__items
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-2.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-3.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-4.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-5.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-6.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-7.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-2.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+			.autor-list__item
+				.autor-list__col.autor-list__col--1
+					.autor-list__inner
+						.autor-list__image
+							img(src="../images/Pixel-2.png")
+						.autor-list__content
+							.autor-list__title
+								| Tim Kazakov
+							.autor-list__rank
+								| #24 rank
+				.autor-list__col.autor-list__col--2
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--3
+					.autor-list__number
+						| 53
+				.autor-list__col.autor-list__col--4
+					.autor-list__number
+						| 45 023
+						+svg('ico-money').autor-list__money
+
+				.autor-list__col.autor-list__col--5
+					.autor-list__number
+						| 67
+						+svg('like').autor-list__like
+		.autor-list__bottom
+			+Button({
+				size: 'medium',
+				title: 'Show more'
+			}).button--more
+			.autor-list__nav
+				.autor-list__arrow
+					+svg('arrow-left')
+				ul.autor-list__pages
+					li
+						a.autor-list__links(href="")
+							| 1
+					li
+						a.autor-list__links.is-current(href="")
+							| 2
+					li
+						a.autor-list__links(href="")
+							| 3
+					li
+						a.autor-list__links(href="")
+							| 4
+					li
+						a.autor-list__links(href="")
+							| ...
+					li
+						a.autor-list__links(href="")
+							| 23
+				.autor-list__arrow
+					+svg('arrow-right')
