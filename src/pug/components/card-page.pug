@@ -15,13 +15,26 @@
 		.card-page__left
 			.card-page__image
 				img(src="../images/card-lg.jpg" alt="image")
-			.card-page__caption
+			.card-page__nav.for-mobile
+				.card-page__add.js-add
+					+svg('add')
+				a.card-page__share(href="")
+					+svg('share')
+				.card-page__like
+					.like.js-like(data-like="page-card")
+						| 10
+						span.like__span
+							+svg('like').like__svg.like__svg--inactive
+							+svg('like-active').like__svg.like__svg--active
+			.card-page__caption.for-desktop
 				| 2000 x 2000 px IMAGE (3.35 MB)
 		.card-page__right
 			.card-page__top
 				.card-page__title
 					| Crypto Girl Avatar #5
-				.card-page__nav
+				.card-page__caption.for-mobile
+					| 2000 x 2000 px IMAGE (3.35 MB)
+				.card-page__nav.for-desktop
 					.card-page__add.js-add
 						+svg('add')
 					a.card-page__share(href="")
@@ -101,7 +114,7 @@
 						.card-page__subincon
 							img(src="../images/icon-2.png" alt="image")
 						.card-page__sinfo
-							.card-page__stitle
+							.card-page__stitle.slice-text
 								| NIFTS_45882
 
 							a.card-page__owner(href="")

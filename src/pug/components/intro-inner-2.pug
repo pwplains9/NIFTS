@@ -17,10 +17,26 @@
 		.autor-info.autor-info--inner
 			.autor-info__left
 				.autor-info__content.autor-info__content--inner
+					.card-page__nav.for-mobile
+						.card-page__add.js-add
+							+svg('add')
+						a.card-page__share(href="")
+							+svg('share')
+						.card-page__like
+							.like.js-like(data-like="page-card")
+								| 10
+								span.like__span
+									+svg('like').like__svg.like__svg--inactive
+									+svg('like-active').like__svg.like__svg--active
 					.autor-info__image.autor-info__image--inner
 						img(src="../images/Pixel-7.png")
 					.autor-info__title.autor-info__title--inner
-							| NFT collections
+						| NFT collections
+					.autor-info__info.autor-info__info--inner.for-mobile
+						.autor-info__rank.autor-info__rank--inner
+							| #24 rank
+						.autor-info__rank.autor-info__rank--inner
+							| Sales volume: $478 821
 					+Button({
 						size: 'black',
 						title: 'Add to watchlist'
@@ -35,7 +51,7 @@
 								| Kirill Zubarev
 
 			.autor-info__right.autor-info__right--inner
-				.card-page__nav
+				.card-page__nav.for-desktop
 					.card-page__add.js-add
 						+svg('add')
 					a.card-page__share(href="")
@@ -74,6 +90,8 @@
 							| Total sold
 				.card-page__content
 					.card-page__more
+						.card-page__subtitle.for-mobile
+							| Description
 						.card-page__text
 							| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...
 						.card-page__button

@@ -5,7 +5,7 @@
 				size: 3,
 				title: 'Popular autors',
 			})
-			.container__buttons
+			.container__buttons.for-desktop
 				+Button({
 					size: 'black',
 					title: 'View all'
@@ -51,3 +51,13 @@
 					rank: '#24 rank',
 					title: 'Pixel Punks#25'
 				})
+		.container__footer.for-mobile
+			+Button({
+				size: 'black',
+				title: 'View all'
+			}).right-16.button--try
+			.container__buttons
+				.js-nav.nav-autor.nav-autor--left
+					+svg('arrow-left')
+				.js-nav.js-nav--right.nav-autor.nav-autor--right
+					+svg('arrow-right')

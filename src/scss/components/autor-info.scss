@@ -1,11 +1,21 @@
 .autor-info {
-	display: flex;
-	justify-content: space-between;
+
 	margin-top: 72px;
 	padding-bottom: 54px;
 
 	&__left {
+		@include mobile {
+			.card-page__nav {
+				position: absolute;
+				right: 0;
+				top: 56px;
+				width: 143px;
 
+				.card-page__like {
+					flex-basis: auto;
+				}
+			}
+		}
 	}
 
 	&__title {
@@ -19,6 +29,15 @@
 			line-height: 48px;
 			letter-spacing: 0;
 		}
+
+		@include mobile {
+			font-size: 28px;
+			line-height: 36px;
+
+			&--inner {
+				letter-spacing: -1px;
+			}
+		}
 	}
 
 	&__content {
@@ -31,6 +50,10 @@
 
 		&--collections {
 
+		}
+
+		@include mobile {
+			margin-top: 23px;
 		}
 	}
 
@@ -60,6 +83,23 @@
 			width: 48px;
 			height: 48px;
 		}
+
+		@include mobile {
+			border-radius: 12px;
+			width: 80px;
+			height: 80px;
+
+			&--inner {
+				margin-bottom: 24px;
+			}
+
+			&--collections {
+				margin-right: 12px;
+				border-radius: 100px;
+				width: 48px;
+				height: 48px;
+			}
+		}
 	}
 
 	&__info {
@@ -72,6 +112,10 @@
 
 		&--collections {
 			padding-top: 0;
+
+			@include mobile {
+				margin-bottom: 32px;
+			}
 		}
 	}
 
@@ -87,11 +131,24 @@
 			margin-right: 40px;
 			font-size: 16px;
 			line-height: 24px;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 
 		&--collections {
 			font-size: 14px;
 			line-height: 20px;
+		}
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+
+			&--inner {
+				margin-right: 40px;
+			}
 		}
 	}
 
@@ -105,17 +162,38 @@
 			font-size: 16px;
 			line-height: 24px;
 		}
+
+		@include mobile {
+			font-size: 20px;
+			line-height: 28px;
+
+			&--collections {
+				font-size: 13px;
+				line-height: 20px;
+			}
+		}
 	}
 
 	&__links {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		margin-top: 56px;
-		width: 537px;
+		@include desktop {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-top: 56px;
+			width: 537px;
 
-		&--inner {
+			&--inner {
+				margin-top: 32px;
+			}
+		}
+
+		@include mobile {
 			margin-top: 32px;
+			margin-bottom: 32px;
+
+			&--inner {
+				margin-top: 23px;
+			}
 		}
 	}
 
@@ -133,38 +211,69 @@
 			opacity: 0.6;
 		}
 
-		&--1,
-		&--3,
-		&--5 {
-			width: 258px;
+		@include desktop {
+			&--1,
+			&--3,
+			&--5 {
+				width: 258px;
+			}
+
+			&--2,
+			&--4 {
+				width: 131px;
+			}
 		}
 
-		&--2,
-		&--4 {
-			width: 131px;
+		@include mobile {
+			font-size: 13px;
+			line-height: 24px;
 		}
 	}
 
 	&__right {
-		margin-top: 69px;
-		width: 640px;
+		@include desktop {
+			margin-top: 69px;
+			width: 640px;
 
-		.card-page__nav {
-			justify-content: flex-end;
-			margin-bottom: 41px;
-		}
+			.card-page__nav {
+				justify-content: flex-end;
+				margin-bottom: 41px;
+			}
 
-		.card-page__content {
-			margin-top: 40px;
-		}
+			.card-page__content {
+				margin-top: 40px;
+			}
 
-		&--inner {
-			margin-top: 148px;
+			&--inner {
+				margin-top: 148px;
+			}
 		}
 	}
 
 	&--inner {
 		margin-top: -106px;
+	}
+
+	@include desktop {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@include mobile {
+		margin-top: 81px;
+
+		.card-page__button {
+			margin-bottom: 0;
+		}
+
+		&--inner {
+			margin-top: -63px;
+			padding-bottom: 42px;
+		}
+
+		&__left {
+			position: relative;
+		}
 	}
 }
 
@@ -187,6 +296,10 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		@include mobile {
+			height: 260px;
 		}
 	}
 }

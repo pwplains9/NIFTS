@@ -3,6 +3,12 @@
 	font-size: 72px;
 	line-height: 72px;
 	letter-spacing: -4px;
+
+	@include mobile {
+		font-size: 36px;
+		line-height: 42px;
+		letter-spacing: -1px;
+	}
 }
 
 .title {
@@ -13,6 +19,12 @@
 		font-size: 52px;
 		line-height: 56px;
 		letter-spacing: -4px;
+
+		@include mobile {
+			font-size: 36px;
+			line-height: 42px;
+			letter-spacing: -1px;
+		}
 	}
 
 	&--2 {
@@ -24,6 +36,11 @@
 		font-size: 36px;
 		line-height: 36px;
 		letter-spacing: -1px;
+
+		@include mobile {
+			font-size: 28px;
+			line-height: 36px;
+		}
 	}
 
 	&--4 {
@@ -255,6 +272,66 @@
 	&--more {
 		padding: 12px 32px;
 	}
+
+	@include mobile {
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 20px;
+
+		&--medium {
+			padding: 8px 14.5px;
+		}
+
+		&--lg {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			margin: 0;
+			padding: 11px 20px;
+			width: 148px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&--try {
+			padding: 10px 18px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&--center {
+			padding: 12px 25px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&--arrow {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&--autor {
+			margin-top: 34px;
+			margin-left: 2px;
+			padding: 12px 39px;
+			font-size: 14px;
+			line-height: 24px;
+		}
+
+		&--collections {
+			margin: 24px 0 8px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&--more {
+			margin-bottom: 32px;
+			padding: 12px 38px;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
 }
 
 .card {
@@ -273,7 +350,7 @@
 		width: 376px;
 		height: 376px;
 
-		.like  {
+		.like {
 			position: absolute;
 			right: 16px;
 			bottom: 16px;
@@ -317,6 +394,17 @@
 					opacity: 1;
 				}
 			}
+
+			@include mobile {
+				padding: 1px 5px;
+				right: 8px;
+				bottom: 8px;
+			}
+		}
+
+		@include mobile {
+			width: 280px;
+			height: 280px;
 		}
 	}
 
@@ -349,6 +437,12 @@
 		font-size: 13px;
 		line-height: 16px;
 		color: rgba(224, 224, 255, 0.6);
+
+		@include mobile {
+			margin: 16px 0 5px;
+			font-size: 12px;
+			line-height: 16px;
+		}
 	}
 
 	&__title {
@@ -358,6 +452,11 @@
 		font-size: 20px;
 		line-height: 28px;
 		letter-spacing: -0.4px;
+
+		@include mobile {
+			font-size: 16px;
+			line-height: 24px;
+		}
 	}
 
 	&__bottom {
@@ -376,6 +475,12 @@
 			font-size: 24px;
 			line-height: 32px;
 			color: rgba(224, 224, 255, 0.2);
+		}
+
+		@include mobile {
+			padding: 6px 16px;
+			width: 280px;
+			height: 72px;
 		}
 	}
 
@@ -405,10 +510,27 @@
 			font-size: 24px;
 			line-height: 32px;
 			color: $color-white;
+
+			@include mobile {
+				font-size: 24px;
+				line-height: 32px;
+			}
 		}
 
 		&--right {
 			text-align: right;
+
+			@include mobile {
+				span {
+					font-size: 20px;
+					line-height: 32px;
+				}
+			}
+		}
+
+		@include mobile {
+			font-size: 12px;
+			line-height: 20px;
 		}
 	}
 
@@ -419,6 +541,11 @@
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 20px;
+
+		@include mobile {
+			margin-top: 15px;
+			line-height: 16px;
+		}
 	}
 
 	&__icon {
@@ -442,6 +569,95 @@
 			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.02), 8px 16px 24px rgba(9, 13, 20, 0.4);
 		}
 	}
+
+	@include mobile {
+		margin: 0 auto;
+		padding: 16px;
+		width: 312px;
+
+		&--small {
+			margin: 0 6px 12px;
+			border-radius: 16px;
+			padding: 8px;
+			width: 158px;
+
+			.card__info {
+				margin: -9px;
+				width: 158px;
+				height: 158px;
+
+				.card__image {
+					img {
+						border-radius: 12px 12px 0 0;
+					}
+				}
+			}
+
+			.card__caption {
+				left: 8px;
+				top: 8px;
+				font-size: 10px;
+				line-height: 14px;
+			}
+
+			.like {
+				font-size: 10px;
+				line-height: 16px;
+			}
+
+			.card__edition {
+				font-size: 10px;
+				line-height: 16px;
+			}
+
+			.card__title {
+				margin-bottom: 12px;
+				font-size: 13px;
+				line-height: 20px;
+			}
+
+			.card__bottom.is-sold {
+				width: 142px;
+				height: 48px;
+				font-size: 12px;
+				line-height: 20px;
+				text-transform: none;
+			}
+
+			.card__icon {
+				margin-right: 4px;
+			}
+
+			.card__product {
+				margin-top: 13px;
+				font-size: 10px;
+				line-height: 16px;
+			}
+
+			.card__bottom {
+				width: 142px;
+				height: 48px;
+				padding: 8px;
+			}
+
+			.card__mount {
+				font-size: 10px;
+				line-height: 16px;
+
+				span {
+					font-size: 16px;
+					line-height: 20px;
+				}
+
+				&--right {
+					span {
+						font-size: 13px;
+						line-height: 19px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .card-pixel {
@@ -457,6 +673,11 @@
 		margin-bottom: 24px;
 		width: 120px;
 		height: 120px;
+
+		@include mobile {
+			width: 120px;
+			height: 120px;
+		}
 	}
 
 	&__rank {
@@ -464,6 +685,10 @@
 		font-size: 13px;
 		line-height: 16px;
 		color: rgba(224, 224, 255, 0.6);
+
+		@include mobile {
+			font-size: 12px;
+		}
 	}
 
 	&__title {
@@ -471,6 +696,14 @@
 		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: -0.4px;
+
+		@include mobile {
+			font-size: 16px;
+		}
+	}
+
+	@include mobile {
+		padding: 16px;
 	}
 }
 
@@ -483,11 +716,24 @@
 	&__left {
 		display: flex;
 		align-items: flex-end;
+
+		@include mobile {
+			flex-flow: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__right {
 		display: flex;
 		transition: all 0.5s linear;
+	}
+
+	&__select {
+		display: flex;
+
+		@include mobile {
+			margin-top: 16px;
+		}
 	}
 
 	&__top {
@@ -503,6 +749,10 @@
 		align-items: center;
 		justify-content: center;
 		margin-top: 23px;
+
+		@include mobile {
+			margin-top: 29px;
+		}
 	}
 
 	&--header {
@@ -514,10 +764,20 @@
 	&--marketplace {
 		margin-top: 72px;
 		margin-bottom: 88px;
+
+		@include mobile {
+			margin-top: 46px;
+			margin-bottom: 66px;
+		}
 	}
 
 	&--collections {
 		margin-top: 67px;
+
+		@include mobile {
+			margin-top: 55px;
+			margin-bottom: 61px;
+		}
 	}
 
 	&--popular {
@@ -539,13 +799,32 @@
 	&--footer {
 
 
-		border-radius: 24px;
-		background: rgba(41, 44, 48, 0.48);
-		backdrop-filter: blur(72px);
+		@include desktop {
+			border-radius: 24px;
+			background: rgba(41, 44, 48, 0.48);
+			backdrop-filter: blur(72px);
+		}
 	}
 
 	&--catalog {
 		z-index: 2;
+	}
+
+	@include mobile {
+		padding: 0 vc(16);
+		width: 100%;
+
+		&--popular {
+
+		}
+
+		&__footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 39px;
+			padding: 0 8px;
+		}
 	}
 }
 
@@ -571,6 +850,10 @@
 
 	&--right {
 		margin-left: 16px;
+
+		@include mobile {
+			margin-left: 24.62px;
+		}
 	}
 
 	@include desktop {
@@ -594,6 +877,24 @@
 	&--inner {
 		padding-top: 6px;
 	}
+
+	@include mobile {
+		padding-top: 56px;
+		padding-bottom: 64px;
+
+		&--1 {
+			padding-bottom: 340px;
+		}
+
+		&--3 {
+			padding-bottom: 0;
+		}
+
+		&--inner {
+			padding-top: 1px;
+			padding-bottom: 4px;
+		}
+	}
 }
 
 .autor {
@@ -602,6 +903,10 @@
 
 	.swiper-wrapper {
 		padding: 72px 0;
+
+		@include mobile {
+			padding-bottom: 0;
+		}
 	}
 
 	.swiper-slide {
@@ -609,6 +914,10 @@
 			.card-pixel {
 				opacity: 1;
 			}
+		}
+
+		@include mobile {
+			width: 184px;
 		}
 	}
 
@@ -653,7 +962,7 @@
 		visibility: hidden;
 		transition: all 0.3s $easing-smooth;
 
-		.container__top--catalog.is-active  &{
+		.container__top--catalog.is-active & {
 			opacity: 1;
 			visibility: visible;
 		}
@@ -684,6 +993,10 @@
 				line-height: 20px;
 				color: rgba(224, 224, 255, 0.6);
 			}
+		}
+
+		@include mobile {
+			width: 292px;
 		}
 	}
 
@@ -734,6 +1047,28 @@
 		@include desktop {
 			&:hover {
 				color: $color-white;
+			}
+		}
+
+		@include mobile {
+			margin-left: 12px;
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	@include mobile {
+		margin-left: 0;
+	}
+}
+
+@include mobile {
+	.section--marketplace {
+		+ {
+			.container {
+				margin-top: 56px;
 			}
 		}
 	}

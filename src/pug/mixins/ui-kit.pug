@@ -47,7 +47,7 @@ mixin Card(data)
 			if data.sold
 				| SOLD OUT
 			else
-				.card__price
+				.card__price.for-desktop
 					!=data.price
 				.card__content
 					.card__mount

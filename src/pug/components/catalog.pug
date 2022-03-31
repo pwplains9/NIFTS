@@ -5,26 +5,29 @@
 				size: 1,
 				title: 'Catalog'
 			})
-			.search
-				.search__button.js-open
-					+svg('search')
-				form.search__form
-					.search__input
-						input(placeholder="Authors names")
-						button.search__go(type="submit")
-							| Search
-					.search__cencel.js-close
-						| Cancel
+			.container__select
+				.search
+					.search__button.js-open
+						+svg('search')
+					form.search__form
+						.search__input
+							input(placeholder="Authors names")
+							button.search__go(type="submit")
+								| Search
+						.search__cencel.js-close
+							+svg('close')
+							.for-desktop
+								| Cancel
 
-			select.js-select.select--sorting
-				option(value="hide") Sorting
-				option By popularity
-				option Lowest Price
-				option Highest Price
-				option Most Likes
-				option Most Views
-				option Auction Ending Soon
-		.container__right
+				select.js-select.select--sorting
+					option(value="hide") Sorting
+					option By popularity
+					option Lowest Price
+					option Highest Price
+					option Most Likes
+					option Most Views
+					option Auction Ending Soon
+		.container__right.for-desktop
 			select.js-select.select--category
 				option(value="hide") Category
 				option All

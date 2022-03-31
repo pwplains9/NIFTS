@@ -13,7 +13,7 @@
 	$size: length($list);
 
 	@while $index > $size {
-		$index: max(1, $index - 2);
+		//$index: max(1, $index - 2);
 	}
 
 	@return nth($list, $index);

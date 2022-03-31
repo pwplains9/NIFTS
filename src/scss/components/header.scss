@@ -6,6 +6,10 @@
 		margin-right: 47px;
 		width: 136px;
 		height: 24px;
+
+		@include mobile {
+			margin-right: 0;
+		}
 	}
 
 	&__nav {
@@ -210,6 +214,10 @@
 			&::after {
 				bottom: 0;
 			}
+
+			@include mobile {
+				width: 13.5px;
+			}
 		}
 
 		&.is-active {
@@ -240,6 +248,12 @@
 				background: linear-gradient(0deg, rgba(224, 224, 255, 0.06), rgba(224, 224, 255, 0.06)), linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #181B1F 99.14%);
 				box-shadow: 0px 0px 1px rgba(255, 0, 170, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(255, 0, 170, 0.12), inset 0px 0px 8px rgba(255, 0, 170, 0.4);
 			}
+		}
+
+		@include mobile {
+			margin-left: 16px;
+			width: 36px;
+			height: 36px;
 		}
 	}
 
@@ -278,5 +292,9 @@
 			opacity: 1;
 			visibility: visible;
 		}
+	}
+
+	@include mobile {
+		padding: 15px 0;
 	}
 }

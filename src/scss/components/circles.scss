@@ -55,5 +55,31 @@
 
 .marketplace {
 	display: flex;
-	margin: 32px -12px 0;
+
+	@include desktop {
+		margin: 32px -12px 0;
+
+		overflow: visible;
+
+		.swiper-wrapper {
+			overflow: visible;
+		}
+
+		.swiper-slide {
+			width: auto;
+		}
+	}
+
+	@include mobile {
+		margin: 32px -16px 0;
+
+		.swiper-slide {
+			margin: 0 8px;
+			width: 312px;
+		}
+
+		.swiper-wrapper {
+			left: 15px;
+		}
+	}
 }

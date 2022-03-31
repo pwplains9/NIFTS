@@ -35,6 +35,10 @@ $select-background: #c0392b;
 			height: 20px;
 			background: url("../images/sprites/svg/sort.svg") center center no-repeat;
 			background-size: contain;
+
+			@include mobile {
+				margin-right: 0;
+			}
 		}
 
 		&::after {
@@ -52,6 +56,11 @@ $select-background: #c0392b;
 			.select-options {
 				width: 280px;
 			}
+		}
+
+		@include mobile {
+			padding: 10px;
+			font-size: 0;
 		}
 	}
 }

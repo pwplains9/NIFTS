@@ -6,13 +6,19 @@ const init = () => {
 		let $nextButton = $('.nav-autor--right');
 
 		let mySwiper = new Swiper('.autor', {
-			slidesPerView: 6,
-			spaceBetween: 24,
+			slidesPerView: 'auto',
+			spaceBetween: 16,
 			loop: true,
 			observer: true,
 			observeParents: true,
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
+			breakpoints: {
+				1023: {
+					slidesPerView: 6,
+					spaceBetween: 24,
+				}
+			}
 		});
 
 		$prevButton.on('click', () => {

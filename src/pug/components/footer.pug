@@ -2,7 +2,7 @@ footer.footer
 	.container.container--footer
 		.writeUs
 			.writeUs__title
-				| Do you have a project#[br] or an idea? Write to us!
+				| Do you have a project#[br.for-desktop] or an idea? Write to us!
 			.writeUs__buttons
 				a.writeUs__button(href="")
 					+svg('tg')
@@ -23,11 +23,11 @@ footer.footer
 				span
 					| English
 				| (United States)
-			.footer__copyright
+			.footer__copyright.for-desktop
 				| &copy;&nbsp;2022&nbsp;NIFTS
 		.footer__right
 			.footer__nav
-				.footer__item
+				.footer__item.footer__item--1
 					.footer__title
 						| DOCUMENTS
 					ul.footer__links
@@ -43,7 +43,7 @@ footer.footer
 						li
 							a.footer__link(href="")
 								| Terms of use
-				.footer__item
+				.footer__item.footer__item--2
 					.footer__title
 						| Functions
 					ul.footer__links
@@ -59,7 +59,7 @@ footer.footer
 						li
 							a.footer__link(href="")
 								| Collab
-				.footer__item
+				.footer__item.footer__item--3
 					.footer__title
 						| company
 					ul.footer__links
@@ -75,7 +75,7 @@ footer.footer
 						li
 							a.footer__link(href="")
 								| FAQ
-				.footer__item
+				.footer__item.footer__item--4
 					.footer__title
 						| contact us
 					ul.footer__links
@@ -104,3 +104,5 @@ footer.footer
 					| made by
 					a(href="roobinium.io" target="_blank")
 						| roobinium.io
+		.footer__copyright.for-mobile
+			| &copy;&nbsp;2022&nbsp;NIFTS

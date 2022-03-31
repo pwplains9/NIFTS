@@ -5,17 +5,18 @@
 				size: 1,
 				title: 'Authors'
 			})
-			.search
-				.search__button.js-open
-					+svg('search')
-				form.search__form
-					.search__input
-						input(placeholder="Authors names")
-						button.search__go(type="submit")
-							| Search
-					.search__cencel.js-close
-						| Cancel
-		.container__right
+			.container__select
+				.search
+					.search__button.js-open
+						+svg('search')
+					form.search__form
+						.search__input
+							input(placeholder="Authors names")
+							button.search__go(type="submit")
+								| Search
+						.search__cencel.js-close
+							| Cancel
+		.container__right.for-desktop
 			select.js-select.select--category
 				option(value="hide") Category
 				option All
@@ -45,7 +46,7 @@
 				option Most Views
 				option Auction Ending Soon
 	.autor-list
-		.autor-list__top
+		.autor-list__top.for-desktop
 			.autor-list__col.autor-list__col--text.autor-list__col--1
 				.autor-list__subtext
 					| Name
@@ -73,17 +74,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -98,17 +107,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -123,17 +140,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -148,17 +173,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -173,17 +206,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -198,17 +239,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -223,17 +272,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like
@@ -248,17 +305,25 @@
 							.autor-list__rank
 								| #24 rank
 				.autor-list__col.autor-list__col--2
+					.autor-list__subtext.for-mobile
+						| Works
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--3
+					.autor-list__subtext.for-mobile
+						| Editions sold
 					.autor-list__number
 						| 53
 				.autor-list__col.autor-list__col--4
+					.autor-list__subtext.for-mobile
+						| Sales volume
 					.autor-list__number
 						| 45 023
 						+svg('ico-money').autor-list__money
 
 				.autor-list__col.autor-list__col--5
+					.autor-list__subtext.for-mobile
+						| Likes
 					.autor-list__number
 						| 67
 						+svg('like').autor-list__like

@@ -12,7 +12,7 @@ let errorHandler;
 let argv = yargs.default({
 	cache: true,
 	debug: true,
-	fix: false,
+	fix: true,
 	minifyHtml: null,
 	minifyCss: null,
 	minifyJs: null,

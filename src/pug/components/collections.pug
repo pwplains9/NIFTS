@@ -5,7 +5,7 @@ section.section.section--marketplace
 				size: 3,
 				title: 'Reccomended Collections',
 			})
-			.container__buttons
+			.container__buttons.for-desktop
 				+Button({
 					size: 'black',
 					title: 'View all'
@@ -84,3 +84,13 @@ section.section.section--marketplace
 							.collections__text
 								| Explore the FichyFam collection that made
 								| by the talented Nicolas Morel & Amalie Comes
+		.container__footer.for-mobile
+			+Button({
+				size: 'black',
+				title: 'View all'
+			}).right-16.button--try
+			.container__buttons.for-mobile
+				.js-nav.nav-collections.nav-collections--left
+					+svg('arrow-left')
+				.js-nav.js-nav--right.nav-collections.nav-collections--right
+					+svg('arrow-right')

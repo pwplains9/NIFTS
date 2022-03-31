@@ -3,7 +3,9 @@
 	margin-bottom: 72px;
 
 	&__left {
-		margin-right: 40px;
+		@include desktop {
+			margin-right: 40px;
+		}
 	}
 
 	&__image {
@@ -19,6 +21,12 @@
 			transform: translateZ(0);
 			object-fit: cover;
 		}
+
+		@include mobile {
+			border-radius: 16px;
+			width: 328px;
+			height: 328px;
+		}
 	}
 
 	&__caption {
@@ -26,6 +34,11 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: rgba(224, 224, 255, 0.6);
+
+		@include mobile {
+			font-size: 12px;
+			line-height: 16px;
+		}
 	}
 
 	&__right {
@@ -33,9 +46,11 @@
 	}
 
 	&__top {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 40px;
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__title {
@@ -43,21 +58,41 @@
 		font-size: 36px;
 		line-height: 36px;
 		letter-spacing: -1px;
+
+		@include mobile {
+			margin: 8px 0;
+			font-size: 28px;
+			line-height: 36px;
+		}
 	}
 
 	&__nav {
 		display: flex;
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 
 	&__add {
 		width: 32px;
 		height: 32px;
+
+		@include mobile {
+			width: 24px;
+			height: 24px;
+		}
 	}
 
 	&__share {
 		margin: 0 24px;
 		width: 32px;
 		height: 32px;
+
+		@include mobile {
+			width: 24px;
+			height: 24px;
+		}
 	}
 
 	&__like {
@@ -80,6 +115,11 @@
 				width: 29px;
 				height: 36px;
 				color: #E0E0FF66;
+
+				@include mobile {
+					width: 24px;
+					height: 24px;
+				}
 			}
 
 			&__svg {
@@ -103,17 +143,41 @@
 					opacity: 1;
 				}
 			}
+
+			@include mobile {
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+
+		@include mobile {
+			display: flex;
+			justify-content: flex-end;
+			flex-basis: 70%;
 		}
 	}
 
 	&__info {
 		display: flex;
 		margin-bottom: 40px;
+
+		@include mobile {
+			margin-top: 32px;
+			margin-bottom: 36px;
+		}
 	}
 
 	&__item {
 		display: flex;
 		margin-right: 80px;
+
+		@include mobile {
+			margin-right: 24px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 
 	&__subimage {
@@ -121,6 +185,11 @@
 		overflow: hidden;
 		width: 48px;
 		height: 48px;
+
+		@include mobile {
+			width: 40px;
+			height: 40px;
+		}
 	}
 
 	&__infos {
@@ -135,12 +204,22 @@
 
 		mix-blend-mode: normal;
 		opacity: 0.6;
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+		}
 	}
 
 	&__subtext {
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 28px;
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+		}
 	}
 
 	&__content {
@@ -156,6 +235,11 @@
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 24px;
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 22px;
+		}
 	}
 
 	&__button {
@@ -170,6 +254,11 @@
 		text-fill-color: transparent;
 
 		opacity: 0.8;
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 22px;
+		}
 	}
 
 	&__lots {
@@ -180,6 +269,16 @@
 		background: rgba(41, 44, 48, 0.48);
 		backdrop-filter: blur(72px);
 		border-radius: 16px;
+
+		@include mobile {
+			flex-wrap: wrap;
+			width: 100%;
+			height: auto;
+
+			&--1 {
+				margin-bottom: 34px;
+			}
+		}
 	}
 
 	&__numbers {
@@ -195,6 +294,10 @@
 			height: 56px;
 			background: linear-gradient(180deg, rgba(224, 224, 255, 0.02) 0%, rgba(224, 224, 255, 0.2) 49.22%, rgba(224, 224, 255, 0.02) 100%);
 			border-radius: 10px;
+
+			@include mobile {
+				right: 0;
+			}
 		}
 
 		&:last-child {
@@ -224,6 +327,29 @@
 		&--5 {
 			width: 95px;
 		}
+
+		@include mobile {
+			margin-right: 0;
+			margin-bottom: 16px;
+			width: 50%;
+
+			&--2,
+			&--4,
+			&--5 {
+				&::after {
+					display: none;
+				}
+			}
+
+			&--2,
+			&--4 {
+				padding-left: 15.5px;
+			}
+
+			&--5 {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__number {
@@ -232,6 +358,11 @@
 		font-weight: 600;
 		font-size: 20px;
 		line-height: 28px;
+
+		@include mobile {
+			font-size: 16px;
+			line-height: 24px;
+		}
 	}
 
 	&__subinfo {
@@ -260,12 +391,29 @@
 	&__edition {
 		display: flex;
 		align-items: center;
-		margin-right: 48px;
+
+
+		@include desktop {
+			margin-right: 48px;
+		}
+
+		@include mobile {
+			margin-right: 16px;
+
+			&:last-child {
+				align-items: flex-start;
+				margin-right: 0;
+			}
+		}
 	}
 
 	&__arrows {
 		margin-right: 22px;
 		width: 36px;
+
+		@include mobile {
+			margin-right: 16px;
+		}
 	}
 
 	&__arrow {
@@ -295,6 +443,8 @@
 				transform: rotate(-90deg);
 			}
 		}
+
+
 	}
 
 	&__stitle {
@@ -304,11 +454,23 @@
 		line-height: 26px;
 
 		span {
-			margin-left: 8px;
 			font-weight: 500;
 			color: #E0E0FF;
 			mix-blend-mode: normal;
 			opacity: 0.6;
+
+			@include desktop {
+				margin-left: 8px;
+			}
+
+			@include mobile {
+				display: block;
+			}
+		}
+
+		@include mobile {
+			font-size: 14px;
+			line-height: 20px;
 		}
 	}
 
@@ -326,12 +488,22 @@
 
 		opacity: 0.9;
 
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+		}
 	}
 
 	&__subincon {
 		margin-right: 12px;
 		width: 50px;
 		height: 50px;
+
+		@include mobile {
+			margin-right: 8px;
+			width: 40px;
+			height: 40px;
+		}
 	}
 
 	&__owner {
@@ -361,6 +533,10 @@
 			height: 1px;
 			background: linear-gradient(180deg, rgba(224, 224, 255, 0.02) 0%, rgba(224, 224, 255, 0.2) 49.22%, rgba(224, 224, 255, 0.02) 100%);
 		}
+
+		@include mobile {
+			display: block;
+		}
 	}
 
 	&__contain {
@@ -376,6 +552,12 @@
 		/* Note: backdrop-filter has minimal browser support */
 
 		border-radius: 16px;
+
+		@include mobile {
+			width: 296px;
+			height: 80px;
+			background: rgba(24, 27, 31, 0.4);
+		}
 	}
 
 	&__lleft {
@@ -387,6 +569,11 @@
 		font-weight: 600;
 		font-size: 32px;
 		line-height: 40px;
+
+		@include mobile {
+			font-size: 24px;
+			line-height: 32px;
+		}
 	}
 
 	&__subinfo {
@@ -394,6 +581,11 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: rgba(224, 224, 255, 0.6);
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+		}
 	}
 
 	&__rright {
@@ -405,10 +597,19 @@
 		font-weight: 600;
 		font-size: 24px;
 		line-height: 32px;
+
+		@include mobile {
+			font-size: 20px;
+			line-height: 24px;
+		}
 	}
 
 	&__ccontain {
 		margin-top: 8px;
+
+		@include mobile {
+			margin-top: 16px;
+		}
 	}
 
 	&__sbutton {
@@ -424,6 +625,10 @@
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 24px;
+
+		@include mobile {
+			width: 296px;
+		}
 	}
 
 	&__ssubinfo {
@@ -432,5 +637,13 @@
 		line-height: 20px;
 		color: rgba(255, 255, 255, 0.6);
 		text-align: center;
+
+		@include mobile {
+			font-size: 13px;
+		}
+	}
+
+	@include mobile {
+		flex-flow: column;
 	}
 }

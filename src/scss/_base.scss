@@ -57,7 +57,12 @@ body {
 
 main {
 	overflow: hidden;
+
 	flex: 1;
+
+	@include mobile {
+		width: 360px;
+	}
 }
 
 p {
@@ -232,6 +237,11 @@ iframe {
 		line-height: 20px;
 		color: rgba(224, 224, 255, 0.8);
 	}
+
+	@include mobile {
+		flex-wrap: wrap;
+		margin: 23px 0px 20px;
+	}
 }
 
 
@@ -239,12 +249,20 @@ iframe {
 	display: block;
 	position: relative;
 	height: 310px;
+
+	@include mobile {
+		height: 440px;
+	}
 }
 
 .scroll-content {
 	display: flow-root;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
+
+	@include mobile {
+		margin-right: 16px;
+	}
 }
 
 .scrollbar-track {

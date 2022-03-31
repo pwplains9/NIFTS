@@ -6,9 +6,16 @@
 		flex-wrap: wrap;
 		flex-shrink: 0;
 		justify-content: space-between;
-		margin-top: -69px;
-		margin-right: 136px;
-		width: 648px;
+
+		@include desktop {
+			margin-top: -69px;
+			margin-right: 136px;
+			width: 648px;
+		}
+
+		@include mobile {
+			margin-top: 48px;
+		}
 	}
 
 	&__right {
@@ -26,29 +33,54 @@
 
 		&--1 {
 			background: linear-gradient(122.29deg, rgba(156, 66, 245, 0) 0%, rgba(156, 66, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			@include mobile {
+				background: linear-gradient(122.29deg, rgba(255, 0, 170, 0) 0%, rgba(255, 0, 170, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			}
 		}
 
 		&--2 {
 			background: linear-gradient(122.29deg, rgba(156, 66, 245, 0) 0%, rgba(156, 66, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			@include mobile {
+
+				background: linear-gradient(122.29deg, rgba(156, 66, 245, 0) 0%, rgba(156, 66, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			}
 		}
 
 		&--3 {
 			background: linear-gradient(122.29deg, rgba(93, 45, 225, 0) 0%, rgba(93, 45, 225, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			@include mobile {
+				background: linear-gradient(122.29deg, rgba(93, 45, 225, 0) 0%, rgba(93, 45, 225, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			}
 		}
 
 		&--4 {
 			background: linear-gradient(122.29deg, rgba(69, 121, 245, 0) 0%, rgba(69, 121, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			@include mobile {
+				background: linear-gradient(122.29deg, rgba(69, 121, 245, 0) 0%, rgba(69, 121, 245, 0.2) 100%), linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
+			}
 		}
 
 		&--1,
 		&--2 {
 			margin-bottom: 24px;
 		}
+
+		@include mobile {
+			margin-bottom: 16px;
+			padding: 16px;
+			width: 100%;
+			height: 200px;
+		}
 	}
 
 	&__icon {
 		width: 96px;
 		height: 96px;
+
+		@include mobile {
+			width: 72px;
+			height: 72px;
+		}
 	}
 
 	&__subtitle {
@@ -57,6 +89,12 @@
 		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: -0.4px;
+
+		@include mobile {
+			margin: 16px 0 11px;
+			font-size: 16px;
+			line-height: 24px;
+		}
 	}
 
 	&__text {
@@ -64,6 +102,10 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: $color-hover;
+
+		@include mobile {
+
+		}
 	}
 
 	&__right {
@@ -76,6 +118,12 @@
 		font-size: 36px;
 		line-height: 36px;
 		letter-spacing: -1px;
+
+		@include mobile {
+			margin-top: 56px;
+			font-size: 28px;
+			line-height: 36px;
+		}
 	}
 
 	&__subtext {
@@ -87,5 +135,20 @@
 		color: $color-text;
 		mix-blend-mode: normal;
 		opacity: 0.6;
+
+		@include mobile {
+			width: 100%;
+		}
+
+		@include mobile {
+			margin-bottom: 32px;
+			font-size: 14px;
+			line-height: 28px;
+		}
+	}
+
+	@include mobile {
+		flex-flow: column-reverse;
+		margin-bottom: 46px;
 	}
 }

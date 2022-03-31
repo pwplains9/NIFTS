@@ -23,16 +23,20 @@
 		&--3 {
 			width: 15.8%;
 
-			.autor-list__subtext {
-				margin-left: -72px;
+			@include desktop {
+				.autor-list__subtext {
+					margin-left: -72px;
+				}
 			}
 		}
 
 		&--4 {
 			width: 14%;
 
-			.autor-list__subtext {
-				margin-left: -2px;
+			@include desktop {
+				.autor-list__subtext {
+					margin-left: -2px;
+				}
 			}
 		}
 
@@ -51,11 +55,29 @@
 		&--text {
 
 		}
+
+		@include mobile {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-basis: 100%;
+			margin-bottom: 8px;
+
+			&--1 {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__subtext {
 		.autor-list__col--1 & {
 			padding-left: 104px;
+		}
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+			color: rgba(224, 224, 255, 0.6);
 		}
 	}
 
@@ -69,11 +91,28 @@
 		margin: 20px 0;
 		padding-bottom: 20px;
 		border-bottom: 1px solid rgba(224, 224, 255, 0.2);
+
+		@include mobile {
+			flex-wrap: wrap;
+			padding-bottom: 11px;
+
+			&:first-child {
+				padding-top: 19px;
+				border-top: 1px solid rgba(224, 224, 255, 0.2);
+			}
+		}
 	}
 
 	&__inner {
 		display: flex;
-		align-items: center;
+
+		@include desktop {
+			align-items: center;
+		}
+
+		@include mobile {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__image {
@@ -82,6 +121,12 @@
 		border-radius: 12px;
 		width: 80px;
 		height: 80px;
+
+		@include mobile {
+			margin-right: 16px;
+			width: 64px;
+			height: 64px;
+		}
 	}
 
 	&__content {
@@ -92,7 +137,16 @@
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 24px;
-		letter-spacing: -0.4px;
+
+		@include desktop {
+			letter-spacing: -0.4px;
+		}
+
+		@include mobile {
+			margin-bottom: 4px;
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 
 	&__rank {
@@ -103,6 +157,10 @@
 
 		mix-blend-mode: normal;
 		opacity: 0.6;
+
+		@include mobile {
+			font-size: 13px;
+		}
 	}
 
 	&__number {
@@ -115,12 +173,23 @@
 		.autor-list__col--2 & {
 			padding-left: 27px;
 		}
+
+		@include mobile {
+			font-size: 13px;
+			line-height: 20px;
+		}
 	}
 
 	&__money {
 		margin-left: 12px;
 		width: 24px;
 		height: 24px;
+
+		@include mobile {
+			margin-left: 8px;
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&__like {
@@ -129,6 +198,11 @@
 		height: 24px;
 		color: #E0E0FF;
 		opacity: 0.6;
+
+		@include mobile {
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&__bottom {
@@ -136,11 +210,20 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 32px;
+
+		@include mobile {
+			flex-flow: column;
+		}
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
+
+		@include mobile {
+			width: 100%;
+			justify-content: space-between;
+		}
 	}
 
 	&__arrow {
@@ -161,6 +244,10 @@
 
 	&__pages {
 		display: flex;
+
+		li {
+			margin: 0 2px;
+		}
 	}
 
 	&__links {

@@ -12,6 +12,7 @@ import sliderAutor from "./components/sliderAutor";
 import sliderCollections from "./components/sliderCollections";
 import Scrollbar from 'smooth-scrollbar';
 import './vendor/select';
+import sliderMarketPlace from "./components/sliderMarketPlace";
 
 ieFix();
 vhFix();
@@ -78,6 +79,7 @@ function init() {
 
 	sliderAutor.init();
 	sliderCollections.init();
+	sliderMarketPlace.init();
 
 
 	if ($('.tabs').length) {
@@ -222,6 +224,21 @@ function init() {
 			vars.$document.find('.range__dropdown').removeClass('is-open');
 		}
 	});
+
+	function sliceText(text, size) {
+		let elem = $(text).text().slice(0, size);
+
+		text.text(elem + '...');
+	}
+
+	if (vars.isMobile()) {
+		sliceText($('.slice-text'), 9);
+
+		$('.address').each((index, item) => {
+			sliceText($(item), 37);
+		})
+
+	}
 }
 
 init();
