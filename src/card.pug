@@ -12,7 +12,207 @@ block content
 		include pug/components/card-page
 		include pug/components/info
 		include pug/components/autor-info
-		include pug/components/popular
-		include pug/components/collections
+		.background-gray
+			.container.container--pop
+
+				.container__top
+					+Title({
+						size: 3,
+						title: 'Popular works',
+					})
+					.container__buttons.for-desktop
+						.js-nav.nav-popuplar--left
+							+svg('arrow-left')
+						.js-nav.js-nav--right.nav-popuplar--right
+							+svg('arrow-right')
+				.popuplar.popular--slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+Card({
+								sold: true,
+								size: 'small',
+								link: '#',
+								caption: 'Total sale $235',
+								image: '../images/card.jpg',
+								edition: 'Editions 342',
+								title: 'Crypto Girl Avatar #5',
+								price: 'PRICE',
+								money: '$139',
+								start: 'Starting Bid',
+								hour: '2 hours',
+								end: 'Ends in',
+								product: 'AI.MALEVICH Х NIFTS',
+							})
+						.swiper-slide
+							+Card({
+								size: 'small',
+								link: '#',
+								caption: 'Total sale $235',
+								image: '../images/card.jpg',
+								edition: 'Editions 342',
+								title: 'Crypto Girl Avatar #5',
+								price: 'PRICE',
+								money: '$139',
+								start: 'Starting Bid',
+								hour: '2 hours',
+								end: 'Ends in',
+								product: 'AI.MALEVICH Х NIFTS',
+							})
+						.swiper-slide
+							+Card({
+								size: 'small',
+								link: '#',
+								caption: 'Total sale $235',
+								image: '../images/card.jpg',
+								edition: 'Editions 342',
+								title: 'Crypto Girl Avatar #5',
+								price: 'PRICE',
+								money: '$139',
+								start: 'Starting Bid',
+								hour: '2 hours',
+								end: 'Ends in',
+								product: 'AI.MALEVICH Х NIFTS',
+							})
+						.swiper-slide
+							+Card({
+								size: 'small',
+								link: '#',
+								caption: 'Total sale $235',
+								image: '../images/card.jpg',
+								edition: 'Editions 342',
+								title: 'Crypto Girl Avatar #5',
+								price: 'PRICE',
+								money: '$139',
+								start: 'Starting Bid',
+								hour: '2 hours',
+								end: 'Ends in',
+								product: 'AI.MALEVICH Х NIFTS',
+							})
+						.swiper-slide
+							+Card({
+								size: 'small',
+								link: '#',
+								caption: 'Total sale $235',
+								image: '../images/card.jpg',
+								edition: 'Editions 342',
+								title: 'Crypto Girl Avatar #5',
+								price: 'PRICE',
+								money: '$139',
+								start: 'Starting Bid',
+								hour: '2 hours',
+								end: 'Ends in',
+								product: 'AI.MALEVICH Х NIFTS',
+							})
+				.container__footer.for-mobile
+					+Button({
+						size: 'black',
+						title: 'View all'
+					}).right-16.button--try
+					.container__buttons.for-mobile
+						.js-nav.nav-collections.nav-popuplar--left
+							+svg('arrow-left')
+						.js-nav.js-nav--right.nav-collections.nav-popuplar--right
+							+svg('arrow-right')
+		section.section.section--marketplace
+			.container.container--collections
+				.circle.circle--4
+				.circle.circle--17
+				.container__top
+					+Title({
+						size: 3,
+						title: 'Collections',
+					})
+					.container__buttons.for-desktop
+						+Button({
+							size: 'black',
+							title: 'View all'
+						}).right-16.button--try
+						.js-nav.nav-collections.nav-collections--left
+							+svg('arrow-left')
+						.js-nav.js-nav--right.nav-collections.nav-collections--right
+							+svg('arrow-right')
+				.collections.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.collections__item
+								a.collections__image(href="")
+									img(src="../images/card.jpg" alt="image")
+
+								.collections__content
+									.collections__icon
+										img(src="../images/Pixel.png" alt="person")
+									.collections__person
+										| by
+										a(href="#")
+											| KittyCryptoGang
+									a.collections__title(href="")
+										| FishuFam
+									.collections__text
+										| Explore the FichyFam collection that made
+										| by the talented Nicolas Morel & Amalie Comes
+						.swiper-slide
+							.collections__item
+								a.collections__image(href="")
+									img(src="../images/card-2.jpg" alt="image")
+
+								.collections__content
+									.collections__icon
+										img(src="../images/Pixel-2.png" alt="person")
+									.collections__person
+										| by
+										a(href="#")
+											| KittyCryptoGang
+									a.collections__title(href="")
+										| FishuFam
+									.collections__text
+										| Explore the FichyFam collection that made
+										| by the talented Nicolas Morel & Amalie Comes
+						.swiper-slide
+							.collections__item
+								a.collections__image(href="")
+									img(src="../images/card-3.jpg" alt="image")
+
+								.collections__content
+									.collections__icon
+										img(src="../images/Pixel-3.png" alt="person")
+									.collections__person
+										| by
+										a(href="#")
+											| KittyCryptoGang
+									a.collections__title(href="")
+										| FishuFam
+									.collections__text
+										| Explore the FichyFam collection that made
+										| by the talented Nicolas Morel & Amalie Comes
+						.swiper-slide
+							.collections__item
+								a.collections__image(href="")
+									img(src="../images/card.jpg" alt="image")
+
+								.collections__content
+									.collections__icon
+										img(src="../images/Pixel.png" alt="person")
+									.collections__person
+										| by
+										a(href="#")
+											| KittyCryptoGang
+									a.collections__title(href="")
+										| FishuFam
+									.collections__text
+										| Explore the FichyFam collection that made
+										| by the talented Nicolas Morel & Amalie Comes
+				.container__footer.for-mobile
+					+Button({
+						size: 'black',
+						title: 'View all'
+					}).right-16.button--try
+					.container__buttons.for-mobile
+						.js-nav.nav-collections.nav-collections--left
+							+svg('arrow-left')
+						.js-nav.js-nav--right.nav-collections.nav-collections--right
+							+svg('arrow-right')
+
+
+
 		include pug/components/FAQ
 	include pug/components/footer

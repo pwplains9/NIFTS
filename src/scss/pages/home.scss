@@ -1,10 +1,10 @@
 .home {
-	padding: 80px 20px;
+	padding: vc(80) vc(20);
 
 	&__picture {
 		display: block;
-		margin: 0 auto 40px;
-		max-width: 500px;
+		margin: 0 auto vc(40);
+		max-width: vc(500);
 		opacity: 0;
 		transition: $duration-normal;
 
@@ -20,9 +20,9 @@
 
 	&__text {
 		margin: 0 auto;
-		max-width: 500px;
-		font-size: 20px;
-		line-height: 26px;
+		max-width: vc(500);
+		font-size: vc(20);
+		line-height: vc(26);
 
 		a {
 			text-decoration: underline;

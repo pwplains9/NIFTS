@@ -22,20 +22,21 @@ header.header
 						| Collab
 		.header__right
 			.header__lang.for-desktop
-				.header__lang-current
-					| ENG
+				.header__lang-current.hover-gray
+					span
+						| ENG
 				ul.header__lang-list
 					li
 						a.header__lang-link(href='#')
 							| RU
 
-			a.header__area(href="#").for-desktop
+			a.header__area(href="#").for-desktop.hover-gray
 				+svg('person')
 			+Button({
 				size: 'medium',
 				title: 'Create NFT'
 			})
-			.header__burger.js-button
+			.header__burger.js-button.hover-burger
 				.header__burger-i
 					span
 			ul.header__menu
@@ -53,3 +54,5 @@ header.header
 					a.header__menu-link(href="") Blog
 				li
 					a.header__menu-link(href="") Contacts
+	include ../../pug/components/mobile-menu
+include ../../pug/components/mobile-filters

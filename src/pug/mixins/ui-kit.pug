@@ -19,7 +19,7 @@ mixin Captiontitle(data)
 		!=data.title
 
 mixin Button(data)
-	a.button(class=`button--${data.size}` href="#")&attributes(attributes)
+	a.button.button-hover(class=`button--${data.size}` href="#")&attributes(attributes)
 		if data.arrow
 			span
 				!=data.title
@@ -64,7 +64,7 @@ mixin Card(data)
 			!=data.product
 mixin CardPixel(data)
 	.swiper-slide
-		.card-pixel(class=`card-pixel--${data.size}`)&attributes(attributes)
+		a.card-pixel(class=`card-pixel--${data.size}` href='#')&attributes(attributes)
 			.card-pixel__image
 				img(src=data.image alt="image")
 			.card-pixel__rank

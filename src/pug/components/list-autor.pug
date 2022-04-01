@@ -1,4 +1,6 @@
 .container.container--catalog
+	.circle.circle--24
+	.circle.circle--25
 	.container__top.container__top--catalog
 		.container__left
 			+Title({
@@ -12,8 +14,9 @@
 					form.search__form
 						.search__input
 							input(placeholder="Authors names")
-							button.search__go(type="submit")
-								| Search
+							button.search__go.button-hover(type="submit")
+								span
+									| Search
 						.search__cencel.js-close
 							| Cancel
 		.container__right.for-desktop

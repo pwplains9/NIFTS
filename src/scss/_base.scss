@@ -1,6 +1,6 @@
 :root {
-	--width-base: 1366;
-	--width-current: 1367px;
+	--width-base: 1440;
+	--width-current: 1441px;
 	--width-multiplier: var(--width-current) / var(--width-base);
 
 	@include laptop {
@@ -53,6 +53,31 @@ body {
 	font-family: $font-Montserrat;
 	color: $color-white;
 	background: $color-body;
+
+	@include mobile {
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 5;
+			background: rgba(9, 13, 20, 0.8);
+			mix-blend-mode: normal;
+			backdrop-filter: blur(4px);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s $easing-smooth;
+		}
+
+		&.is-menu {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
 }
 
 main {
@@ -61,7 +86,8 @@ main {
 	flex: 1;
 
 	@include mobile {
-		width: 360px;
+		margin-top: vc(64);
+		width: vc(360);
 	}
 }
 
@@ -197,13 +223,13 @@ iframe {
 /* stylelint-enable */
 
 .content {
-	padding-left: 140px;
+	padding-left: vc(140);
 }
 
 
 .breadcrums {
 	display: flex;
-	margin: 39px 0px 25px;
+	margin: vc(39 ) 0 vc(25);
 
 	li {
 		position: relative;
@@ -223,24 +249,24 @@ iframe {
 
 		&::after {
 			content: "•";
-			margin: 0 8px;
+			margin: 0 vc(8);
 			font-weight: 600;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: vc(14);
+			line-height: vc(20);
 			color: rgba(224, 224, 255, 0.6);
 		}
 	}
 
 	&__link {
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: rgba(224, 224, 255, 0.8);
 	}
 
 	@include mobile {
 		flex-wrap: wrap;
-		margin: 23px 0px 20px;
+		margin: vc(23) 0px vc(20);
 	}
 }
 
@@ -248,10 +274,10 @@ iframe {
 [data-scrollbar] {
 	display: block;
 	position: relative;
-	height: 310px;
+	height: vc(310);
 
 	@include mobile {
-		height: 440px;
+		height: vc(440);
 	}
 }
 
@@ -261,7 +287,7 @@ iframe {
 	transform: translate3d(0, 0, 0);
 
 	@include mobile {
-		margin-right: 16px;
+		margin-right: vc(16);
 	}
 }
 
@@ -285,13 +311,13 @@ iframe {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 8px;
+	height: vc(8);
 }
 
 .scrollbar-track-y {
 	top: 0;
 	right: 2px !important;
-	width: 6px;
+	width: vc(6);
 	height: 100%;
 }
 
@@ -299,8 +325,27 @@ iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 6px !important;
-	height: 8px;
+	width: vc(6) !important;
+	height: vc(8);
 	background: rgba(224, 224, 255, 0.12) !important;
 	border-radius: 10px;
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+	margin-left: vc(143);
+	border-radius: 12px;
+	padding: vc(10) vc(16) vc(10) vc(12);
+	background: #2D2F33;
+	font-weight: 500;
+	font-size: vc(14);
+	line-height: vc(14);
+	color: rgba(224, 224, 255, 0.6);
+
+	svg {
+		margin-right: vc(8);
+		width: vc(20);
+		height: vc(20);
+	}
 }

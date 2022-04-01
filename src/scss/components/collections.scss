@@ -1,13 +1,13 @@
 .collections {
-	margin-top: -40px;
+	margin-top: vc(-40);
 	overflow: visible;
 
 	.swiper-wrapper {
-		padding: 72px 0;
+		padding: vc(72) 0;
 
 		@include mobile {
-			left: 16px;
-			padding: 31px 0 0;
+			left: vc(16);
+			padding: vc(31) 0 0;
 		}
 	}
 
@@ -27,8 +27,8 @@
 	&__item {
 		position: relative;
 		overflow: hidden;
-		width: 424px;
-		height: 352px;
+		width: vc(424);
+		height: vc(352);
 		border-radius: 24px;
 		background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
 		border: 1px solid rgba(245, 247, 250, 0.06);
@@ -36,36 +36,66 @@
 		box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
 		backdrop-filter: blur(24px);
 
+		@include desktop {
+			overflow: hidden;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: linear-gradient(135deg, #26282F 0%, rgba(33, 35, 42, 0.85) 52.14%, rgba(24, 26, 32, 0.7) 100%);
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.5s $easing-smooth;
+			}
+
+			&:hover {
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
 		@include mobile {
-			width: 312px;
-			height: 360px;
+			width: vc(312);
+			height: vc(360);
 		}
 	}
 
 	&__image {
+		position: relative;
+		z-index: 1;
 		display: block;
 		width: 100%;
-		height: 184px;
+		height: vc(184);
 		overflow: hidden;
 
 		img {
-			margin-top: -88px;
-			width: 424px;
-			height: 424px;
+			margin-top: vc(-88);
+			width: vc(424);
+			height: vc(424);
 		}
 	}
 
 	&__icon {
-		width: 72px;
-		height: 72px;
+		position: relative;
+		z-index: 1;
+		width: vc(72);
+		height: vc(72);
 	}
 
 	&__person {
+		position: relative;
+		z-index: 1;
 		display: block;
-		margin: 16px 0 4px;
+		margin: vc(16) 0 vc(4);
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: vc(13);
+		line-height: vc(16);
 
 		a {
 			padding-left: 5px;
@@ -77,72 +107,103 @@
 		}
 
 		@include mobile {
-			font-size: 12px;
+			font-size: vc(12);
 		}
 	}
 
 	&__title {
+		position: relative;
+		z-index: 1;
 		display: block;
-		margin-bottom: 8px;
+		margin-bottom: vc(8);
 		font-weight: 600;
-		font-size: 20px;
-		line-height: 28px;
+		font-size: vc(20);
+		line-height: vc(28);
 		letter-spacing: -0.4px;
 
 		@include mobile {
-			font-size: 16px;
-			line-height: 24px;
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 	}
 
 	&__text {
+		position: relative;
+		z-index: 1;
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: rgba(224, 224, 255, 0.6);
 
 		@include mobile {
-			font-size: 13px;
+			font-size: vc(13);
 		}
 	}
 
 	&__content {
-		margin-top: -42px;
-		padding: 0 24px 24px;
+		position: relative;
+		z-index: 1;
+		margin-top: vc(-42);
+		padding: 0 vc(24) vc(24);
 
 		@include mobile {
-			padding: 0 16px 16px;
+			padding: 0 vc(16) vc(16);
 		}
 	}
 
 	@include mobile {
-		margin: 0 -16px;
+		margin: 0 vc(-16);
 
 		.swiper-slide {
-			margin: 0 8px;
-			width: 312px;
+			margin: 0 vc(8);
+			width: vc(312);
 		}
 	}
 }
 
-.popuplar {
+.popuplar,
+.popular {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 32px -12px 0;
+	margin: vc(32) vc(-12) 0;
 
 	.card {
-		margin-bottom: 12px;
+		@include desktop {
+			margin-bottom: vc(24);
+		}
+
+		@include mobile {
+			margin-bottom: vc(12);
+		}
 	}
 
 	&--2 {
-		margin-bottom: 45px;
+		margin-bottom: vc(45);
+	}
+
+	&--slider {
+		overflow: visible;
+
+		.swiper-slide {
+			.card {
+				opacity: 0;
+				transition: all 0.5s $easing-smooth;
+			}
+
+			&.swiper-slide-visible {
+				.card {
+					opacity: 1;
+				}
+			}
+		}
+
 	}
 
 	@include mobile {
-		margin: 32px -6px 0;
+		margin: vc(32) vc(-6) 0;
 
 		&--2 {
-			margin-bottom: 52px;
+			margin-bottom: vc(52);
 		}
 	}
 }

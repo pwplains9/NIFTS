@@ -1,13 +1,13 @@
 .autor-list {
-	margin-bottom: 72px;
+	margin-bottom: vc(72);
 
 	&__top {
 		display: flex;
 		border-bottom: 1px solid rgba(224, 224, 255, 0.2);
-		padding: 31px 0px 19px;
+		padding: vc(31) 0px vc(19);
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: rgba(224, 224, 255, 0.6);
 	}
 
@@ -25,7 +25,7 @@
 
 			@include desktop {
 				.autor-list__subtext {
-					margin-left: -72px;
+					margin-left: vc(-72);
 				}
 			}
 		}
@@ -61,7 +61,7 @@
 			align-items: center;
 			justify-content: space-between;
 			flex-basis: 100%;
-			margin-bottom: 8px;
+			margin-bottom: vc(8);
 
 			&--1 {
 				margin-bottom: 0;
@@ -71,12 +71,12 @@
 
 	&__subtext {
 		.autor-list__col--1 & {
-			padding-left: 104px;
+			padding-left: vc(104);
 		}
 
 		@include mobile {
-			font-size: 13px;
-			line-height: 20px;
+			font-size: vc(13);
+			line-height: vc(20);
 			color: rgba(224, 224, 255, 0.6);
 		}
 	}
@@ -88,16 +88,16 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		margin: 20px 0;
-		padding-bottom: 20px;
+		margin: vc(20) 0;
+		padding-bottom: vc(20);
 		border-bottom: 1px solid rgba(224, 224, 255, 0.2);
 
 		@include mobile {
 			flex-wrap: wrap;
-			padding-bottom: 11px;
+			padding-bottom: vc(11);
 
 			&:first-child {
-				padding-top: 19px;
+				padding-top: vc(19);
 				border-top: 1px solid rgba(224, 224, 255, 0.2);
 			}
 		}
@@ -111,55 +111,51 @@
 		}
 
 		@include mobile {
-			margin-bottom: 16px;
+			margin-bottom: vc(16);
 		}
 	}
 
 	&__image {
 		overflow: hidden;
-		margin-right: 24px;
+		margin-right: vc(24);
 		border-radius: 12px;
-		width: 80px;
-		height: 80px;
+		width: vc(80);
+		height: vc(80);
 
 		@include mobile {
-			margin-right: 16px;
-			width: 64px;
-			height: 64px;
+			margin-right: vc(16);
+			width: vc(64);
+			height: vc(64);
 		}
-	}
-
-	&__content {
-
 	}
 
 	&__title {
 		font-weight: 600;
-		font-size: 18px;
-		line-height: 24px;
+		font-size: vc(18);
+		line-height: vc(24);
 
 		@include desktop {
 			letter-spacing: -0.4px;
 		}
 
 		@include mobile {
-			margin-bottom: 4px;
-			font-size: 16px;
-			line-height: 20px;
+			margin-bottom: vc(4);
+			font-size: vc(16);
+			line-height: vc(20);
 		}
 	}
 
 	&__rank {
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: #E0E0FF;
 
 		mix-blend-mode: normal;
 		opacity: 0.6;
 
 		@include mobile {
-			font-size: 13px;
+			font-size: vc(13);
 		}
 	}
 
@@ -167,41 +163,41 @@
 		display: flex;
 		align-items: center;
 		font-weight: 500;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: vc(16);
+		line-height: vc(24);
 
 		.autor-list__col--2 & {
-			padding-left: 27px;
+			padding-left: vc(27);
 		}
 
 		@include mobile {
-			font-size: 13px;
-			line-height: 20px;
+			font-size: vc(13);
+			line-height: vc(20);
 		}
 	}
 
 	&__money {
-		margin-left: 12px;
-		width: 24px;
-		height: 24px;
+		margin-left: vc(12);
+		width: vc(24);
+		height: vc(24);
 
 		@include mobile {
-			margin-left: 8px;
-			width: 20px;
-			height: 20px;
+			margin-left: vc(8);
+			width: vc(20);
+			height: vc(20);
 		}
 	}
 
 	&__like {
-		margin-left: 8px;
-		width: 24px;
-		height: 24px;
+		margin-left: vc(8);
+		width: vc(24);
+		height: vc(24);
 		color: #E0E0FF;
 		opacity: 0.6;
 
 		@include mobile {
-			width: 20px;
-			height: 20px;
+			width: vc(20);
+			height: vc(20);
 		}
 	}
 
@@ -209,7 +205,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: 32px;
+		margin-top: vc(32);
 
 		@include mobile {
 			flex-flow: column;
@@ -230,15 +226,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 36px;
-		height: 36px;
+		width: vc(36);
+		height: vc(36);
 		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
 		box-shadow: 0px 0px 1px rgba(255, 0, 170, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(255, 0, 170, 0.12), 0px 8px 8px -4px rgba(255, 0, 170, 0.06), inset 0px 2px 6px rgba(255, 0, 170, 0.4);
 		border-radius: 12px;
 
 		svg {
-			width: 20px;
-			height: 20px;
+			width: vc(20);
+			height: vc(20);
 		}
 	}
 
@@ -254,8 +250,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 36px;
-		height: 36px;
+		width: vc(36);
+		height: vc(36);
 		color: #E0E0FF;
 
 		opacity: 0.6;

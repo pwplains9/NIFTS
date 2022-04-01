@@ -5,50 +5,226 @@
 
 	&--1 {
 		left: 50%;
-		top: -33px;
-		margin-left: -363px;
-		width: 286px;
-		height: 286px;
+		top: vc(-136);
+		margin-left: vc(-363);
+		width: vc(286);
+		height: vc(286);
 		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
 		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
 	}
 
 	&--2 {
-		right: -83px;
-		top: 505px;
-		width: 199px;
-		height: 199px;
+		right: vc(-70);
+		top: vc(400);
+		width: vc(199);
+		height: vc(199);
 		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
 		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
 	}
 
 	&--3 {
-		left: -290px;
-		top: 606px;
-		width: 454px;
-		height: 454px;
+		left: vc(-278);
+		top: vc(502);
+		width: vc(454);
+		height: vc(454);
 		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
 		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
 	}
 
 	&--4 {
-
+		right: vc(-156);
+		bottom: vc(-41);
+		width: vc(286);
+		height: vc(286);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
 	}
 
 	&--5 {
-
+		left: vc(-311);
+		top: vc(440);
+		width: vc(454);
+		height: vc(454);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
 	}
 
 	&--6 {
-
+		right: vc(-301);
+		top: vc(1479);
+		width: vc(454);
+		height: vc(454);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
 	}
 
 	&--7 {
-
+		right: vc(-279);
+		top: vc(48);
+		width: vc(199);
+		height: vc(199);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
 	}
 
 	&--8 {
+		right: vc(-247);
+		top: vc(308);
+		width: vc(454);
+		height: vc(454);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
+	}
 
+	&--9 {
+		left: vc(-223);
+		top: vc(122);
+		width: vc(286);
+		height: vc(286);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
+	}
+
+	&--10 {
+		right: vc(-226);
+		top: vc(307);
+		width: vc(409);
+		height: vc(409);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
+	}
+
+	&--11 {
+		left: vc(-111);
+		top: vc(1155);
+		width: vc(199);
+		height: vc(199);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
+	}
+
+	&--12 {
+		right: vc(-140);
+		bottom: vc(-180);
+		width: vc(403);
+		height: vc(403);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
+	}
+
+	&--13 {
+		left: vc(-209);
+		top: vc(167);
+		width: vc(258);
+		height: vc(258);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 72px rgba(245, 69, 98, 0.4);
+	}
+
+	&--14 {
+		right: vc(-188);
+		bottom: vc(-340);
+		width: vc(409);
+		height: vc(409);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 96px rgba(69, 121, 245, 0.4);
+	}
+
+	&--15 {
+		left: vc(578);
+		top: vc(213);
+		width: vc(409);
+		height: vc(409);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
+	}
+
+	&--16 {
+		width: vc(286);
+		height: vc(286);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
+	}
+
+	&--17 {
+		left: vc(-180);
+		top: vc(-200);
+		width: vc(312);
+		height: vc(312);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
+	}
+
+	&--18 {
+		right: vc(-231);
+		bottom: vc(-189);
+		width: vc(312);
+		height: vc(312);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
+	}
+
+	&--19 {
+		top: vc(-323);
+		left: vc(434);
+		width: vc(454);
+		height: vc(454);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
+	}
+
+	&--20 {
+		left: vc(-160);
+		top: vc(496);
+		width: vc(286);
+		height: vc(286);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
+	}
+
+	&--21 {
+		right: vc(-138);
+		bottom: vc(586);
+		width: vc(403);
+		height: vc(403);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
+	}
+
+	&--22 {
+		right: vc(-311);
+		top: vc(-67);
+		width: vc(454);
+		height: vc(454);
+		background: linear-gradient(135deg, #2D2F33 0%, #1C1D21 46.64%, #0F1013 99.14%);
+		box-shadow: 0px 0px 1px rgba(245, 69, 98, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(245, 69, 98, 0.12), 0px 8px 8px -4px rgba(245, 69, 98, 0.06), inset -19px -29px 96px rgba(245, 69, 98, 0.4);
+	}
+
+	&--23 {
+		left: vc(-160);
+		top: vc(941);
+		width: vc(286);
+		height: vc(286);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
+	}
+
+	&--24 {
+		right: vc(-386);
+		top: vc(459);
+		width: vc(305);
+		height: vc(305);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(0, 187, 255, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(0, 187, 255, 0.12), 0px 8px 8px -4px rgba(0, 187, 255, 0.06), inset -19px -29px 60px rgba(0, 187, 255, 0.4);
+	}
+
+	&--25 {
+		bottom: vc(3);
+		left: vc(-297);
+		width: vc(211);
+		height: vc(211);
+		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
+		box-shadow: 0px 0px 1px rgba(69, 121, 245, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(69, 121, 245, 0.12), 0px 8px 8px -4px rgba(69, 121, 245, 0.06), inset -19px -29px 60px rgba(69, 121, 245, 0.4);
 	}
 }
 
@@ -57,7 +233,7 @@
 	display: flex;
 
 	@include desktop {
-		margin: 32px -12px 0;
+		margin: vc(32) vc(-12) 0;
 
 		overflow: visible;
 
@@ -71,15 +247,15 @@
 	}
 
 	@include mobile {
-		margin: 32px -16px 0;
+		margin: vc(32) vc(-16) 0;
 
 		.swiper-slide {
-			margin: 0 8px;
-			width: 312px;
+			margin: 0 vc(8);
+			width: vc(312);
 		}
 
 		.swiper-wrapper {
-			left: 15px;
+			left: vc(15);
 		}
 	}
 }

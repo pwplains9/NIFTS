@@ -1,11 +1,12 @@
 .header {
 	position: relative;
 	z-index: 10;
+
 	&__logo {
 		display: block;
-		margin-right: 47px;
-		width: 136px;
-		height: 24px;
+		margin-right: vc(47);
+		width: vc(136);
+		height: vc(24);
 
 		@include mobile {
 			margin-right: 0;
@@ -17,8 +18,8 @@
 
 		li {
 			position: relative;
-			padding: 36px 3.15px;
-			margin-right: 42px;
+			padding: vc(36) 3.15px;
+			margin-right: vc(42);
 
 			&:last-child {
 				margin-right: 0;
@@ -49,15 +50,15 @@
 	&__link {
 		display: flex;
 		font-weight: 600;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: vc(16);
+		line-height: vc(24);
 		color: $color-hover;
 		transition: color 0.2s $easing-smooth;
 
 		svg {
-			margin-right: 12px;
-			width: 24px;
-			height: 24px;
+			margin-right: vc(12);
+			width: vc(24);
+			height: vc(24);
 		}
 
 		li.is-current & {
@@ -90,17 +91,19 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 12px;
-			width: 101px;
-			height: 48px;
+			width: vc(101);
+			height: vc(48);
 			background: $color-bg;
 			cursor: pointer;
 
 			&::after {
 				content: "";
+				position: relative;
+				z-index: 1;
 				display: block;
-				margin-left: 12px;
-				width: 24px;
-				height: 24px;
+				margin-left: vc(12);
+				width: vc(24);
+				height: vc(24);
 				background: url("../images/sprites/svg/arrow-down.svg") center center no-repeat;
 				background-size: contain;
 			}
@@ -116,17 +119,17 @@
 		&-list {
 			position: absolute;
 			left: 0;
-			top: 60px;
+			top: vc(60);
 			z-index: 20;
 			width: 100%;
-			padding: 20px 0;
+			padding: vc(20) 0;
 			background: #2D2F33;
 			border: 1px solid rgba(224, 224, 255, 0.2);
 			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 6px 12px 24px rgba(9, 13, 20, 0.4);
 			border-radius: 12px;
 			font-weight: 500;
-			font-size: 16px;
-			line-height: 24px;
+			font-size: vc(16);
+			line-height: vc(24);
 			visibility: hidden;
 			opacity: 0;
 			transition: all 0.5s linear;
@@ -139,7 +142,7 @@
 
 		&-link {
 			display: block;
-			padding: 8px 24px;
+			padding: vc(8) vc(24);
 
 			@include desktop {
 				&:hover {
@@ -154,35 +157,35 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 0 24px;
+		margin: 0 vc(24);
 		border-radius: 12px;
-		width: 48px;
-		height: 48px;
+		width: vc(48);
+		height: vc(48);
 		background: $color-bg;
 
 		svg {
-			width: 24px;
-			height: 24px;
+			width: vc(24);
+			height: vc(24);
 		}
 	}
 
 	&__burger {
 		position: relative;
-		margin-left: 24px;
+		margin-left: vc(24);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #212429 99.14%);
 		box-shadow: 0px 0px 1px rgba(255, 0, 170, 0.12), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(255, 0, 170, 0.12), 0px 8px 8px -4px rgba(255, 0, 170, 0.06), inset 0px 2px 6px rgba(255, 0, 170, 0.4);
 		border-radius: 12px;
-		width: 48px;
-		height: 48px;
+		width: vc(48);
+		height: vc(48);
 
 		span {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-top: 4px;
+			margin-top: vc(4);
 			border-radius: 20px;
 			width: 100%;
 			height: 2px;
@@ -193,8 +196,8 @@
 		&-i {
 			position: relative;
 			margin: 0 auto;
-			width: 16.2px;
-			height: 10.91px;
+			width: vc(16.2);
+			height: vc(10.91);
 
 			&::before,
 			&::after {
@@ -216,7 +219,7 @@
 			}
 
 			@include mobile {
-				width: 13.5px;
+				width: vc(13.5);
 			}
 		}
 
@@ -251,50 +254,74 @@
 		}
 
 		@include mobile {
-			margin-left: 16px;
-			width: 36px;
-			height: 36px;
+			margin-left: vc(16);
+			width: vc(36);
+			height: vc(36);
 		}
 	}
 
 	&__menu {
 		position: absolute;
-		right: 0;
-		top: 60px;
-		z-index: 20;
-		width: 280px;
-		height: 328px;
-		padding: 20px 0;
-		background: #2D2F33;
-		border: 1px solid rgba(224, 224, 255, 0.2);
-		box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 6px 12px 24px rgba(9, 13, 20, 0.4);
-		border-radius: 12px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 24px;
 		visibility: hidden;
 		opacity: 0;
-		transition: all 0.5s linear;
 
-		&-link {
-			display: block;
-			padding: 8px 24px;
+		@include desktop {
+			position: absolute;
+			right: 0;
+			top: vc(60);
+			z-index: 20;
+			width: vc(280);
+			height: vc(328);
+			padding: vc(20) 0;
+			background: #2D2F33;
+			border: 1px solid rgba(224, 224, 255, 0.2);
+			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 6px 12px 24px rgba(9, 13, 20, 0.4);
+			border-radius: 12px;
+			font-weight: 500;
+			font-size: vc(16);
+			line-height: vc(24);
 
-			@include desktop {
-				&:hover {
-					background: rgba(24, 27, 31, 0.24);
-					color: rgba(224, 224, 255, 0.8);
+			transition: all 0.5s linear;
+
+			&-link {
+				display: block;
+				padding: vc(8) vc(24);
+
+				@include desktop {
+					&:hover {
+						background: rgba(24, 27, 31, 0.24);
+						color: rgba(224, 224, 255, 0.8);
+					}
 				}
 			}
-		}
 
-		&.is-view {
-			opacity: 1;
-			visibility: visible;
+			&.is-view {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 
 	@include mobile {
-		padding: 15px 0;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		padding: vc(15) 0;
+
+		&.is-scroll {
+			background: rgba(24, 27, 31, 0.6);
+			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), 8px 8px 24px rgba(9, 13, 20, 0.4);
+			backdrop-filter: blur(80px);
+		}
+
+		&.is-active {
+			background: #212327;
+
+			.button {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
 	}
 }

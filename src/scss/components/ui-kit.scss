@@ -1,12 +1,12 @@
 .main-title {
 	font-weight: 800;
-	font-size: 72px;
-	line-height: 72px;
+	font-size: vc(72);
+	line-height: vc(72);
 	letter-spacing: -4px;
 
 	@include mobile {
-		font-size: 36px;
-		line-height: 42px;
+		font-size: vc(36);
+		line-height: vc(42);
 		letter-spacing: -1px;
 	}
 }
@@ -16,69 +16,69 @@
 
 	&--1 {
 		font-weight: 800;
-		font-size: 52px;
-		line-height: 56px;
+		font-size: vc(52);
+		line-height: vc(56);
 		letter-spacing: -4px;
 
 		@include mobile {
-			font-size: 36px;
-			line-height: 42px;
+			font-size: vc(36);
+			line-height: vc(42);
 			letter-spacing: -1px;
 		}
 	}
 
 	&--2 {
-		font-size: 40px;
-		line-height: 48px;
+		font-size: vc(40);
+		line-height: vc(48);
 	}
 
 	&--3 {
-		font-size: 36px;
-		line-height: 36px;
+		font-size: vc(36);
+		line-height: vc(36);
 		letter-spacing: -1px;
 
 		@include mobile {
-			font-size: 28px;
-			line-height: 36px;
+			font-size: vc(28);
+			line-height: vc(36);
 		}
 	}
 
 	&--4 {
-		font-size: 24px;
-		line-height: 32px;
+		font-size: vc(24);
+		line-height: vc(32);
 		letter-spacing: -1px;
 	}
 
 	&--5 {
 		font-weight: 600;
-		font-size: 20px;
-		line-height: 28px;
+		font-size: vc(20);
+		line-height: vc(28);
 		letter-spacing: -0.4px;
 	}
 
 	&--6 {
 		font-weight: 600;
-		font-size: 18px;
-		line-height: 24px;
+		font-size: vc(18);
+		line-height: vc(24);
 		letter-spacing: -0.4px;
 	}
 
 	&--7 {
 		font-weight: 600;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: vc(16);
+		line-height: vc(24);
 	}
 
 	&--8 {
 		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 	}
 
 	&--9 {
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: vc(13);
+		line-height: vc(16);
 	}
 }
 
@@ -87,18 +87,18 @@
 
 	&--1 {
 
-		font-size: 24px;
-		line-height: 40px;
+		font-size: vc(24);
+		line-height: vc(40);
 	}
 
 	&--2 {
-		font-size: 20px;
-		line-height: 36px;
+		font-size: vc(20);
+		line-height: vc(36);
 	}
 
 	&--3 {
-		font-size: 18px;
-		line-height: 32px;
+		font-size: vc(18);
+		line-height: vc(32);
 	}
 }
 
@@ -106,18 +106,18 @@
 	font-weight: 500;
 
 	&--1 {
-		font-size: 16px;
-		line-height: 24px;
+		font-size: vc(16);
+		line-height: vc(24);
 	}
 
 	&--2 {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 	}
 
 	&--3 {
-		font-size: 13px;
-		line-height: 20px;
+		font-size: vc(13);
+		line-height: vc(20);
 	}
 }
 
@@ -126,13 +126,13 @@
 	font-weight: 600;
 
 	&--1 {
-		font-size: 14px;
-		line-height: 24px;
+		font-size: vc(14);
+		line-height: vc(24);
 	}
 
 	&--2 {
-		font-size: 13px;
-		line-height: 20px;
+		font-size: vc(13);
+		line-height: vc(20);
 	}
 }
 
@@ -140,22 +140,29 @@
 	display: inline-block;
 	border-radius: 12px;
 	font-weight: 600;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: vc(16);
+	line-height: vc(24);
 	transition: all 0.5s $easing-smooth;
+
+	span {
+		position: relative;
+		z-index: 1;
+	}
 
 	&--medium,
 	&--arrow,
 	&--small {
-		padding: 12px 24px;
+		padding: vc(12) vc(24);
 		background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
 		box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.12), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12);
 
 
 		@include desktop {
+			&::after {
+
+			}
 			&:hover {
-				background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
-				box-shadow: 0px 1px 1px rgba(156, 66, 245, 0.24), 0px 4px 4px -1px rgba(27, 10, 82, 0.12), 0px 12px 12px -4px rgba(156, 66, 245, 0.24);
+
 			}
 
 			&:active {
@@ -175,46 +182,36 @@
 	}
 
 	&--small {
-		padding: 10px 16px;
+		padding: vc(10) vc(16);
 	}
 
 	&--arrow {
-		padding-right: 21px;
+		padding-right: vc(21);
 
 		span {
 			display: flex;
 			align-items: center;
 
 			svg {
-				margin-left: 12px;
-				width: 24px;
-				height: 24px;
-			}
-		}
-
-		@include desktop {
-			&:hover {
-
-			}
-
-			&:active {
-
-			}
-
-			&:disabled {
-
+				margin-left: vc(12);
+				width: vc(24);
+				height: vc(24);
 			}
 		}
 	}
 
 	&--black {
-		padding: 10px 16px;
-		background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #181B1F 99.14%);
+		padding: vc(10) vc(16);
+		background: #202227;
 		box-shadow: 0px 0px 1px rgba(255, 0, 170, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(255, 0, 170, 0.12), 0px 8px 8px -4px rgba(255, 0, 170, 0.06), inset 0px 2px 6px rgba(255, 0, 170, 0.4);
 
 		@include desktop {
+			&::after {
+				display: none;
+			}
+
 			&:hover {
-				background: linear-gradient(0deg, rgba(224, 224, 255, 0.06), rgba(224, 224, 255, 0.06)), linear-gradient(135deg, #2D2F33 0%, #282A2E 51.37%, #181B1F 99.14%);
+				background: #383a3f;
 				box-shadow: 0px 0px 1px rgba(255, 0, 170, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.06), 0px 16px 24px rgba(255, 0, 170, 0.12), inset 0px 0px 8px rgba(255, 0, 170, 0.4);
 			}
 
@@ -236,50 +233,36 @@
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		text-fill-color: transparent;
-
-		@include desktop {
-			&:hover {
-
-			}
-
-			&:active {
-
-			}
-
-			&:disabled {
-
-			}
-		}
 	}
 
 	&--try {
-		padding: 10px 18px;
-		font-size: 14px;
-		line-height: 20px;
+		padding: vc(10) vc(18);
+		font-size: vc(14);
+		line-height: vc(20);
 	}
 
 	&--autor {
-		margin-top: 75px;
-		padding: 12px 31px;
+		margin-top: vc(75);
+		padding: vc(12) vc(31);
 	}
 
 	&--collections {
-		margin-top: 32px;
-		margin-bottom: 20px;
-		padding: 12px 33px;
+		margin-top: vc(32);
+		margin-bottom: vc(20);
+		padding: vc(12) vc(33);
 	}
 
 	&--more {
-		padding: 12px 32px;
+		padding: vc(12) vc(32);
 	}
 
 	@include mobile {
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 20px;
+		font-size: vc(13);
+		line-height: vc(20);
 
 		&--medium {
-			padding: 8px 14.5px;
+			padding: vc(8) vc(14.5);
 		}
 
 		&--lg {
@@ -288,48 +271,48 @@
 			justify-content: center;
 			flex-shrink: 0;
 			margin: 0;
-			padding: 11px 20px;
-			width: 148px;
-			font-size: 14px;
-			line-height: 20px;
+			padding: vc(11) vc(20);
+			width: vc(148);
+			font-size: vc(14);
+			line-height: vc(20);
 		}
 
 		&--try {
-			padding: 10px 18px;
-			font-size: 14px;
-			line-height: 20px;
+			padding: vc(10) vc(18);
+			font-size: vc(14);
+			line-height: vc(20);
 		}
 
 		&--center {
-			padding: 12px 25px;
-			font-size: 16px;
-			line-height: 24px;
+			padding: vc(12) vc(25);
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 
 		&--arrow {
-			font-size: 16px;
-			line-height: 24px;
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 
 		&--autor {
-			margin-top: 34px;
-			margin-left: 2px;
-			padding: 12px 39px;
-			font-size: 14px;
-			line-height: 24px;
+			margin-top: vc(34);
+			margin-left: vc(2);
+			padding: vc(12) vc(39);
+			font-size: vc(14);
+			line-height: vc(24);
 		}
 
 		&--collections {
-			margin: 24px 0 8px;
-			font-size: 16px;
-			line-height: 24px;
+			margin: vc(24) 0 vc(8);
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 
 		&--more {
-			margin-bottom: 32px;
-			padding: 12px 38px;
-			font-size: 14px;
-			line-height: 24px;
+			margin-bottom: vc(32);
+			padding: vc(12) vc(38);
+			font-size: vc(14);
+			line-height: vc(24);
 		}
 	}
 }
@@ -338,8 +321,8 @@
 	margin: 0 12px;
 	border: 1px solid rgba(245, 247, 250, 0.06);
 	border-radius: 24px;
-	padding: 24px;
-	width: 424px;
+	padding: vc(24);
+	width: vc(424);
 	background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
 	box-sizing: border-box;
 	box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
@@ -347,30 +330,31 @@
 
 	&__info {
 		position: relative;
-		width: 376px;
-		height: 376px;
+		z-index: 1;
+		width: vc(376);
+		height: vc(376);
 
 		.like {
 			position: absolute;
-			right: 16px;
-			bottom: 16px;
+			right: vc(16);
+			bottom: vc(16);
 			display: flex;
 			align-items: center;
 			border: 1px solid rgba(255, 255, 255, 0.12);
 			border-radius: 50px;
-			padding: 1px 7px;
+			padding: 1px vc(7);
 			font-weight: 400;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: vc(14);
+			line-height: vc(20);
 			background: rgba(255, 255, 255, 0.32);
 			backdrop-filter: blur(8px);
 			cursor: pointer;
 
 			&__span {
 				position: relative;
-				margin-left: 6.48px;
-				width: 15.04px;
-				height: 13.94px;
+				margin-left: vc(6.48);
+				width: vc(15.04);
+				height: vc(13.94);
 			}
 
 			&__svg {
@@ -396,15 +380,15 @@
 			}
 
 			@include mobile {
-				padding: 1px 5px;
-				right: 8px;
-				bottom: 8px;
+				padding: 1px vc(5);
+				right: vc(8);
+				bottom: vc(8);
 			}
 		}
 
 		@include mobile {
-			width: 280px;
-			height: 280px;
+			width: vc(280);
+			height: vc(280);
 		}
 	}
 
@@ -421,49 +405,54 @@
 
 	&__caption {
 		position: absolute;
-		left: 16px;
-		top: 16px;
+		left: vc(16);
+		top: vc(16);
 		border-radius: 12px;
-		padding: 4px 8px;
+		padding: vc(4) vc(8);
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: vc(13);
+		line-height: vc(16);
 		background: $color-green;
 	}
 
 	&__edition {
-		margin: 24px 0 8px;
+		position: relative;
+		z-index: 1;
+		margin: vc(24) 0 vc(8);
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: vc(13);
+		line-height: vc(16);
 		color: rgba(224, 224, 255, 0.6);
 
 		@include mobile {
-			margin: 16px 0 5px;
-			font-size: 12px;
-			line-height: 16px;
+			margin: vc(16) 0 vc(5);
+			font-size: vc(12);
+			line-height: vc(16);
 		}
 	}
 
 	&__title {
+		position: relative;
+		z-index: 1;
 		display: block;
-		margin-bottom: 24px;
+		margin-bottom: vc(24);
 		font-weight: 600;
-		font-size: 20px;
-		line-height: 28px;
+		font-size: vc(20);
+		line-height: vc(28);
 		letter-spacing: -0.4px;
 
 		@include mobile {
-			font-size: 16px;
-			line-height: 24px;
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 	}
 
 	&__bottom {
+		position: relative;
+		z-index: 1;
 		border-radius: 12px;
-		padding: 16px;
-		width: 264px;
-		height: 116px;
+		padding: vc(16);
+		height: vc(116);
 		background: rgba(224, 224, 255, 0.02);
 
 		&.is-sold {
@@ -472,23 +461,23 @@
 			align-items: center;
 			justify-content: center;
 			font-weight: 600;
-			font-size: 24px;
-			line-height: 32px;
+			font-size: vc(24);
+			line-height: vc(32);
 			color: rgba(224, 224, 255, 0.2);
 		}
 
 		@include mobile {
-			padding: 6px 16px;
-			width: 280px;
-			height: 72px;
+			padding: vc(6) vc(16);
+			width: vc(280);
+			height: vc(72);
 		}
 	}
 
 	&__price {
-		margin-bottom: 12px;
+		margin-bottom: vc(12);
 		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: rgba(224, 224, 255, 0.6);
 	}
 
@@ -500,20 +489,20 @@
 	&__mount {
 		font-family: $font-Montserrat;
 		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: rgba(224, 224, 255, 0.6);
 
 		span {
 			display: block;
 			font-family: $font-Gilroy;
-			font-size: 24px;
-			line-height: 32px;
+			font-size: vc(24);
+			line-height: vc(32);
 			color: $color-white;
 
 			@include mobile {
-				font-size: 24px;
-				line-height: 32px;
+				font-size: vc(24);
+				line-height: vc(32);
 			}
 		}
 
@@ -522,69 +511,88 @@
 
 			@include mobile {
 				span {
-					font-size: 20px;
-					line-height: 32px;
+					font-size: vc(20);
+					line-height: vc(32);
 				}
 			}
 		}
 
 		@include mobile {
-			font-size: 12px;
-			line-height: 20px;
+			font-size: vc(12);
+			line-height: vc(20);
 		}
 	}
 
 	&__product {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		align-items: center;
-		margin-top: 24px;
+		margin-top: vc(24);
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 
 		@include mobile {
-			margin-top: 15px;
-			line-height: 16px;
+			margin-top: vc(15);
+			line-height: vc(16);
 		}
 	}
 
 	&__icon {
-		margin-right: 8px;
-		width: 20px;
-		height: 20px;
+		margin-right: vc(8);
+		width: vc(20);
+		height: vc(20);
 	}
 
 	&--small {
-		width: 312px;
+		width: vc(312);
 
 		.card__info {
-			width: 264px;
-			height: 264px;
+			width: vc(264);
+			height: vc(264);
 		}
 	}
 
 	@include desktop {
-		&:hover {
+		overflow: hidden;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
 			background: linear-gradient(135deg, #26282F 0%, rgba(33, 35, 42, 0.85) 52.14%, rgba(24, 26, 32, 0.7) 100%);
-			box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.02), 8px 16px 24px rgba(9, 13, 20, 0.4);
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.5s $easing-smooth;
+		}
+
+		&:hover {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 
 	@include mobile {
 		margin: 0 auto;
-		padding: 16px;
-		width: 312px;
+		padding: vc(16);
+		width: vc(312);
 
 		&--small {
-			margin: 0 6px 12px;
+			margin: 0 vc(6) vc(12);
 			border-radius: 16px;
-			padding: 8px;
-			width: 158px;
+			padding: vc(8);
+			width: vc(158);
 
 			.card__info {
-				margin: -9px;
-				width: 158px;
-				height: 158px;
+				margin: vc(-9);
+				width: vc(158);
+				height: vc(158);
 
 				.card__image {
 					img {
@@ -594,65 +602,65 @@
 			}
 
 			.card__caption {
-				left: 8px;
-				top: 8px;
-				font-size: 10px;
-				line-height: 14px;
+				left: vc(8);
+				top: vc(8);
+				font-size: vc(10);
+				line-height: vc(14);
 			}
 
 			.like {
-				font-size: 10px;
-				line-height: 16px;
+				font-size: vc(10);
+				line-height: vc(16);
 			}
 
 			.card__edition {
-				font-size: 10px;
-				line-height: 16px;
+				font-size: vc(10);
+				line-height: vc(16);
 			}
 
 			.card__title {
-				margin-bottom: 12px;
-				font-size: 13px;
-				line-height: 20px;
+				margin-bottom: vc(12);
+				font-size: vc(13);
+				line-height: vc(20);
 			}
 
 			.card__bottom.is-sold {
-				width: 142px;
-				height: 48px;
-				font-size: 12px;
-				line-height: 20px;
+				width: vc(142);
+				height: vc(48);
+				font-size: vc(12);
+				line-height: vc(20);
 				text-transform: none;
 			}
 
 			.card__icon {
-				margin-right: 4px;
+				margin-right: vc(4);
 			}
 
 			.card__product {
-				margin-top: 13px;
-				font-size: 10px;
-				line-height: 16px;
+				margin-top: vc(13);
+				font-size: vc(10);
+				line-height: vc(16);
 			}
 
 			.card__bottom {
-				width: 142px;
-				height: 48px;
-				padding: 8px;
+				width: vc(142);
+				height: vc(48);
+				padding: vc(8);
 			}
 
 			.card__mount {
-				font-size: 10px;
-				line-height: 16px;
+				font-size: vc(10);
+				line-height: vc(16);
 
 				span {
-					font-size: 16px;
-					line-height: 20px;
+					font-size: vc(16);
+					line-height: vc(20);
 				}
 
 				&--right {
 					span {
-						font-size: 13px;
-						line-height: 19px;
+						font-size: vc(13);
+						line-height: vc(19);
 					}
 				}
 			}
@@ -661,49 +669,79 @@
 }
 
 .card-pixel {
+	display: block;
 	border-radius: 24px;
 	border: 1px solid rgba(245, 247, 250, 0.06);
-	padding: 24px;
+	padding: vc(24);
 	background: linear-gradient(135deg, rgba(245, 247, 250, 0.12) 0%, rgba(245, 247, 250, 0.06) 52.14%, rgba(245, 247, 250, 0.0001) 100%);
 	box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
 	backdrop-filter: blur(24px);
 
-
 	&__image {
-		margin-bottom: 24px;
-		width: 120px;
-		height: 120px;
+		position: relative;
+		z-index: 1;
+		margin-bottom: vc(24);
+		width: vc(120);
+		height: vc(120);
 
 		@include mobile {
-			width: 120px;
-			height: 120px;
+			width: vc(120);
+			height: vc(120);
 		}
 	}
 
 	&__rank {
+		position: relative;
+		z-index: 1;
 		font-weight: 600;
-		font-size: 13px;
-		line-height: 16px;
+		font-size: vc(13);
+		line-height: vc(16);
 		color: rgba(224, 224, 255, 0.6);
 
 		@include mobile {
-			font-size: 12px;
+			font-size: vc(12);
 		}
 	}
 
 	&__title {
+		position: relative;
+		z-index: 1;
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: -0.4px;
 
 		@include mobile {
-			font-size: 16px;
+			font-size: vc(16);
+		}
+	}
+
+	@include desktop {
+		overflow: hidden;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: linear-gradient(135deg, #2A2C32 0%, rgba(42, 44, 50, 0.85) 52.14%, rgba(30, 32, 39, 0.7) 100%);
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.5s $easing-smooth;
+		}
+
+		&:hover {
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 
 	@include mobile {
-		padding: 16px;
+		padding: vc(16);
 	}
 }
 
@@ -711,11 +749,15 @@
 .container {
 	position: relative;
 	margin: 0 auto;
-	width: 1320px;
+	width: vc(1320);
 
 	&__left {
 		display: flex;
 		align-items: flex-end;
+
+		&--2 {
+			align-items: flex-start;
+		}
 
 		@include mobile {
 			flex-flow: column;
@@ -732,7 +774,8 @@
 		display: flex;
 
 		@include mobile {
-			margin-top: 16px;
+			align-items: center;
+			margin-top: vc(16);
 		}
 	}
 
@@ -748,10 +791,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-top: 23px;
+		margin-top: vc(23);
 
 		@include mobile {
-			margin-top: 29px;
+			margin-top: vc(29);
 		}
 	}
 
@@ -762,26 +805,30 @@
 	}
 
 	&--marketplace {
-		margin-top: 72px;
-		margin-bottom: 88px;
+		margin-top: vc(72);
+		margin-bottom: vc(88);
 
 		@include mobile {
-			margin-top: 46px;
-			margin-bottom: 66px;
+			margin-top: vc(46);
+			margin-bottom: vc(66);
 		}
 	}
 
 	&--collections {
-		margin-top: 67px;
+		margin-top: vc(67);
 
 		@include mobile {
-			margin-top: 55px;
-			margin-bottom: 61px;
+			margin-top: vc(55);
+			margin-bottom: vc(61);
 		}
 	}
 
 	&--popular {
-		padding-bottom: 140px;
+		padding-bottom: vc(140);
+	}
+
+	&--pop {
+		padding-bottom: vc(48);
 	}
 
 	&__buttons {
@@ -789,17 +836,20 @@
 	}
 
 	&--advantage {
-		padding-bottom: 72px;
+		position: relative;
+		z-index: 2;
+		padding-bottom: vc(72);
 	}
 
 	&--faq {
-		padding-top: 72px;
+		padding-top: vc(72);
 	}
 
 	&--footer {
-
+		z-index: 3;
 
 		@include desktop {
+
 			border-radius: 24px;
 			background: rgba(41, 44, 48, 0.48);
 			backdrop-filter: blur(72px);
@@ -808,6 +858,12 @@
 
 	&--catalog {
 		z-index: 2;
+	}
+
+	&--card {
+		@include desktop {
+			margin-top: vc(72);
+		}
 	}
 
 	@include mobile {
@@ -822,15 +878,15 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin-top: 39px;
-			padding: 0 8px;
+			margin-top: vc(39);
+			padding: 0 vc(8);
 		}
 	}
 }
 
 .right {
 	&-16 {
-		margin-right: 16px;
+		margin-right: vc(16);
 	}
 }
 
@@ -839,51 +895,53 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 12px;
-	width: 36px;
-	height: 36px;
+	width: vc(36);
+	height: vc(36);
 	background: $color-bg;
+	transition: all 0.5s $easing-smooth;
+	cursor: pointer;
 
 	svg {
-		width: 20px;
-		height: 20px;
+		width: vc(20);
+		height: vc(20);
 	}
 
 	&--right {
-		margin-left: 16px;
+		margin-left: vc(16);
 
 		@include mobile {
-			margin-left: 24.62px;
+			margin-left: vc(24.62);
 		}
 	}
 
 	@include desktop {
 		&:hover {
-			background: linear-gradient(0deg, rgba(224, 224, 255, 0.06), rgba(224, 224, 255, 0.06)), #2D2F33;
+			background: #383a3f;
 		}
 	}
 }
 
 .background-gray {
 	position: relative;
-	z-index: 1;
-	padding-top: 72px;
+	z-index: 2;
+	padding-top: vc(72);
 	background: rgba(41, 44, 48, 0.48);
 	backdrop-filter: blur(72px);
 
 	&--1 {
-		padding-bottom: 218px;
+		padding-bottom: vc(218);
 	}
 
 	&--inner {
-		padding-top: 6px;
+		padding-top: vc(6);
 	}
 
 	@include mobile {
-		padding-top: 56px;
-		padding-bottom: 64px;
+		padding-top: vc(56);
+		padding-bottom: vc(64);
 
 		&--1 {
-			padding-bottom: 340px;
+			padding-bottom: vc(340);
 		}
 
 		&--3 {
@@ -892,17 +950,17 @@
 
 		&--inner {
 			padding-top: 1px;
-			padding-bottom: 4px;
+			padding-bottom: vc(4);
 		}
 	}
 }
 
 .autor {
-	margin-top: -40px;
+	margin-top: vc(-40);
 	overflow: visible;
 
 	.swiper-wrapper {
-		padding: 72px 0;
+		padding: vc(72) 0;
 
 		@include mobile {
 			padding-bottom: 0;
@@ -917,7 +975,7 @@
 		}
 
 		@include mobile {
-			width: 184px;
+			width: vc(184);
 		}
 	}
 
@@ -930,24 +988,31 @@
 
 .search {
 	position: relative;
-	margin-left: 48px;
-	margin-bottom: 4px;
-	width: 40px;
-	height: 40px;
+	margin-left: vc(48);
+	margin-bottom:  vc(4);
+	width: vc(40);
+	height: vc(40);
 
 	&__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
+		width: vc(40);
+		height: vc(40);
 		background: #2D2F33;
 		border-radius: 12px;
 		cursor: pointer;
+		transition: all 0.5s $easing-smooth;
 
 		svg {
 			width: 20px;
 			height: 20px;
+		}
+
+		@include desktop {
+			&:hover {
+				background: #383a3f;
+			}
 		}
 	}
 
@@ -970,55 +1035,50 @@
 
 	&__input {
 		position: relative;
-		width: 515px;
+		width: vc(515);
 		background: #2D2F33;
 		border: 1px solid rgba(224, 224, 255, 0.2);
 		border-radius: 12px;
 
 		input {
 			border: none;
-			padding: 10px 12px 10px 16px;
+			padding: vc(10) vc(12) vc(10) vc(16);
 			width: 100%;
-			height: 40px;
+			height: vc(40);
 			font-weight: 500;
-			font-size: 14px;
-			line-height: 20px;
+			font-size: vc(14);
+			line-height: vc(20);
 			color: rgba(224, 224, 255, 0.6);
 			background: transparent;
 			outline: none;
 
 			&::placeholder {
 				font-weight: 500;
-				font-size: 14px;
-				line-height: 20px;
+				font-size: vc(14);
+				line-height: vc(20);
 				color: rgba(224, 224, 255, 0.6);
 			}
 		}
 
 		@include mobile {
-			width: 292px;
+			width: vc(292);
 		}
 	}
 
 	&__go {
-		position: absolute;
+		position: absolute !important;
 		right: 0;
 		border: none;
-		padding: 10px 16px;
+		padding: vc(10) vc(16);
 		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: $color-white;
 		background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
 		box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.12), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12);
 		border-radius: 12px;
 
 		@include desktop {
-			&:hover {
-				background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
-				box-shadow: 0px 1px 1px rgba(156, 66, 245, 0.24), 0px 4px 4px -1px rgba(27, 10, 82, 0.12), 0px 12px 12px -4px rgba(156, 66, 245, 0.24);
-			}
-
 			&:active {
 				background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
 				box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 1px 4px -1px rgba(27, 10, 82, 0.12), 0px 8px 16px rgba(156, 66, 245, 0.24);
@@ -1036,10 +1096,10 @@
 	}
 
 	&__cencel {
-		margin-left: 24px;
+		margin-left: vc(24);
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: rgba(224, 224, 255, 0.6);
 		transition: all 0.5s linear;
 		cursor: pointer;
@@ -1051,10 +1111,11 @@
 		}
 
 		@include mobile {
-			margin-left: 12px;
+			margin-left: vc(12);
+
 			svg {
-				width: 24px;
-				height: 24px;
+				width: vc(24);
+				height: vc(24);
 			}
 		}
 	}
@@ -1068,7 +1129,7 @@
 	.section--marketplace {
 		+ {
 			.container {
-				margin-top: 56px;
+				margin-top: vc(56);
 			}
 		}
 	}

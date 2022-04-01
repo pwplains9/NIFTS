@@ -10,6 +10,353 @@ block content
 	include pug/components/header
 	main
 		include pug/components/intro-inner-2
-		include pug/components/catalog
+		.container.container--card
+			.circle.circle--22
+			.circle.circle--23
+
+			.container__top.container__top--card
+
+				.container__left.container__left--2
+					+Title({
+						size: 3,
+						title: 'Works'
+					})
+					.container__select
+						.search
+							.search__button.js-open
+								+svg('search')
+							form.search__form
+								.search__input
+									input(placeholder="Authors names")
+									button.search__go(type="submit")
+										| Search
+								.search__cencel.js-close
+									+svg('close').for-mobile
+									.for-desktop
+										| Cancel
+
+						select.js-select.select--sorting
+							option(value="hide") Sorting
+							option By popularity
+							option Lowest Price
+							option Highest Price
+							option Most Likes
+							option Most Views
+							option Auction Ending Soon
+						.filter.for-mobile
+							+svg('filter')
+							| Filter
+							span.filter-select
+				.container__right.for-desktop
+					select.js-select.select--category
+						option(value="hide") Category
+						option All
+						option Art
+						option Collectibles
+						option Entertainment
+						option Esports
+						option Gaming
+						option NFT for Good
+						option Sport
+					select.js-select
+						option(value="hide") Media type
+						option By popularity
+						option Lowest Price
+						option Highest Price
+						option Most Likes
+						option Most Views
+						option Auction Ending Soon
+					select.js-select
+						option(value="hide") Trade type
+						option By popularity
+						option Lowest Price
+						option Highest Price
+						option Most Likes
+						option Most Views
+						option Auction Ending Soon
+
+					.range
+						.range__current
+							.range__start
+								| Price range
+							.range__d.is-hidden
+								| -
+							.range__end
+								|
+							| , $
+							.range__icon
+						.range__dropdown
+							.range__title
+								| Price range, $
+							.range__inputs
+								.range__input
+									input(min="0" type="number")
+								| -
+								.range__input
+									input(min="0" type="number")
+							.range__title
+								| Choose Crypto
+							select(name="basic[]" multiple="multiple")
+								option(value="ETH") ETH
+								option(value="Bitcoin") Bitcoin
+							.range__item
+								.range__sicon
+									| ~
+									+svg('eth')
+								.range__price
+									| 0,255
+								.range__divider
+									| -
+								.range__price
+									| 0,515
+							.range__item
+								.range__sicon
+									| ~
+									+svg('bit')
+								.range__price
+									| 0,153
+								.range__divider
+									| -
+								.range__price
+									| 0,49
+							.range__apply
+								| Apply
+							.range__clear
+								| Clear
+					select.js-select.select--last
+						option(value="hide") Binance
+						option By popularity
+						option Lowest Price
+						option Highest Price
+						option Most Likes
+						option Most Views
+						option Auction Ending Soon
+			.popuplar.popuplar--2
+				+Card({
+					sold: true,
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+				+Card({
+					size: 'small',
+					link: '#',
+					caption: 'Total sale $235',
+					image: '../images/card.jpg',
+					edition: 'Editions 342',
+					title: 'Crypto Girl Avatar #5',
+					price: 'PRICE',
+					money: '$139',
+					start: 'Starting Bid',
+					hour: '2 hours',
+					end: 'Ends in',
+					product: 'AI.MALEVICH Х NIFTS',
+				})
+
 		include pug/components/FAQ
 	include pug/components/footer

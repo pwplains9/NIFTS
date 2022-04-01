@@ -8,13 +8,13 @@
 		justify-content: space-between;
 
 		@include desktop {
-			margin-top: -69px;
-			margin-right: 136px;
-			width: 648px;
+			margin-top: vc(-69);
+			margin-right: vc(136);
+			width: vc(648);
 		}
 
 		@include mobile {
-			margin-top: 48px;
+			margin-top: vc(48);
 		}
 	}
 
@@ -25,9 +25,9 @@
 	&__item {
 		border: 1px solid rgba(245, 247, 250, 0.06);
 		border-radius: 24px;
-		padding: 24px;
-		width: 312px;
-		height: 248px;
+		padding: vc(24);
+		width: vc(312);
+		height: vc(248);
 		box-shadow: 0px 1px 1px rgba(9, 13, 20, 0.4), -4px -4px 8px rgba(224, 224, 255, 0.04), 8px 8px 24px rgba(9, 13, 20, 0.4);
 		backdrop-filter: blur(24px);
 
@@ -62,45 +62,45 @@
 
 		&--1,
 		&--2 {
-			margin-bottom: 24px;
+			margin-bottom: vc(24);
 		}
 
 		@include mobile {
-			margin-bottom: 16px;
-			padding: 16px;
+			margin-bottom: vc(16);
+			padding: vc(16);
 			width: 100%;
-			height: 200px;
+			height: vc(200);
 		}
 	}
 
 	&__icon {
-		width: 96px;
-		height: 96px;
+		width: vc(96);
+		height: vc(96);
 
 		@include mobile {
-			width: 72px;
-			height: 72px;
+			width: vc(72);
+			height: vc(72);
 		}
 	}
 
 	&__subtitle {
-		margin: 24px 0 16px;
+		margin: vc(24) 0 vc(16);
 		font-weight: 600;
-		font-size: 18px;
-		line-height: 24px;
+		font-size: vc(18);
+		line-height: vc(24);
 		letter-spacing: -0.4px;
 
 		@include mobile {
-			margin: 16px 0 11px;
-			font-size: 16px;
-			line-height: 24px;
+			margin: vc(16) 0 vc(11);
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 	}
 
 	&__text {
 		font-weight: 500;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: vc(14);
+		line-height: vc(20);
 		color: $color-hover;
 
 		@include mobile {
@@ -113,25 +113,25 @@
 	}
 
 	&__title {
-		margin-top: 72px;
+		margin-top: vc(72);
 		font-weight: 700;
-		font-size: 36px;
-		line-height: 36px;
+		font-size: vc(36);
+		line-height: vc(36);
 		letter-spacing: -1px;
 
 		@include mobile {
-			margin-top: 56px;
-			font-size: 28px;
-			line-height: 36px;
+			margin-top: vc(56);
+			font-size: vc(28);
+			line-height: vc(36);
 		}
 	}
 
 	&__subtext {
-		margin: 32px 0 24px;
-		width: 421px;
+		margin: vc(32) 0 vc(24);
+		width: vc(421);
 		font-weight: 500;
-		font-size: 16px;
-		line-height: 28px;
+		font-size: vc(16);
+		line-height: vc(28);
 		color: $color-text;
 		mix-blend-mode: normal;
 		opacity: 0.6;
@@ -141,14 +141,14 @@
 		}
 
 		@include mobile {
-			margin-bottom: 32px;
-			font-size: 14px;
-			line-height: 28px;
+			margin-bottom: vc(32);
+			font-size: vc(14);
+			line-height: vc(28);
 		}
 	}
 
 	@include mobile {
 		flex-flow: column-reverse;
-		margin-bottom: 46px;
+		margin-bottom: vc(46);
 	}
 }

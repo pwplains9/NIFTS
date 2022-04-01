@@ -1,0 +1,81 @@
+.mobile-filter.for-mobile.is-hidden
+	.mobile-filter__top
+		.mobile-filter__back(data-level="2")
+			+svg('arrow-select')
+		.mobile-filter__position
+			| Filter
+		.mobile-filter__clear.js-clear
+			| Сlear all
+	.mobile-filter__content
+		select.js-select.select--category
+			option(value="hide") Category
+			option All
+			option Art
+			option Collectibles
+			option Entertainment
+			option Esports
+			option Gaming
+			option NFT for Good
+			option Sport
+		select.js-select
+			option(value="hide") Media type
+			option By popularity
+			option Lowest Price
+			option Highest Price
+			option Most Likes
+			option Most Views
+			option Auction Ending Soon
+		select.js-select
+			option(value="hide") Trade type
+			option By popularity
+			option Lowest Price
+			option Highest Price
+			option Most Likes
+			option Most Views
+			option Auction Ending Soon
+
+		.range
+			.range__current
+				.range__start
+					| Price range
+				.range__d.is-hidden
+					| -
+				.range__end
+					|
+				| , $
+				.range__icon
+			.range__dropdown
+				.range__inputs
+					.range__input
+						input(min="0" type="number")
+					| -
+					.range__input
+						input(min="0" type="number")
+				.range__title
+					| Choose Crypto
+				select(name="basic[]" multiple="multiple")
+					option(value="ETH") ETH
+					option(value="Bitcoin") Bitcoin
+				.range__item
+					.range__sicon
+						| ~
+						+svg('eth')
+					.range__price
+						| 0,255
+					.range__divider
+						| -
+					.range__price
+						| 0,515
+				.range__item
+					.range__sicon
+						| ~
+						+svg('bit')
+					.range__price
+						| 0,153
+					.range__divider
+						| -
+					.range__price
+						| 0,49
+	.mobile-filter__button.button-hover
+		span
+			| Apply
