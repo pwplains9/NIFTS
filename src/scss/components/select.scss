@@ -12,7 +12,7 @@ $select-background: #c0392b;
 }
 
 .select {
-	margin-left: 16px;
+	margin-left: vc(16);
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
@@ -34,7 +34,7 @@ $select-background: #c0392b;
 		&::before {
 			content: "";
 			flex-shrink: 0;
-			margin-right: vc( 8);
+			margin-right: vc(8);
 			width: vc(20);
 			height: vc(20);
 			background: url("../images/sprites/svg/sort.svg") center center no-repeat;
@@ -65,7 +65,55 @@ $select-background: #c0392b;
 		}
 
 		@include mobile {
-			padding: 10px;
+			padding: vc(10);
+			font-size: 0;
+		}
+	}
+}
+
+.select--filter  {
+	margin-left: 32px;
+	+
+	.select-styled {
+		display: flex;
+		align-items: center;
+		padding: vc(10) vc(16) vc(10) vc(12);
+
+		&::before {
+			content: "";
+			flex-shrink: 0;
+			margin-right: vc(8);
+			width: vc(20);
+			height: vc(20);
+			background: url("../images/sprites/svg/filter-white.svg") center center no-repeat;
+			background-size: contain;
+
+			@include mobile {
+				margin-right: 0;
+			}
+		}
+
+		&::after {
+			display: none;
+		}
+
+		&.active {
+			&::before {
+				background: url("../images/sprites/svg/filter-white.svg") center center no-repeat;
+				background-size: contain;
+			}
+		}
+
+		+ {
+			.select-options {
+				@include desktop {
+					width: vc(280);
+				}
+			}
+		}
+
+		@include mobile {
+			padding: vc(10);
 			font-size: 0;
 		}
 	}
@@ -124,7 +172,7 @@ $select-background: #c0392b;
 	position: absolute;
 	top: vc(48);
 	right: 0;
-	left: 0;
+	left: -1px;
 	z-index: 999;
 	margin: 0;
 	padding: vc(20) 0;
@@ -417,7 +465,7 @@ $select-background: #c0392b;
 	&__dropdown {
 		@include desktop {
 			position: absolute;
-			right: vc(-9);
+			right: vc(-1);
 			top: vc(48);
 			width: vc(280);
 			padding: vc(20) vc(24);

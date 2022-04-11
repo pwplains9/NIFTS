@@ -1,6 +1,6 @@
 .container
-	.circle.circle--13
-	.circle.circle--14
+	.circle.circle--13(data-off-parallax='{"y": 30, "distance": 1900, "smoothness": 10}')
+	.circle.circle--14(data-off-parallax='{"y": 60, "distance": 1900, "smoothness": 10}')
 	ul.breadcrums
 		li
 			a.breadcrums__link(href='#') Home
@@ -110,7 +110,7 @@
 							.card-page__stitle
 								| Edition #10
 								span of 342
-							a.card-page__select(href="")
+							a.card-page__select(href="" data-modal="select-edition").js-modal
 								| Select Edition
 					.card-page__edition
 						.card-page__subincon

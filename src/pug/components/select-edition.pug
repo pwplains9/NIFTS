@@ -1,0 +1,207 @@
+.select-edition(data-modal="select-edition").is-hidden
+	.select-edition__bg.js-close
+	.select-edition__content.is-hidden
+		.select-edition__close.js-close
+			+svg('close')
+		.select-edition__title
+			| Select Edition
+		.select-edition__top
+			.select-edition__search
+				form.search__form.search__form--view
+					.search__input
+						input(placeholder="Search edition")
+						button.search__go.search__go--select.button-hover(type="submit")
+							span
+								+svg('search')
+			.select-edition__right
+				label.select-edition__checkbox
+					.select-edition__text
+						| For Sale
+					input(type="checkbox")
+					span
+				select.js-select.select--last.select--filter
+					option(value="hide") Filter: All
+					option Filter: All
+					option Filter: Auction
+					option Filter: Fixed price
+
+		.select-edition__info
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| Edition
+						+svg('arrow_down')
+				.select-edition__col.select-edition__col--2
+					.select-edition__text.select-edition__text--gray
+						| Owner
+				.select-edition__col.select-edition__col--3
+					.select-edition__text.select-edition__text--gray
+						| Price
+				.select-edition__col.select-edition__col--4
+					.select-edition__text.select-edition__text--gray
+						| Ends In
+				.select-edition__col.select-edition__col--5
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+			.select-edition__item
+				.select-edition__col.select-edition__col--1
+					.select-edition__text
+						| #1
+				.select-edition__col.select-edition__col--2
+					.select-edition__image
+						img(src="../images/Pixel-2.png" alt="image text")
+					.select-edition__text
+						| Kirill Zubarev
+				.select-edition__col.select-edition__col--3
+					.select-edition__text
+						| $ 1.000
+				.select-edition__col.select-edition__col--4
+					.select-edition__text
+						| -
+				.select-edition__col.select-edition__col--5
+					+Button({
+						size: 'medium',
+						title: 'Select'
+					}).button--select
+		.select-edition__bottom
+			.select-edition__go
+				.select-edition__text
+					| Go to page
+				form.select-edition__input
+					input
+					button.select-edition__submit.button-hover
+						span
+							| Go
+			.select-edition__nav
+				.select-edition__arrow
+					+svg('arrow-left')
+				ul.select-edition__pages
+					li
+						a.select-edition__links(href="")
+							| 1
+					li
+						a.select-edition__links.is-current(href="")
+							| 2
+					li
+						a.select-edition__links(href="")
+							| 3
+				.select-edition__arrow
+					+svg('arrow-right')

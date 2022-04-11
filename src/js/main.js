@@ -1,6 +1,8 @@
 import './vendor';
 import './helpers';
 import './components/social';
+import './vendor/jquery.easing.1.3';
+import './vendor/parallax';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
@@ -25,6 +27,14 @@ header.init();
 lazyLoading.init();
 
 function init() {
+	const parall = $(`[data-off-parallax]`);
+
+	$(parall).each((i, element) => {
+		const data = $(element).attr('data-off-parallax');
+		$(element).attr('data-parallax', `${data}`);
+		$(element).removeAttr('data-off-parallax');
+	});
+
 	let click = vars.$document.find('.js-like');
 
 	click.on('click', (e) => {
@@ -45,7 +55,7 @@ function init() {
 		if (!$this.hasClass('is-active')) {
 			$this.addClass('is-active');
 
-			if(!vars.isMobile()) {
+			if (!vars.isMobile()) {
 				vars.$document.find('.header__menu').addClass('is-view');
 			} else {
 				vars.lockScroll(true, helpers.$document.find('.header'), 'header');
@@ -62,7 +72,7 @@ function init() {
 
 		} else {
 			$this.removeClass('is-active');
-			if(!vars.isMobile()) {
+			if (!vars.isMobile()) {
 				vars.$document.find('.header__menu').removeClass('is-view');
 			} else {
 				vars.lockScroll(false, vars.$document.find('.header'), 'header');
@@ -119,7 +129,7 @@ function init() {
 
 			$this.addClass('is-active');
 
-			if ($this.data('tab') === 2) {
+			if ($this.data('tab') === 2 || $this.data('tab') === 4) {
 				vars.$document.find('.tabs__navs').addClass('is-active')
 			} else {
 				vars.$document.find('.tabs__navs').removeClass('is-active')
@@ -176,6 +186,12 @@ function init() {
 			});
 			$(this).toggleClass('active').next('ul.select-options').toggle();
 			$(this).closest('.select').toggleClass('is-active');
+
+			if (vars.$document.find('.range__current').hasClass('is-open')) {
+				vars.$document.find('.range__current').removeClass('is-open');
+				vars.$document.find('.range__dropdown').removeClass('is-open');
+				vars.$document.find('.range').removeClass('is-open');
+			}
 		});
 
 		$listItems.click(function (e) {
@@ -270,7 +286,7 @@ function init() {
 		})
 
 		vars.$window.on('scroll', () => {
-			if(window.scrollY > 0) {
+			if (window.scrollY > 0) {
 				vars.$document.find('.header').addClass('is-scroll');
 			} else {
 				vars.$document.find('.header').removeClass('is-scroll');
@@ -337,6 +353,95 @@ function init() {
 			}
 		});
 	}
+
+	vars.$document.find('.js-luck').on('click', (event) => {
+		event.preventDefault();
+
+		gsap.timeline()
+			.to($('.marketplace .swiper-wrapper'), 0.5, {
+				autoAlpha: 0,
+			})
+			.call(() => {
+
+			})
+			.from($('.marketplace .swiper-wrapper'), 0.5, {
+				autoAlpha: 0,
+			})
+	});
+
+	$(".header__nav li").hover(function (event) {
+		const $this = $(event.currentTarget);
+
+		vars.$document.find('.header__inner .line').css({
+			'left': $this.position().left + 'px',
+			'width': $this.width() + 'px',
+		})
+	});
+
+	$(".header__nav li").on('mouseleave', () => {
+		const $this = $('.header__nav li.is-current');
+
+		vars.$document.find('.header__inner .line').css({
+			'left': $this.position().left + 'px',
+			'width': $this.width() + 'px',
+		})
+	});
+
+	vars.$document.find('.js-modal').on('click', (e) => {
+		e.preventDefault();
+		helpers.lockScroll(true, helpers.$document.find('.modal'), 'modal');
+
+		setImmediate(() => {
+			helpers.$body.css('padding-right', `${helpers.getScrollbarWidth()}px`);
+			helpers.$header.css('right', `${helpers.getScrollbarWidth()}px`);
+		});
+
+		const $this = $(e.currentTarget);
+		const $modal = vars.$document.find(`.modal[data-modal="${$this.attr('data-modal')}"], .select-edition[data-modal="${$this.attr('data-modal')}"]`);
+
+		if ($modal.hasClass('is-hidden')) {
+			gsap.timeline().from($modal, 0.5, {
+				opacity: 0,
+				clearProps: true,
+				onStart: () => {
+					$modal.removeClass('is-hidden');
+				}
+			}).from($modal.find('.modal__content, .select-edition__content'), 0.5, {
+				y: 100,
+				opacity: 0,
+				clearProps: true,
+				onStart: () => {
+					$modal.find('.modal__content, .select-edition__content').removeClass('is-hidden');
+				}
+			})
+		}
+	})
+
+	vars.$document.find('.js-close').on('click', (e) => {
+
+		if (!$(e.currentTarget).closest('.modal, .select-edition').hasClass('is-hidden')) {
+			gsap.timeline()
+				.to($(e.currentTarget).closest('.modal, .select-edition').find('.modal__content, .select-edition__content'), 0.5, {
+					y: 100,
+					opacity: 0,
+					clearProps: true,
+					onComplete: () => {
+						$(e.currentTarget).closest('.modal, .select-edition').find('.modal__content, .select-edition__content').addClass('is-hidden');
+					}
+				})
+				.to($(e.currentTarget).closest('.modal, .select-edition'), 0.5, {
+					opacity: 0,
+					clearProps: true,
+					onComplete: () => {
+						$(e.currentTarget).closest('.modal, .select-edition').addClass('is-hidden');
+
+						helpers.lockScroll(false, helpers.$document.find('.modal'), 'modal');
+						helpers.$body.css('padding-right', '');
+						helpers.$header.css('right', '');
+					}
+				});
+		}
+	})
 }
 
 init();

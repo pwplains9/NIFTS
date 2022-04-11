@@ -29,7 +29,7 @@
 		}
 
 		@include mobile {
-			padding: 20px 16px;
+			padding: vc(20) vc(16);
 		}
 	}
 

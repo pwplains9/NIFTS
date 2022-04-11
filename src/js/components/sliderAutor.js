@@ -1,5 +1,3 @@
-import Swiper from 'swiper'
-
 const init = () => {
 	if ($('.autor').length) {
 		let $prevButton = $('.nav-autor--left');
@@ -8,11 +6,15 @@ const init = () => {
 		let mySwiper = new Swiper('.autor', {
 			slidesPerView: 'auto',
 			spaceBetween: 16,
-			loop: true,
+			loop: false,
 			observer: true,
 			observeParents: true,
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
+			navigation: {
+				nextEl: '.nav-autor--right',
+				prevEl: '.nav-autor--left',
+			},
 			breakpoints: {
 				1023: {
 					slidesPerView: 6,
@@ -21,13 +23,7 @@ const init = () => {
 			}
 		});
 
-		$prevButton.on('click', () => {
-			mySwiper.slidePrev();
-		});
 
-		$nextButton.on('click', () => {
-			mySwiper.slideNext();
-		});
 
 		mySwiper.update();
 	}

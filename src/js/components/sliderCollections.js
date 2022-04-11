@@ -1,4 +1,4 @@
-import Swiper from 'swiper'
+
 
 const init = () => {
 	if ($('.collections').length) {
@@ -8,25 +8,21 @@ const init = () => {
 		let mySwiper = new Swiper('.collections', {
 			slidesPerView: 'auto',
 			spaceBetween: 0,
-			loop: true,
+			loop: false,
 			observer: true,
 			observeParents: true,
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
+			navigation: {
+				nextEl: '.nav-collections--right',
+				prevEl: '.nav-collections--left',
+			},
 			breakpoints: {
 				1023: {
 					slidesPerView: 3,
 					spaceBetween: 24,
 				}
 			}
-		});
-
-		$prevButton.on('click', () => {
-			mySwiper.slidePrev();
-		});
-
-		$nextButton.on('click', () => {
-			mySwiper.slideNext();
 		});
 	}
 }

@@ -19,7 +19,7 @@ mixin Captiontitle(data)
 		!=data.title
 
 mixin Button(data)
-	a.button.button-hover(class=`button--${data.size}` href="#")&attributes(attributes)
+	a.button.button-hover(class=`button--${data.size}` data-modal=data.modal || false href="#")&attributes(attributes)
 		if data.arrow
 			span
 				!=data.title
@@ -27,6 +27,11 @@ mixin Button(data)
 		else
 			span
 				!=data.title
+mixin ButtonSumbit(data)
+	button.button.button-hover(class=`button--${data.size}` data-modal=data.modal || false href="#")&attributes(attributes)
+		span
+			!=data.title
+
 mixin Card(data)
 	.card(class=`card--${data.size}` )&attributes(attributes)
 		.card__info

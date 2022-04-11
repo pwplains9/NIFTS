@@ -1,6 +1,6 @@
 .container.container--catalog
-	.circle.circle--24
-	.circle.circle--25
+	.circle.circle--24(data-off-parallax='{"y": 30, "distance": 1900, "smoothness": 10}')
+	.circle.circle--25(data-off-parallax='{"y": 60, "distance": 1900, "smoothness": 10}')
 	.container__top.container__top--catalog
 		.container__left
 			+Title({
@@ -18,7 +18,9 @@
 								span
 									| Search
 						.search__cencel.js-close
-							| Cancel
+							+svg('close').for-mobile
+							.for-desktop
+								| Cancel
 		.container__right.for-desktop
 			select.js-select.select--category
 				option(value="hide") Category

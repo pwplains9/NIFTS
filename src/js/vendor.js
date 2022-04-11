@@ -5,7 +5,7 @@ import $ from 'jquery';
 import objectFitImages from 'object-fit-images';
 import gsap from 'gsap';
 // import objectFitVideos from 'object-fit-videos';
-
+import Swiper from 'swiper/swiper-bundle.min';
 svg4everybody();
 objectFitImages();
 // objectFitVideos();
@@ -13,6 +13,7 @@ objectFitImages();
 window.$ = $;
 window.jQuery = $;
 window.gsap = gsap;
+window.Swiper = Swiper;
 window.objectFitImages = objectFitImages;
 // window.objectFitVideos = objectFitVideos;
 

@@ -45,7 +45,7 @@
 	}
 
 	&__nav {
-		padding: 0 vc(32);
+		padding: 0 vc(24);
 		margin-bottom: vc(16);
 	}
 
@@ -70,7 +70,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: vc(16);
-		padding: vc(12) vc(16) vc(12) vc(32);
+		padding: vc(12) vc(16) vc(12) vc(24);
 
 		&-current {
 			display: flex;
@@ -214,7 +214,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: vc(2016);
+		padding: vc(20) vc(16);
 	}
 
 	&__back {

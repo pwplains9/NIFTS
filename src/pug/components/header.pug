@@ -3,23 +3,25 @@ header.header
 		.header__left
 			a.header__logo(href="/")
 				+svg('client')
-			ul.header__nav.for-desktop
-				li.is-current
-					a.header__link
-						+svg('bag')
-						| Marketplace
-				li
-					a.header__link
-						+svg('moon_stars')
-						| Metaverse
-				li
-					a.header__link
-						+svg('card')
-						| Digital clothing
-				li
-					a.header__link
-						+svg('bolt')
-						| Collab
+			.header__inner
+				.line.for-desktop
+				ul.header__nav.for-desktop
+					li.is-current
+						a.header__link
+							+svg('bag')
+							| Marketplace
+					li
+						a.header__link
+							+svg('moon_stars')
+							| Metaverse
+					li
+						a.header__link
+							+svg('card')
+							| Digital clothing
+					li
+						a.header__link
+							+svg('bolt')
+							| Collab
 		.header__right
 			.header__lang.for-desktop
 				.header__lang-current.hover-gray
@@ -30,12 +32,13 @@ header.header
 						a.header__lang-link(href='#')
 							| RU
 
-			a.header__area(href="#").for-desktop.hover-gray
+			a.header__area(href="#" data-modal="personal").for-desktop.hover-gray.js-modal
 				+svg('person')
 			+Button({
 				size: 'medium',
-				title: 'Create NFT'
-			})
+				title: 'Create NFT',
+				modal: 'contacts',
+			}).js-modal
 			.header__burger.js-button.hover-burger
 				.header__burger-i
 					span
@@ -54,5 +57,19 @@ header.header
 					a.header__menu-link(href="") Blog
 				li
 					a.header__menu-link(href="") Contacts
+				li
+					.header__title
+						| follow
+					.header__follow
+						a.header__social(href="" target="_blank")
+							+svg('fb')
+						a.header__social(href="" target="_blank")
+							+svg('tw')
+						a.header__social(href="" target="_blank")
+							+svg('inst')
+						a.header__social(href="" target="_blank")
+							+svg('tg')
+						a.header__social(href="" target="_blank")
+							+svg('dis')
 	include ../../pug/components/mobile-menu
 include ../../pug/components/mobile-filters

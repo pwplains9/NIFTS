@@ -20,6 +20,7 @@
 			height: 100%;
 			transform: translateZ(0);
 			object-fit: cover;
+
 		}
 
 		@include mobile {
@@ -126,6 +127,7 @@
 				transition: opacity 0.5s $easing-smooth;
 
 				&--active {
+					top: vc(-2);
 					opacity: 0;
 				}
 			}
@@ -141,8 +143,8 @@
 			}
 
 			@include mobile {
-				font-size: 16px;
-				line-height: 24px;
+				font-size: vc(16);
+				line-height: vc(24);
 			}
 		}
 
@@ -331,7 +333,7 @@
 
 			&--2,
 			&--4 {
-				padding-left: 15.5px;
+				padding-left: vc(15.5);
 			}
 
 			&--5 {
@@ -411,7 +413,8 @@
 		border-radius: 12px;
 		width: vc(36);
 		height: vc(36);
-		background: rgba(255, 255, 255, 0.08);
+		background: #474a4e;
+		cursor: pointer;
 
 		svg {
 			width: vc(20);
@@ -429,6 +432,14 @@
 		&--bottom {
 			svg {
 				transform: rotate(-90deg);
+			}
+		}
+
+		@include desktop {
+			transition: all 0.5s linear;
+
+			&:hover {
+				background: #383a3f;
 			}
 		}
 	}
@@ -507,7 +518,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: vc(12) vc(7) 0 0;
-		margin-top: 13px;
+		margin-top: vc(13);
 
 		&::before {
 			content: "";

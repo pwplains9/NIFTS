@@ -12,11 +12,11 @@ section.section.section--marketplace
 				+Button({
 					size: 'small',
 					title: 'Try  luck'
-				}).button--try
+				}).button--try.js-luck
 		.marketplace.swiper
-			.circle.circle--1
-			.circle.circle--2
-			.circle.circle--3
+			.circle.circle--1(data-off-parallax='{"y": 30, "distance": 1900, "smoothness": 10}')
+			.circle.circle--2(data-off-parallax='{"y": 60, "distance": 1900, "smoothness": 10}')
+			.circle.circle--3(data-off-parallax='{"y": 90, "distance": 1900, "smoothness": 10}')
 			.swiper-wrapper
 				.swiper-slide
 					+Card({
@@ -69,5 +69,5 @@ section.section.section--marketplace
 			+Button({
 				size: 'small',
 				title: 'Try  luck'
-			}).button--try.button--lg
+			}).button--try.button--lg.js-luck
 

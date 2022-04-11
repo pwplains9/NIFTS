@@ -1,4 +1,3 @@
-import Swiper from 'swiper'
 import vars from "../helpers";
 
 const init = () => {

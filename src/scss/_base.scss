@@ -53,6 +53,7 @@ body {
 	font-family: $font-Montserrat;
 	color: $color-white;
 	background: $color-body;
+	font-size: vc(14);
 
 	@include mobile {
 		&::after {
@@ -342,10 +343,25 @@ iframe {
 	font-size: vc(14);
 	line-height: vc(14);
 	color: rgba(224, 224, 255, 0.6);
+	transition: all 0.5s linear;
 
 	svg {
 		margin-right: vc(8);
 		width: vc(20);
 		height: vc(20);
+	}
+
+	.is-active & {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.swiper-button-disabled {
+	background: #2D2F33 !important;
+	pointer-events: none;
+
+	svg {
+		opacity: 0.24;
 	}
 }

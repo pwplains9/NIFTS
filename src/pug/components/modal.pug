@@ -1,0 +1,147 @@
+.modal(data-modal="contacts").is-hidden
+	.modal__bg.js-close
+	form.modal__content.is-hidden
+		.modal__close.js-close
+			+svg('close')
+		.modal__title
+			| Contact Us
+		.modal__control.is-error
+			label.modal__label
+				| Name
+				span *
+			.modal__input.is-error
+				input
+			.error error message
+		.modal__control
+			label.modal__label
+				| Company
+			.modal__input
+				input
+		.modal__control
+			label.modal__label
+				| E-mail
+				span *
+			.modal__input
+				input
+		.modal__control
+			label.modal__label
+				| Mobile / Telegram
+				span *
+			.modal__input
+				input
+
+		.modal__control
+			label.modal__label
+				| Website / Portfolio
+			.modal__input
+				input
+		.modal__control
+			label.modal__label
+				| How can we help you?
+			.modal__input.modal__input--textarea
+				textarea
+		.modal__personal
+			label.modal__checkbox
+				input(type="checkbox")
+				span
+			.modal__text
+				span.modal__subtext
+					| I agree to the processing of
+				br.for-mobile
+				a(href="#") personal data
+		+ButtonSumbit({
+			size: 'medium',
+			title: 'Submit'
+		}).button--form
+
+.modal(data-modal="personal").is-hidden
+	.modal__bg.js-close
+	form.modal__content.is-hidden
+		.modal__close.js-close
+			+svg('close')
+		.modal__title
+			| Personal Account
+		.tabs
+			.tabs__navs
+				.tabs__nav(data-tab="3").is-active
+					| Login
+				.tabs__nav(data-tab="4")
+					| Registration
+			.tabs__content
+				.tabs__element.is-active(data-tab="3")
+					.modal__control
+						label.modal__label
+							| E-mail
+						.modal__input
+							input
+					.modal__control
+						label.modal__label
+							| Password
+						.modal__input
+							input
+					.modal__control.modal__control--forgot
+						a(href="") Forgot password?
+					+ButtonSumbit({
+						size: 'medium',
+						title: 'Continue'
+					}).button--form
+				.tabs__element.is-hidden(data-tab="4")
+					.modal__control.is-error
+						label.modal__label
+							| E-mail
+							span *
+						.modal__input
+							input
+						.error
+							| error message
+					.modal__control.is-error
+						label.modal__label
+							| E-mail
+							span *
+						.modal__input
+							input
+						.error
+							| error message
+					.modal__control
+						label.modal__label
+							| Nickname
+							span *
+						.modal__input
+							input
+						.error
+							| error message
+					.modal__control
+						label.modal__label
+							| Telegram
+							span *
+						.modal__input()
+							input(placeholder="@nickname")
+						.error
+							| error message
+					.modal__control
+						label.modal__label
+							|Portfolio
+							span *
+						.modal__input
+							input
+						.error
+							| error message
+					.modal__control
+						label.modal__label
+							| Referral ID
+							span *
+						.modal__input
+							input
+						.error
+							| error message
+					.modal__control
+						label.modal__label
+							| Password
+							span *
+						.modal__input
+							input
+
+					+ButtonSumbit({
+						size: 'medium',
+						title: 'Submit'
+					}).button--form

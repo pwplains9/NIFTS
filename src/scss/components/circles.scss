@@ -239,6 +239,7 @@
 
 		.swiper-wrapper {
 			overflow: visible;
+			transition: opacity 0.3s linear;
 		}
 
 		.swiper-slide {

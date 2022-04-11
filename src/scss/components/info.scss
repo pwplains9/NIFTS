@@ -87,6 +87,10 @@
 			transform: translateX(0);
 			transition: all 0.5s linear;
 
+			.modal & {
+				width: 50%;
+			}
+
 			@include mobile {
 				width: vc(160);
 				height: vc(40);
@@ -96,6 +100,21 @@
 		&.is-active {
 			&::before {
 				transform: translateX(100%);
+
+				@include mobile {
+					transform: translateX(95%);
+				}
+			}
+		}
+
+		.modal & {
+			background: #272A2E;
+			box-shadow: inset 6px 10px 16px rgba(0, 0, 0, 0.24);
+			margin: 0 auto;
+			width: 380px;
+
+			@include mobile {
+				width: 296px;
 			}
 		}
 
@@ -140,6 +159,11 @@
 		box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.06);
 		backdrop-filter: blur(72px);
 		border-radius: 12px;
+
+		.modal & {
+			margin-top: vc(24);
+			padding: 0;
+		}
 	}
 
 	&__element {

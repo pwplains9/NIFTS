@@ -86,6 +86,10 @@
 		z-index: 1;
 		width: vc(72);
 		height: vc(72);
+
+		img {
+			border-radius: 12px;
+		}
 	}
 
 	&__person {
@@ -98,7 +102,7 @@
 		line-height: vc(16);
 
 		a {
-			padding-left: 5px;
+			padding-left: vc(5);
 			background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -120,6 +124,9 @@
 		font-size: vc(20);
 		line-height: vc(28);
 		letter-spacing: -0.4px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 
 		@include mobile {
 			font-size: vc(16);

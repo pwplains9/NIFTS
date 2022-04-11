@@ -1,0 +1,317 @@
+.modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	height: 100vh;
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(9, 13, 20, 0.8);
+		mix-blend-mode: normal;
+		backdrop-filter: blur(4px);
+		cursor: pointer;
+
+		@include mobile {
+			position: fixed;
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+		margin: 0 auto;
+		border-radius: 24px;
+		width: vc(580);
+		background: rgba(24, 27, 31, 0.9);
+		box-shadow: 8px 20px 40px rgba(0, 0, 0, 0.24);
+		backdrop-filter: blur(72px);
+
+		@include mobile {
+			margin-top: 32px;
+			margin-bottom: 25px;
+			padding-bottom: 24px;
+			width: 328px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: vc(20);
+		top: vc(20);
+		width: vc(24);
+		height: vc(24);
+		cursor: pointer;
+
+		@include desktop {
+			transition: all 0.5s linear;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		@include mobile {
+			right: vc(14);
+			top: vc(15);
+		}
+	}
+
+	&__title {
+
+		font-weight: 700;
+		font-size: vc(36);
+		line-height: vc(36);
+		text-align: center;
+		letter-spacing: -1px;
+
+		@include desktop {
+			padding-top: vc(56);
+			margin-bottom: vc(40);
+		}
+
+		@include mobile {
+			padding-top: 32px;
+			margin-bottom: 24px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+	}
+
+	&__control {
+
+	}
+
+	&__label {
+		display: block;
+		padding-left: vc(18);
+		margin-bottom: vc(8);
+		font-weight: 500;
+		font-size: vc(13);
+		line-height: vc(16);
+		color: #E0E0FF;
+		mix-blend-mode: normal;
+		opacity: 0.6;
+
+		span {
+			padding-left: 4px;
+			color: #FF00AA;
+		}
+	}
+
+	&__control {
+		position: relative;
+		margin: 0 auto vc(24);
+		width: vc(380);
+
+		.error {
+			position: absolute;
+			right: 0;
+			bottom: vc(-16);
+			font-weight: 500;
+			font-size: vc(13);
+			line-height: vc(16);
+			color: #FF00AA;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s linear;
+		}
+
+		&.is-error {
+			.error {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&--forgot {
+			display: flex;
+			justify-content: flex-end;
+
+			@include mobile {
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		@include mobile {
+			margin-bottom: 16px;
+			width: 296px;
+		}
+	}
+
+	&__input {
+		border: 4px solid transparent;
+		border-radius: 12px;
+		width: 100%;
+		height: vc(48);
+		background: #27292D;
+
+		input,
+		textarea {
+			margin: 0;
+			border: 2px solid transparent;
+			border-radius: 12px;
+			padding-left: vc(12);
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			font-weight: 500;
+			font-size: vc(16);
+			line-height: vc(28);
+			color: $color-white;
+			transition: all 0.5s linear;
+
+			&:focus {
+				outline: none;
+			}
+
+			&::placeholder {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 28px;
+				color: #E0E0FF;
+
+				mix-blend-mode: normal;
+				opacity: 0.6;
+			}
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		&:focus {
+			border: 4px solid rgba(93, 45, 225, 0.12);
+			border-radius: 12px;
+
+			input {
+				border-color: #5D5FEF;
+			}
+		}
+
+		.is-error & {
+			border-color: rgba(255, 0, 170, 0.12);
+
+			input {
+				border-color: #FF00AA;
+			}
+		}
+
+		&--textarea {
+			height: vc(104);
+
+			@include mobile {
+				height: 76px;
+			}
+		}
+
+		@include desktop {
+			transition: all 0.5s linear;
+
+			&:hover {
+				background: #383a3f;
+				border-color: #383a3f;
+
+				input {
+					border-color: #383a3f;
+				}
+			}
+		}
+
+	}
+
+	&__personal {
+		display: flex;
+		margin: 0 auto vc(24);
+		width: vc(380);
+		font-weight: 500;
+		font-size: vc(14);
+		line-height: vc(24);
+
+		@include desktop {
+			align-items: center;
+		}
+
+		@include mobile {
+			width: 296px;
+		}
+	}
+
+	&__checkbox {
+		position: relative;
+		cursor: pointer;
+
+		span {
+			display: block;
+			margin-right: 12px;
+			border: 2px solid #5D5FEF;
+			border-radius: 6px;
+			width: vc(24);
+			height: vc(24);
+			background: transparent;
+			transition: all 0.5s linear;
+
+			&::after {
+				content: "";
+				display: block;
+				width: vc(20);
+				height: vc(20);
+				background: url("../images/sprites/svg/check-white.svg") center center no-repeat;
+				background-size: contain;
+				opacity: 0;
+				transition: all 0.5s linear;
+			}
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+			height: 0;
+			width: 0;
+			cursor: pointer;
+
+			&:checked ~ span {
+				background: #5D5FEF;
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__subtext {
+		padding-right: vc(4);
+		opacity: 0.6;
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: vc(14);
+		line-height: vc(24);
+
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@include desktop {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include mobile {
+		overflow: auto;
+	}
+}

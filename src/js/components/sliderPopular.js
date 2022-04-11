@@ -1,5 +1,3 @@
-import Swiper from 'swiper'
-
 const init = () => {
 	if ($('.popular--slider').length) {
 		let $prevButton = $('.nav-popuplar--left');
@@ -8,7 +6,11 @@ const init = () => {
 		let mySwiper = new Swiper('.popular--slider', {
 			slidesPerView: 2,
 			spaceBetween: 0,
-			loop: true,
+			loop: false,
+			navigation: {
+				nextEl: '.nav-popuplar--right',
+				prevEl: '.nav-popuplar--left',
+			},
 			observer: true,
 			observeParents: true,
 			watchSlidesVisibility: true,
@@ -19,14 +21,6 @@ const init = () => {
 					spaceBetween: 24,
 				}
 			}
-		});
-
-		$prevButton.on('click', () => {
-			mySwiper.slidePrev();
-		});
-
-		$nextButton.on('click', () => {
-			mySwiper.slideNext();
 		});
 	}
 }

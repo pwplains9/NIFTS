@@ -256,6 +256,21 @@
 		padding: vc(12) vc(32);
 	}
 
+	&--form {
+		display: block;
+		margin: 32px auto 56px;
+		border: none;
+		width: 180px;
+		padding: 12px 0;
+		color: $color-white;
+	}
+
+	&--select {
+		padding: 10px 24px;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
 	@include mobile {
 		font-weight: 600;
 		font-size: vc(13);
@@ -314,11 +329,19 @@
 			font-size: vc(14);
 			line-height: vc(24);
 		}
+
+		&--form {
+			margin-bottom: 0;
+			padding: 12px 0;
+			width: 296px;
+			font-size: 16px;
+			line-height: 24px;
+		}
 	}
 }
 
 .card {
-	margin: 0 12px;
+	margin: 0 vc(12);
 	border: 1px solid rgba(245, 247, 250, 0.06);
 	border-radius: 24px;
 	padding: vc(24);
@@ -440,6 +463,9 @@
 		font-size: vc(20);
 		line-height: vc(28);
 		letter-spacing: -0.4px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 
 		@include mobile {
 			font-size: vc(16);
@@ -684,6 +710,10 @@
 		width: vc(120);
 		height: vc(120);
 
+		img {
+			border-radius: 12px;
+		}
+
 		@include mobile {
 			width: vc(120);
 			height: vc(120);
@@ -710,6 +740,9 @@
 		font-size: 18px;
 		line-height: 24px;
 		letter-spacing: -0.4px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 
 		@include mobile {
 			font-size: vc(16);
@@ -961,6 +994,7 @@
 
 	.swiper-wrapper {
 		padding: vc(72) 0;
+		-webkit-transform-style: preserve-3d;
 
 		@include mobile {
 			padding-bottom: 0;
@@ -968,7 +1002,7 @@
 	}
 
 	.swiper-slide {
-		&.swiper-slide-visible {
+		&.swiper-slide.swiper-slide-visible {
 			.card-pixel {
 				opacity: 1;
 			}
@@ -982,6 +1016,8 @@
 	.card-pixel {
 		opacity: 0;
 		transition: all 0.3s $easing-smooth;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translate3d(0, 0, 0);
 	}
 }
 
@@ -1005,8 +1041,8 @@
 		transition: all 0.5s $easing-smooth;
 
 		svg {
-			width: 20px;
-			height: 20px;
+			width: vc(20);
+			height: vc(20);
 		}
 
 		@include desktop {
@@ -1028,6 +1064,13 @@
 		transition: all 0.3s $easing-smooth;
 
 		.container__top--catalog.is-active & {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&--view {
+			position: static;
+			width: 340px;
 			opacity: 1;
 			visibility: visible;
 		}
@@ -1077,6 +1120,15 @@
 		background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
 		box-shadow: 0px 0px 1px rgba(156, 66, 245, 0.24), 0px 2px 4px -1px rgba(27, 10, 82, 0.12), 0px 16px 24px rgba(156, 66, 245, 0.24), 0px 8px 8px -4px rgba(156, 66, 245, 0.12);
 		border-radius: 12px;
+
+		&--select {
+			padding: 10px;
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+		}
 
 		@include desktop {
 			&:active {
