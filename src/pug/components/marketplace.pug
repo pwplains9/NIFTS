@@ -14,15 +14,17 @@ section.section.section--marketplace
 					title: 'Try  luck'
 				}).button--try.js-luck
 		.marketplace.swiper
-			.circle.circle--1(data-off-parallax='{"y": 30, "distance": 1900, "smoothness": 10}')
+			.circle.circle--1(data-off-parallax='{"y": 30, "distance": 1300, "smoothness": 5}')
 			.circle.circle--2(data-off-parallax='{"y": 60, "distance": 1900, "smoothness": 10}')
-			.circle.circle--3(data-off-parallax='{"y": 90, "distance": 1900, "smoothness": 10}')
+			.circle.circle--3(data-off-parallax='{"y": 90, "distance": 1500, "smoothness": 15}')
 			.swiper-wrapper
 				.swiper-slide
 					+Card({
+						size: '1',
+						market: true,
 						link: '#',
 						caption: 'Total sale $235',
-						image: '../images/card.jpg',
+						image: '../images/card.png',
 						edition: 'Editions 342',
 						title: 'Crypto Girl Avatar #5',
 						price: 'PRICE',
@@ -34,9 +36,11 @@ section.section.section--marketplace
 					})
 				.swiper-slide
 					+Card({
+						size: '2',
+						market: true,
 						link: '#',
 						caption: 'Total sale $235',
-						image: '../images/card-2.jpg',
+						image: '../images/card-2.png',
 						edition: 'Editions 342',
 						title: 'Crypto Girl Avatar #5',
 						price: 'PRICE',
@@ -48,9 +52,11 @@ section.section.section--marketplace
 					})
 				.swiper-slide
 					+Card({
+						size: '3',
+						market: true,
 						link: '#',
 						caption: 'Total sale $235',
-						image: '../images/card-3.jpg',
+						image: '../images/card-3.png',
 						edition: 'Editions 342',
 						title: 'Crypto Girl Avatar #5',
 						price: 'PRICE',

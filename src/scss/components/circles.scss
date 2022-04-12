@@ -239,7 +239,16 @@
 
 		.swiper-wrapper {
 			overflow: visible;
-			transition: opacity 0.3s linear;
+
+			.card {
+				div {
+					transition: opacity 0.3s linear;
+				}
+
+				&.is-start {
+
+				}
+			}
 		}
 
 		.swiper-slide {

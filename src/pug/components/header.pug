@@ -1,10 +1,10 @@
 header.header
 	.container.container--header
 		.header__left
+			.line.for-desktop
 			a.header__logo(href="/")
 				+svg('client')
 			.header__inner
-				.line.for-desktop
 				ul.header__nav.for-desktop
 					li.is-current
 						a.header__link
@@ -41,7 +41,8 @@ header.header
 			}).js-modal
 			.header__burger.js-button.hover-burger
 				.header__burger-i
-					span
+					+svg('menu-white')
+					+svg('close-white')
 			ul.header__menu
 				li
 					a.header__menu-link(href="") About Us

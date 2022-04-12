@@ -355,35 +355,56 @@ function init() {
 	}
 
 	vars.$document.find('.js-luck').on('click', (event) => {
+		let info = vars.$document.find('.marketplace .card__info');
+		let info2 = vars.$document.find('.marketplace .card__edition');
+		let info3 = vars.$document.find('.marketplace .card__title');
+		let info4 = vars.$document.find('.marketplace .card__bottom');
+		let info5 = vars.$document.find('.marketplace .card__product');
 		event.preventDefault();
 
 		gsap.timeline()
-			.to($('.marketplace .swiper-wrapper'), 0.5, {
+			.to([info, info2, info3, info4, info5], 0.5, {
 				autoAlpha: 0,
+				onStart: () => {
+					vars.$document.find('.marketplace .card').addClass('is-start');
+				}
 			})
 			.call(() => {
 
 			})
-			.from($('.marketplace .swiper-wrapper'), 0.5, {
+			.from([info, info2, info3, info4, info5], 0.5, {
+				delay: 2,
 				autoAlpha: 0,
+				onComplete: () => {
+					vars.$document.find('.marketplace .card').removeClass('is-start');
+				}
 			})
 	});
 
-	$(".header__nav li").hover(function (event) {
+	$(".header__left li, .header__logo").hover(function (event) {
 		const $this = $(event.currentTarget);
 
-		vars.$document.find('.header__inner .line').css({
-			'left': $this.position().left + 'px',
-			'width': $this.width() + 'px',
+		console.log($this.offset().left)
+
+		vars.$document.find('.header__left .line').css({
+			'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
+			'width': $this.width() + 3 + 'px',
 		})
 	});
 
-	$(".header__nav li").on('mouseleave', () => {
+	const $this = $('.header__nav li.is-current');
+
+	vars.$document.find('.header__left .line').css({
+		'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
+		'width': $this.width() + 3 + 'px',
+	})
+
+	$(".header__left li, .header__logo").on('mouseleave', () => {
 		const $this = $('.header__nav li.is-current');
 
-		vars.$document.find('.header__inner .line').css({
-			'left': $this.position().left + 'px',
-			'width': $this.width() + 'px',
+		vars.$document.find('.header__left .line').css({
+			'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
+			'width': $this.width() + 3 + 'px',
 		})
 	});
 
@@ -445,3 +466,7 @@ function init() {
 }
 
 init();
+
+$(window).on('resize', () => {
+	init();
+});

@@ -378,6 +378,10 @@
 		display: flex;
 	}
 
+	&__sinfo {
+		width: 100%;
+	}
+
 	&__edition {
 		display: flex;
 		align-items: center;
@@ -391,8 +395,10 @@
 			margin-right: vc(16);
 
 			&:last-child {
-				align-items: flex-start;
+				align-items: flex-end;
+				margin-left: vc(-36);
 				margin-right: 0;
+				width: vc(175);
 			}
 		}
 	}
@@ -492,6 +498,7 @@
 	}
 
 	&__subincon {
+		flex-shrink: 0;
 		margin-right: vc(12);
 		width: vc(50);
 		height: vc(50);

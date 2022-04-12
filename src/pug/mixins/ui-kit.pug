@@ -34,6 +34,10 @@ mixin ButtonSumbit(data)
 
 mixin Card(data)
 	.card(class=`card--${data.size}` )&attributes(attributes)
+		if data.market
+			.card__glitch.card__glitch--1
+			.card__glitch.card__glitch--2
+			.card__glitch.card__glitch--3
 		.card__info
 			a.card__image(href=data.link)
 				img(src=data.image alt="image")

@@ -2,6 +2,20 @@
 	position: relative;
 	z-index: 10;
 
+	.line {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: vc(145);
+		height: vc(2);
+		background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
+		box-shadow: 0px 1px 1px rgba(255, 0, 170, 0.24), 0px 2px 4px -1px rgba(10, 70, 82, 0.12), 0px 3px 8px rgba(255, 0, 170, 0.24), 0px 6px 12px rgba(255, 0, 170, 0.24);
+		border-radius: 2px 2px 0px 0px;
+		//opacity: 0;
+		transition: all 0.5s $easing-smooth;
+	}
+
 	&__logo {
 		display: block;
 		margin-right: vc(47);
@@ -16,19 +30,7 @@
 	&__inner {
 		position: relative;
 
-		.line {
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: vc(145);
-			height: vc(2);
-			background: linear-gradient(135deg, #FF00AA 0%, #9C42F5 50.18%, #5D2DE1 100%);
-			box-shadow: 0px 1px 1px rgba(255, 0, 170, 0.24), 0px 2px 4px -1px rgba(10, 70, 82, 0.12), 0px 3px 8px rgba(255, 0, 170, 0.24), 0px 6px 12px rgba(255, 0, 170, 0.24);
-			border-radius: 2px 2px 0px 0px;
-			//opacity: 0;
-			transition: all 0.5s $easing-smooth;
-		}
+
 	}
 
 	&__nav {
@@ -214,30 +216,21 @@
 		&-i {
 			position: relative;
 			margin: 0 auto;
-			width: 16.2px;
-			height: 10.91px;
+			width: vc(27);
+			height: vc(27);
 
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				border-radius: 20px;
-				width: 100%;
-				height: 2px;
-				background: $color-white;
-				transition: all 0.3s $easing-smooth;
-			}
-
-			&::before {
+			svg {
+				position: absolute !important;
+				left: 0;
+				right: 0;
 				top: 0;
-			}
+				bottom: 0;
+				transition: all 0.5s $easing-smooth;
 
-			&::after {
-				top: 8px;
-			}
-
-			@include mobile {
-				width: vc(13.5);
+				&:last-child {
+					opacity: 0;
+					transform: scale(0);
+				}
 			}
 		}
 
@@ -250,14 +243,16 @@
 			}
 
 			.header__burger-i {
-				&::before {
-					top: 4px;
-					transform: rotate(-45deg);
-				}
+				svg {
+					&:first-child {
+						opacity: 0;
+						transform: scale(0);
+					}
 
-				&::after {
-					top: 4.5px;
-					transform: rotate(45deg);
+					&:last-child {
+						opacity: 1;
+						transform: scale(1);
+					}
 				}
 			}
 		}
