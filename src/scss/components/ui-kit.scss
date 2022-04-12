@@ -1303,6 +1303,14 @@
 			}
 		}
 
+		@include desktop {
+			transition: all 0.5s $easing-smooth;
+
+			&:hover {
+				background: #383a3f;
+			}
+		}
+
 		@include mobile {
 			width: vc(292);
 		}
