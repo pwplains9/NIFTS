@@ -398,7 +398,7 @@
 				align-items: flex-end;
 				margin-left: vc(-36);
 				margin-right: 0;
-				width: vc(175);
+				width: vc(181);
 			}
 		}
 	}
@@ -536,6 +536,10 @@
 			width: vc(592);
 			height: 1px;
 			background: linear-gradient(180deg, rgba(224, 224, 255, 0.02) 0%, rgba(224, 224, 255, 0.2) 49.22%, rgba(224, 224, 255, 0.02) 100%);
+
+			@include mobile {
+				width: 100%;
+			}
 		}
 
 		@include mobile {

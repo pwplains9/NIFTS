@@ -332,10 +332,10 @@
 
 		&--form {
 			margin-bottom: 0;
-			padding: 12px 0;
-			width: 296px;
-			font-size: 16px;
-			line-height: 24px;
+			padding: vc(12) 0;
+			width: vc(296);
+			font-size: vc(16);
+			line-height: vc(24);
 		}
 	}
 }
@@ -1245,10 +1245,8 @@
 			height: vc(20);
 		}
 
-		@include desktop {
-			&:hover {
-				background: #383a3f;
-			}
+		&:hover {
+			background: #383a3f;
 		}
 	}
 

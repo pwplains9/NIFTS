@@ -6,6 +6,7 @@ vars.$document = $(document);
 vars.$window = $(window);
 vars.$body = $(document.body);
 vars.$html = $(document.documentElement);
+vars.$header = vars.$document.find('.header');
 vars.isMobile = () => innerWidth <= 1024;
 vars.isIE = () => vars.$html.hasClass('is-browser-ie');
 vars.isIOS = () => vars.$html.hasClass('is-os-ios');

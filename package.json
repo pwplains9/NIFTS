@@ -80,7 +80,9 @@
 		"smooth-scrollbar": "8.7.4",
 		"svg4everybody": "2.1.9",
 		"swiper": "6.5.8",
-		"gsap": "3.7.1"
+		"gsap": "3.7.1",
+		"lodash.debounce": "4.0.8",
+		"lodash.throttle": "4.1.1"
 	},
 	"husky": {
 		"hooks": {

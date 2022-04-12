@@ -344,11 +344,16 @@ iframe {
 	line-height: vc(14);
 	color: rgba(224, 224, 255, 0.6);
 	transition: all 0.5s linear;
+	cursor: pointer;
 
 	svg {
 		margin-right: vc(8);
 		width: vc(20);
 		height: vc(20);
+	}
+
+	&:hover {
+		background: #383a3f;
 	}
 
 	.is-active & {

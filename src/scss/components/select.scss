@@ -152,11 +152,8 @@ $select-background: #c0392b;
 		background-size: contain;
 	}
 
-	@include desktop {
-		&:hover {
-			background: #383a3f;
-		}
-
+	&:hover {
+		background: #383a3f;
 	}
 
 	&:active, &.active {
@@ -414,10 +411,8 @@ $select-background: #c0392b;
 			}
 		}
 
-		@include desktop {
-			&:hover {
-				background: #383a3f;
-			}
+		&:hover {
+			background: #383a3f;
 		}
 
 		@include mobile {

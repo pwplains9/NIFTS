@@ -3,30 +3,45 @@ import './helpers';
 import './components/social';
 import './vendor/jquery.easing.1.3';
 import './vendor/parallax';
-import {ieFix} from './vendor/ie-fix';
-import {vhFix} from './vendor/vh-fix';
-import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 import vars from "./helpers";
+import helpers from "./helpers";
 import sliderAutor from "./components/sliderAutor";
 import sliderCollections from "./components/sliderCollections";
 import Scrollbar from 'smooth-scrollbar';
 import './vendor/select';
 import sliderMarketPlace from "./components/sliderMarketPlace";
-import helpers from "./helpers";
 import sliderPopular from "./components/sliderPopular";
 
-ieFix();
-vhFix();
-actualYear();
+// ieFix();
+// vhFix();
+// actualYear();
 scrollToAnchor.init();
 
-header.init();
+// header.init();
 lazyLoading.init();
 
+function sliceText(text, size) {
+	let elem = $(text).text().slice(0, size);
+
+	text.text(elem + '...');
+}
+
+function resize() {
+	// if (window.resizeWidth && innerWidth === window.resizeWidth) {
+	// 	return;
+	// }
+
+	forMobile();
+
+	window.resizeWidth = innerWidth;
+}
+
 function init() {
+
+	forMobile();
 	const parall = $(`[data-off-parallax]`);
 
 	$(parall).each((i, element) => {
@@ -272,12 +287,131 @@ function init() {
 		}
 	});
 
-	function sliceText(text, size) {
-		let elem = $(text).text().slice(0, size);
 
-		text.text(elem + '...');
-	}
 
+	vars.$document.find('.js-luck').on('click', (event) => {
+		let info = vars.$document.find('.marketplace .card__info');
+		let info2 = vars.$document.find('.marketplace .card__edition');
+		let info3 = vars.$document.find('.marketplace .card__title');
+		let info4 = vars.$document.find('.marketplace .card__bottom');
+		let info5 = vars.$document.find('.marketplace .card__product');
+		event.preventDefault();
+
+		gsap.timeline()
+			.to([info, info2, info3, info4, info5], 0.5, {
+				autoAlpha: 0,
+				onStart: () => {
+					vars.$document.find('.marketplace .card').addClass('is-start');
+				}
+			})
+			.call(() => {
+
+			})
+			.from([info, info2, info3, info4, info5], 0.5, {
+				delay: 2,
+				autoAlpha: 0,
+				onComplete: () => {
+					vars.$document.find('.marketplace .card').removeClass('is-start');
+				}
+			})
+	});
+
+	$(".header__left li, .header__logo").hover(function (event) {
+		const $this = $(event.currentTarget);
+
+		if (!$this.hasClass('header__logo')) {
+			vars.$document.find('.header__left .line').css({
+				'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
+				'width': $this.width() + 3 + 'px',
+			})
+
+			console.log('123');
+		} else {
+			vars.$document.find('.header__left .line').css({
+				'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 'px',
+				'width': $this.width() + 3 + 'px',
+			})
+		}
+	});
+
+	const $this = $('.header__nav li.is-current');
+
+	vars.$document.find('.header__left .line').css({
+		'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
+		'width': $this.width() + 3 + 'px',
+	})
+
+	$(".header__left li, .header__logo").on('mouseleave', () => {
+		const $this = $('.header__nav li.is-current');
+
+		vars.$document.find('.header__left .line').css({
+			'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
+			'width': $this.width() + 3 + 'px',
+		})
+	});
+
+	vars.$document.find('.js-modal').on('click', (e) => {
+		e.preventDefault();
+		helpers.lockScroll(true, helpers.$document.find('.modal'), 'modal');
+
+		setImmediate(() => {
+			helpers.$body.css('padding-right', `${helpers.getScrollbarWidth()}px`);
+			helpers.$header.css('right', `${helpers.getScrollbarWidth()}px`);
+		});
+
+		const $this = $(e.currentTarget);
+		const $modal = vars.$document.find(`.modal[data-modal="${$this.attr('data-modal')}"], .select-edition[data-modal="${$this.attr('data-modal')}"]`);
+
+		if ($modal.hasClass('is-hidden')) {
+			gsap.timeline().from($modal, 0.5, {
+				opacity: 0,
+				clearProps: true,
+				onStart: () => {
+					$modal.removeClass('is-hidden');
+				}
+			}).from($modal.find('.modal__content, .select-edition__content'), 0.5, {
+				y: 100,
+				opacity: 0,
+				clearProps: true,
+				onStart: () => {
+					$modal.find('.modal__content, .select-edition__content').removeClass('is-hidden');
+				}
+			})
+		}
+	})
+
+	vars.$document.find('.js-close').on('click', (e) => {
+
+		if (!$(e.currentTarget).closest('.modal, .select-edition').hasClass('is-hidden')) {
+			gsap.timeline()
+				.to($(e.currentTarget).closest('.modal, .select-edition').find('.modal__content, .select-edition__content'), 0.5, {
+					y: 100,
+					opacity: 0,
+					clearProps: true,
+					onComplete: () => {
+						$(e.currentTarget).closest('.modal, .select-edition').find('.modal__content, .select-edition__content').addClass('is-hidden');
+					}
+				})
+				.to($(e.currentTarget).closest('.modal, .select-edition'), 0.5, {
+					opacity: 0,
+					clearProps: true,
+					onComplete: () => {
+						$(e.currentTarget).closest('.modal, .select-edition').addClass('is-hidden');
+
+						helpers.lockScroll(false, helpers.$document.find('.modal'), 'modal');
+						helpers.$body.css('padding-right', '');
+						helpers.$header.css('right', '');
+					}
+				});
+		}
+	});
+
+	window.resizeWidth = innerWidth;
+
+	window.addEventListener('resize', _debounce(resize, 500));
+}
+
+function forMobile() {
 	if (vars.isMobile()) {
 		sliceText($('.slice-text'), 9);
 
@@ -353,120 +487,10 @@ function init() {
 			}
 		});
 	}
-
-	vars.$document.find('.js-luck').on('click', (event) => {
-		let info = vars.$document.find('.marketplace .card__info');
-		let info2 = vars.$document.find('.marketplace .card__edition');
-		let info3 = vars.$document.find('.marketplace .card__title');
-		let info4 = vars.$document.find('.marketplace .card__bottom');
-		let info5 = vars.$document.find('.marketplace .card__product');
-		event.preventDefault();
-
-		gsap.timeline()
-			.to([info, info2, info3, info4, info5], 0.5, {
-				autoAlpha: 0,
-				onStart: () => {
-					vars.$document.find('.marketplace .card').addClass('is-start');
-				}
-			})
-			.call(() => {
-
-			})
-			.from([info, info2, info3, info4, info5], 0.5, {
-				delay: 2,
-				autoAlpha: 0,
-				onComplete: () => {
-					vars.$document.find('.marketplace .card').removeClass('is-start');
-				}
-			})
-	});
-
-	$(".header__left li, .header__logo").hover(function (event) {
-		const $this = $(event.currentTarget);
-
-		console.log($this.offset().left)
-
-		vars.$document.find('.header__left .line').css({
-			'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
-			'width': $this.width() + 3 + 'px',
-		})
-	});
-
-	const $this = $('.header__nav li.is-current');
-
-	vars.$document.find('.header__left .line').css({
-		'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
-		'width': $this.width() + 3 + 'px',
-	})
-
-	$(".header__left li, .header__logo").on('mouseleave', () => {
-		const $this = $('.header__nav li.is-current');
-
-		vars.$document.find('.header__left .line').css({
-			'left': $this.offset().left - vars.$document.find('.header__left').offset().left + 5 + 'px',
-			'width': $this.width() + 3 + 'px',
-		})
-	});
-
-	vars.$document.find('.js-modal').on('click', (e) => {
-		e.preventDefault();
-		helpers.lockScroll(true, helpers.$document.find('.modal'), 'modal');
-
-		setImmediate(() => {
-			helpers.$body.css('padding-right', `${helpers.getScrollbarWidth()}px`);
-			helpers.$header.css('right', `${helpers.getScrollbarWidth()}px`);
-		});
-
-		const $this = $(e.currentTarget);
-		const $modal = vars.$document.find(`.modal[data-modal="${$this.attr('data-modal')}"], .select-edition[data-modal="${$this.attr('data-modal')}"]`);
-
-		if ($modal.hasClass('is-hidden')) {
-			gsap.timeline().from($modal, 0.5, {
-				opacity: 0,
-				clearProps: true,
-				onStart: () => {
-					$modal.removeClass('is-hidden');
-				}
-			}).from($modal.find('.modal__content, .select-edition__content'), 0.5, {
-				y: 100,
-				opacity: 0,
-				clearProps: true,
-				onStart: () => {
-					$modal.find('.modal__content, .select-edition__content').removeClass('is-hidden');
-				}
-			})
-		}
-	})
-
-	vars.$document.find('.js-close').on('click', (e) => {
-
-		if (!$(e.currentTarget).closest('.modal, .select-edition').hasClass('is-hidden')) {
-			gsap.timeline()
-				.to($(e.currentTarget).closest('.modal, .select-edition').find('.modal__content, .select-edition__content'), 0.5, {
-					y: 100,
-					opacity: 0,
-					clearProps: true,
-					onComplete: () => {
-						$(e.currentTarget).closest('.modal, .select-edition').find('.modal__content, .select-edition__content').addClass('is-hidden');
-					}
-				})
-				.to($(e.currentTarget).closest('.modal, .select-edition'), 0.5, {
-					opacity: 0,
-					clearProps: true,
-					onComplete: () => {
-						$(e.currentTarget).closest('.modal, .select-edition').addClass('is-hidden');
-
-						helpers.lockScroll(false, helpers.$document.find('.modal'), 'modal');
-						helpers.$body.css('padding-right', '');
-						helpers.$header.css('right', '');
-					}
-				});
-		}
-	})
 }
 
 init();
 
 $(window).on('resize', () => {
-	init();
+	// init();
 });
