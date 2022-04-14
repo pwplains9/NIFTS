@@ -4,13 +4,18 @@ const init = () => {
 		let $nextButton = $('.nav-autor--right');
 
 		let mySwiper = new Swiper('.autor', {
-			slidesPerView: 'auto',
-			spaceBetween: 16,
+
 			loop: false,
 			observer: true,
 			observeParents: true,
 			watchSlidesVisibility: true,
 			watchSlidesProgress: true,
+			resizeReInit: true,
+			progress:true,
+			autoResize: true,
+			resizeObserver: true,
+			observeSlideChildren: true,
+			updateOnWindowResize: true,
 			navigation: {
 				nextEl: '.nav-autor--right',
 				prevEl: '.nav-autor--left',
@@ -19,6 +24,10 @@ const init = () => {
 				1023: {
 					slidesPerView: 6,
 					spaceBetween: 24,
+				},
+				1: {
+					slidesPerView: 2,
+					spaceBetween: 16,
 				}
 			}
 		});

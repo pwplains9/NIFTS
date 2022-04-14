@@ -21,3 +21,9 @@
 @function vc($value) {
 	@return calc(#{$value} * var(--width-multiplier));
 }
+
+//$browser-context: 14;
+//
+//@function vc($value, $context: $browser-context) {
+//	@return #{$value/$browser-context}em;
+//}

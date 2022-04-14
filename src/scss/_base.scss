@@ -18,6 +18,18 @@
 	}
 }
 
+@mixin response($size) {
+	@media only screen and (max-width: ($size + "px")) {
+		@content;
+	}
+}
+
+@mixin min-response($size) {
+	@media only screen and (min-width: ($size + "px")) {
+		@content;
+	}
+}
+
 *,
 *::before,
 *::after {
@@ -31,6 +43,19 @@ html {
 	box-sizing: border-box;
 	font-family: $font-primary;
 	scroll-behavior: smooth;
+	font-size: calc(100vw / 1680 * 10);
+
+	@include desktop-xl {
+		font-size: 14px;
+	}
+
+	@include response(1024) {
+		font-size: calc(100vw / 600 * 10);
+	}
+
+	@include response(767) {
+		font-size: calc(100vw / 368 * 10);
+	}
 
 	&.has-cursor,
 	&.has-cursor * {
@@ -88,7 +113,6 @@ main {
 
 	@include mobile {
 		margin-top: vc(64);
-		width: vc(360);
 	}
 }
 

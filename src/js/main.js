@@ -380,7 +380,7 @@ function init() {
 		}
 	})
 
-	vars.$document.find('.js-close').on('click', (e) => {
+	vars.$document.find('.js-close-modal').on('click', (e) => {
 
 		if (!$(e.currentTarget).closest('.modal, .select-edition').hasClass('is-hidden')) {
 			gsap.timeline()

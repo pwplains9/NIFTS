@@ -61,7 +61,7 @@
 		}
 
 		@include mobile {
-			width: vc(312);
+			width: vc(312) ;
 			height: vc(360);
 		}
 	}
@@ -163,7 +163,7 @@
 
 		.swiper-slide {
 			margin: 0 vc(8);
-			width: vc(312);
+			width: vc(312) !important;
 		}
 	}
 }

@@ -391,7 +391,7 @@
 		}
 
 		&--2 {
-			background: #39282e;
+			background: #9f9f9f;
 			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 			animation: glitch-anim-clippath 3s infinite linear normal;
 			animation-play-state : paused;
@@ -810,7 +810,7 @@
 		width: vc(312);
 
 		&--small {
-			margin: 0 vc(6) vc(12);
+			margin: 0 auto vc(12);
 			border-radius: 16px;
 			padding: vc(8);
 			width: vc(158);
