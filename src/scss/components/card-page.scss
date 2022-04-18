@@ -395,10 +395,11 @@
 			margin-right: vc(16);
 
 			&:last-child {
-				align-items: flex-end;
-				margin-left: vc(-36);
+				align-items: flex-start;
+				//margin-left: vc(-36);
 				margin-right: 0;
-				width: vc(181);
+				//width: vc(181);
+				flex-flow: column;
 			}
 		}
 	}
@@ -504,7 +505,7 @@
 		height: vc(50);
 
 		@include mobile {
-			margin-right: vc(8);
+			margin-bottom: vc(4);
 			width: vc(40);
 			height: vc(40);
 		}

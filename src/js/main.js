@@ -288,17 +288,18 @@ function init() {
 	});
 
 
-
 	vars.$document.find('.js-luck').on('click', (event) => {
-		let info = vars.$document.find('.marketplace .card__info');
+		let info = vars.$document.find('.marketplace .card__image img');
 		let info2 = vars.$document.find('.marketplace .card__edition');
 		let info3 = vars.$document.find('.marketplace .card__title');
 		let info4 = vars.$document.find('.marketplace .card__bottom');
 		let info5 = vars.$document.find('.marketplace .card__product');
+		let info6 = vars.$document.find('.marketplace .card__caption');
+		let info7 = vars.$document.find('.marketplace .like');
 		event.preventDefault();
 
 		gsap.timeline()
-			.to([info, info2, info3, info4, info5], 0.5, {
+			.to([info2, info3, info4, info5, info6, info7], 0.5, {
 				autoAlpha: 0,
 				onStart: () => {
 					vars.$document.find('.marketplace .card').addClass('is-start');
@@ -307,7 +308,7 @@ function init() {
 			.call(() => {
 
 			})
-			.from([info, info2, info3, info4, info5], 0.5, {
+			.from([info2, info3, info4, info5, info6, info7], 0.5, {
 				delay: 2,
 				autoAlpha: 0,
 				onComplete: () => {

@@ -411,8 +411,12 @@ $select-background: #c0392b;
 			}
 		}
 
-		&:hover {
-			background: #383a3f;
+		@include desktop {
+
+
+			&:hover {
+				background: #383a3f;
+			}
 		}
 
 		@include mobile {
@@ -424,10 +428,6 @@ $select-background: #c0392b;
 			line-height: vc(24);
 			text-transform: uppercase;
 			background: transparent;
-
-			&.is-open {
-				padding-bottom: 0;
-			}
 		}
 	}
 
