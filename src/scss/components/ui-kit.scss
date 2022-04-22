@@ -269,6 +269,10 @@
 		padding: 10px 24px;
 		font-size: 14px;
 		line-height: 20px;
+
+		@include mobile {
+			padding: 8px 16px;
+		}
 	}
 
 	@include mobile {
@@ -336,6 +340,14 @@
 			width: vc(296);
 			font-size: vc(16);
 			line-height: vc(24);
+		}
+
+		&--select {
+			@include mobile {
+				padding: vc(8) vc(16);
+				font-size: vc(14);
+				line-height: vc(20);
+			}
 		}
 	}
 }
@@ -1274,6 +1286,11 @@
 			width: 340px;
 			opacity: 1;
 			visibility: visible;
+
+			@include mobile {
+				margin-top: 20px;
+				width: 100%;
+			}
 		}
 	}
 
@@ -1314,6 +1331,10 @@
 
 		@include mobile {
 			width: vc(292);
+
+			.search__form--view & {
+				width: 100%;
+			}
 		}
 	}
 
@@ -1336,6 +1357,15 @@
 			svg {
 				width: 20px;
 				height: 20px;
+
+				@include mobile {
+					width: vc(20);
+					height: vc(20);
+				}
+			}
+
+			@include mobile {
+				padding: vc(10);
 			}
 		}
 

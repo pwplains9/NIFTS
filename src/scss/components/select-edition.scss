@@ -27,13 +27,22 @@
 	&__content {
 		position: relative;
 		z-index: 1;
-		margin: 50px auto;
-		border-radius: 24px;
 		width: 872px;
 		height: 860px;
 		background: rgba(24, 27, 31, 0.9);
 		box-shadow: 8px 20px 40px rgba(0, 0, 0, 0.24);
 		backdrop-filter: blur(72px);
+
+		@include desktop {
+			margin: 50px auto;
+			border-radius: 24px;
+		}
+
+		@include mobile {
+			width: 100%;
+			height: auto;
+			background: #181B1F;
+		}
 	}
 
 	&__close {
@@ -53,9 +62,18 @@
 		}
 
 		@include mobile {
-			right: vc(14);
-			top: vc(15);
+			right: vc(16);
+			top: vc(20);
 		}
+	}
+
+	&__back {
+		position: absolute;
+		left: vc(16);
+		top: vc(20);
+		width: vc(24);
+		height: vc(24);
+		transform: rotate(180deg);
 	}
 
 	&__title {
@@ -70,44 +88,78 @@
 		}
 
 		@include mobile {
-			padding-top: 32px;
-			margin-bottom: 24px;
-			font-size: 24px;
-			line-height: 32px;
+			padding-top: vc(16);
+			margin-bottom: vc(24);
+			font-size: vc(24);
+			line-height: vc(32);
+			letter-spacing: -1px;
 		}
 	}
 
 	&__top, &__info, &__bottom {
 		margin: 0 auto;
-		width: 776px;
+
+		@include desktop {
+			width: 776px;
+		}
+	}
+
+	&__top {
+		@include mobile {
+			flex-wrap: wrap;
+			padding: 0 16px;
+		}
 	}
 
 	&__search {
-
+		@include mobile {
+			width: 100%;
+			order: 3;
+		}
 	}
 
 	&__bottom {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include mobile {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__top {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 24px;
+
+		@include mobile {
+			margin-bottom: 0;
+		}
 	}
 
 	&__info {
 		margin-bottom: 22px;
 		padding: 0 24px;
-		background: rgba(224, 224, 255, 0.04);
 		box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.06);
-		border-radius: 16px;
+
+		@include desktop {
+			border-radius: 16px;
+			background: rgba(224, 224, 255, 0.04);
+		}
+
+		@include mobile {
+			padding: 0 16px;
+		}
 	}
 
 	&__right {
 		display: flex;
+
+		@include mobile {
+			justify-content: space-between;
+			width: 100%;
+		}
 	}
 
 	&__checkbox {
@@ -182,6 +234,11 @@
 		&--gray {
 			color: rgba(224, 224, 255, 0.6);
 		}
+
+		@include mobile {
+			font-size: vc(14);
+			line-height: vc(20);
+		}
 	}
 
 	&__item {
@@ -189,8 +246,14 @@
 		padding: 16px 0;
 		border-bottom: 1px solid rgba(224, 224, 255, 0.2);
 
-		&:last-child {
-			border-bottom: 0;
+		@include desktop {
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		@include mobile {
+			padding: 12px 0;
 		}
 	}
 
@@ -208,24 +271,47 @@
 				width: 16px;
 				height: 16px;
 			}
+
+			@include mobile {
+				width: 26%;
+			}
 		}
 
 		&--2 {
 			display: flex;
 			align-items: center;
 			width: 34%;
+
+			@include mobile {
+				display: none;
+			}
 		}
 
 		&--3 {
 			width: 20.6%;
+
+			@include mobile {
+				width: 51%;
+			}
 		}
 
 		&--4 {
 			width: 17.6%;
+
+			@include mobile {
+				display: none;
+			}
 		}
 
 		&--5 {
-			width: 92px;
+			@include desktop {
+				width: 92px;
+			}
+
+			@include mobile {
+				width: 23%;
+				justify-content: flex-end;
+			}
 		}
 	}
 
@@ -246,6 +332,12 @@
 	&__go {
 		display: flex;
 		align-items: center;
+
+		@include mobile {
+			order: 2;
+			margin-bottom: 32px;
+			padding-left: 16px;
+		}
 	}
 
 	&__text {
@@ -265,6 +357,16 @@
 			border: none;
 			background: transparent;
 			outline: none;
+
+			@include mobile {
+				padding: vc(10) vc(12) vc(10) vc(16);
+			}
+		}
+
+		@include mobile {
+			margin-left: vc(16);
+			width: vc(140);
+			height: vc(40);
 		}
 	}
 
@@ -281,6 +383,12 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: $color-white;
+
+		@include mobile {
+			padding: vc(10) vc(18);
+			font-size: vc(14);
+			line-height: vc(20);
+		}
 	}
 
 	&__nav {
@@ -288,6 +396,8 @@
 		align-items: center;
 
 		@include mobile {
+			margin-bottom: 24px;
+			padding: 0 16px;
 			width: 100%;
 			justify-content: space-between;
 		}
@@ -327,7 +437,7 @@
 
 		opacity: 0.6;
 
-		&.is-current{
+		&.is-current {
 			background: #2D2F33;
 			border-radius: 12px;
 			color: $color-white;
