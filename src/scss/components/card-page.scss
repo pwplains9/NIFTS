@@ -2,6 +2,24 @@
 	display: flex;
 	margin-bottom: vc(72);
 
+	&__sold {
+		position: relative;
+		z-index: 1;
+		border-radius: 12px;
+		padding: vc(16);
+		width: 100%;
+		height: vc(116);
+		background: rgba(224, 224, 255, 0.02);
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		font-weight: 600;
+		font-size: vc(24);
+		line-height: vc(32);
+		color: rgba(224, 224, 255, 0.2);
+	}
+
 	&__left {
 		@include desktop {
 			margin-right: vc(40);
