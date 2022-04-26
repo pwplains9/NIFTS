@@ -291,6 +291,8 @@
 			width: 20.6%;
 
 			@include mobile {
+				align-items: flex-start;
+				flex-flow: column;
 				width: 51%;
 			}
 		}

@@ -649,6 +649,8 @@
 	&__edition {
 		position: relative;
 		z-index: 1;
+		display: flex;
+		justify-content: space-between;
 		margin: vc(24) 0 vc(8);
 		font-weight: 600;
 		font-size: vc(13);
@@ -777,6 +779,10 @@
 		margin-right: vc(8);
 		width: vc(20);
 		height: vc(20);
+
+		img {
+			border-radius: 50%;
+		}
 	}
 
 	&--small {
