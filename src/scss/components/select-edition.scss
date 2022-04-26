@@ -366,13 +366,16 @@
 		border-radius: 12px;
 
 		input {
-			padding: 10px 12px 10px 16px;
+			padding: 12px 12px 10px 16px;
 			border: none;
 			background: transparent;
 			outline: none;
+			width: 100%;
+			font-weight: 500;
+			color: $color-white;
 
 			@include mobile {
-				padding: vc(10) vc(12) vc(10) vc(16);
+				padding: vc(12) vc(12) vc(10) vc(16);
 			}
 		}
 
