@@ -292,6 +292,7 @@
 
 			@include mobile {
 				align-items: flex-start;
+				justify-content: center;
 				flex-flow: column;
 				width: 51%;
 			}
@@ -343,6 +344,16 @@
 	}
 
 	&__text {
+		+ div {
+			@include desktop {
+				display: none;
+			}
+
+			@include mobile {
+				display: block;
+			}
+		}
+
 
 	}
 

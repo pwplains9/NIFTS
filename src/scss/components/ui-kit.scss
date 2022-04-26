@@ -1358,15 +1358,14 @@
 		border-radius: 12px;
 
 		&--select {
-			padding: 10px;
+			padding: vc(10);
 
 			svg {
-				width: 20px;
-				height: 20px;
+				width: vc(20);
+				height: vc(20);
 
 				@include mobile {
-					width: vc(20);
-					height: vc(20);
+
 				}
 			}
 
